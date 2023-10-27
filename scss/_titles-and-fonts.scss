@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&family=Ubuntu:wght@300;700&display=swap');
+
+$font-default: 'Nunito', sans-serif;
+$font-title: 'Ubuntu', sans-serif;
+
+.title-section {
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: $font-title;
+    font-weight: 700;
+
+    &:after {
+        content: '';
+        width: 100px;
+        height: 3px;
+        
+    }
+}

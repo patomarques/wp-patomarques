@@ -1,3 +1,107 @@
 /*!
  * bootScore custom styles
- *//*# sourceMappingURL=main.css.map */
+ */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&family=Ubuntu:wght@300;700&display=swap");
+.title-section {
+  font-size: 2rem;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+.title-section:after {
+  content: "";
+  width: 100px;
+  height: 3px;
+}
+
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  color: #303841;
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #3a4750;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.content-main {
+  margin: 80px 0;
+}
+
+.content-blog {
+  display: flex;
+}
+.content-blog__post {
+  position: relative;
+}
+.content-blog__post__categories {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+}
+.content-blog__post__categories__link {
+  background-color: #ffffff;
+  color: #3a4750;
+  font-size: 0.8rem;
+  padding: 2px 5px;
+  border-radius: 6px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  display: block;
+}
+.content-blog__post__categories__link:hover {
+  background-color: #3a4750;
+  color: #ffffff;
+}
+.content-blog__post__title {
+  font-size: 1.4rem;
+}
+.content-blog__post__subtitle {
+  font-size: 1rem;
+}
+
+.container-full {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.box-square {
+  background-color: #303841;
+  width: 25vw;
+  position: relative;
+  display: flex;
+}
+.box-square img {
+  max-width: 100%;
+  height: auto;
+}
+.box-square .fa-images {
+  text-align: center;
+  z-index: 99;
+  color: #ffffff;
+  margin: auto;
+  font-size: 3rem;
+}
+.box-square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.site-header {
+  margin-bottom: 70px;
+}/*# sourceMappingURL=main.css.map */
