@@ -1,4 +1,4 @@
-<section class="container-full content-centered mb-8">
+<section id="section-home-intro" class="container-full content-centered">
     <div class="content-centered__box-text">
         <h2 class="bg-fullscreen__title bold logo-text display-1">
             < Pato Marques />
@@ -7,7 +7,7 @@
         </h3>
 
         <div class="content-btn-scroll">
-            <a href="" class="btn-scroll-down">
+            <a href="#page" class="btn-scroll-down">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
         </div>

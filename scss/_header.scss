@@ -3,7 +3,12 @@
 }
 
 .fixed-top {
-    top: 0 !important; 
+    top: 0 !important;
+    position: fixed;
+    background-color: $color-white;
+    -webkit-box-shadow: 0px 0px 3px $color-secondary;
+    -moz-box-shadow: 0px 0px 3px $color-secondary;
+    box-shadow: 0px 0px 3px $color-secondary;
 }
 
 .navbar-brand {
