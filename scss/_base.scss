@@ -15,6 +15,10 @@ a {
     }
 }
 
+#wpadminbar {
+    display: none;
+}
+
 .content-main {
     margin: 80px 0;
 }
@@ -51,20 +55,46 @@ a {
         }
 
         &__title {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+            min-height: 70px;
+            margin-bottom: 10px;
+            display: flex;
         }
 
         &__subtitle {
             font-size: 1rem;
+        }
+
+        &__link {
+            margin: auto;
         }
     }
 }
 
 .container-full {
     width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     position: relative;
+}
+
+.mb-8 {
+    margin-bottom: 80px;
+}
+
+.content-centered {
+    display: flex;
+    align-items: center;
+
+    &__box-text {
+        text-align: center;
+        margin: auto;
+
+        .logo-text {
+            margin-top: -120px;
+        }
+    }
 }
 
 .box-square {
@@ -97,4 +127,37 @@ a {
     display: none !important;
 }
 
-footer {}
+
+.content-btn-scroll {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.btn-scroll-down {
+    text-align: center;
+    margin: 0 auto 35px;
+    position: relative;
+    font-size: 1.7rem;
+
+    &:after {
+        content: "";
+        border: 1px solid black;
+        padding: 20px;
+        position: absolute;
+        transform: rotate(-45deg);
+        z-index: -1;
+        margin-left: -33px;
+        margin-top: -7px;
+    }
+
+    &:hover {
+        color: $color-gold;
+
+        &:after {
+            background-color: $color-black;
+        }
+    }
+}

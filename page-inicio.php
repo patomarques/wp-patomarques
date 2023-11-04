@@ -1,21 +1,21 @@
-<?php get_header(); ?>
+<section class="container-full content-centered mb-8">
+    <div class="content-centered__box-text">
+        <h2 class="bg-fullscreen__title bold logo-text display-1">
+            < Pato Marques />
+        </h2>
+        <h3 class="bg-fullscreen__subtitle">Desenvolvedor WEB | Wordpress | Laravel | Front-end | Back-end
+        </h3>
 
-<section id="section-banner" class="container-full">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="bg-fullscreen">
-                    <h2 class="bg-fullscreen__title title-section bold">Pato Marques</h2>
-                    <h3 class="bg-fullscreen__subtitle">Desenvolvedor WEB | Wordpress | Laravel | Front-end | Back-end
-                    </h3>
-                </div>
-                <a href="" class="btn-scroll-down">
-                    <i class="fa-solid fa-angles-down"></i>
-                </a>
-            </div>
+        <div class="content-btn-scroll">
+            <a href="" class="btn-scroll-down">
+                <i class="fa-solid fa-angles-down"></i>
+            </a>
         </div>
     </div>
+
 </section>
+
+<?php get_header(); ?>
 
 <section id="section-about" class="container-full content-main">
     <div class="container">
@@ -131,11 +131,11 @@ $posts = get_posts($args);
             <div class="content-blog__post">
                 <div class="content-blog__post__image box-square">
                     <?php
-                        if (!empty(get_the_post_thumbnail($post->ID, 'medium'))) {
-                            echo get_the_post_thumbnail($post->ID, 'medium');
-                        } else {
-                            echo '<i class="fa-solid fa-images"></i>';
-                        }
+                    if (!empty(get_the_post_thumbnail($post->ID, 'medium'))) {
+                        echo get_the_post_thumbnail($post->ID, 'medium');
+                    } else {
+                        echo '<i class="fa-solid fa-images"></i>';
+                    }
                     ?>
 
                     <div class="content-blog__post__categories">
@@ -160,7 +160,7 @@ $posts = get_posts($args);
                 </div>
                 <div class="content-blog__post__box p-3 text-center">
                     <h3 class="content-blog__post__title">
-                        <a href="<?php echo get_permalink($post->ID); ?>" class="content-blog__link">
+                        <a href="<?php echo get_permalink($post->ID); ?>" class="content-blog__post__link">
                             <?= $post->post_title ?>
                         </a>
                     </h3>
@@ -169,9 +169,6 @@ $posts = get_posts($args);
                         <?= the_time('j \d\e F \d\e Y', $post->post_date) ?>
                     </h5>
 
-                    <h4 class="content-blog__post__description">
-                        <?= $post->post_excerpt ?>
-                    </h4>
                     <a href="<?php echo get_permalink($post->ID); ?>" class="content-blog__post__button">
                         Ler mais...
                     </a>
@@ -184,6 +181,18 @@ $posts = get_posts($args);
     </div>
 </section>
 
+<?php
+$args = array(
+    'post_type' => 'contatos',
+    'public' => true,
+    'posts_per_page' => -1,
+    'orderby' => 'date',
+    'order' => 'ASC'
+);
+
+$contacts = new WP_Query($args);
+?>
+
 <section id="section-contact" class="container-full content-main">
     <div class="container">
         <div class="row">
@@ -195,26 +204,23 @@ $posts = get_posts($args);
             <div class="col-12">
                 <div class="content-contact text-center">
                     <ul class="content-contact__list list-inline">
-                        <li class="content-contact__list-item list-inline-item">
-                            <a href="" class="content-contact__link">
-                                Icone Telegram
-                            </a>
-                        </li>
-                        <li class="content-contact__list-item list-inline-item">
-                            <a href="" class="content-contact__link">
-                                Icone Whatsapp
-                            </a>
-                        </li>
-                        <li class="content-contact__list-item list-inline-item">
-                            <a href="" class="content-contact__link">
-                                Icone Github
-                            </a>
-                        </li>
-                        <li class="content-contact__list-item list-inline-item">
-                            <a href="" class="content-contact__link">
-                                Icone Email
-                            </a>
-                        </li>
+
+                        <?php if ($contacts->have_posts()) {
+                            while ($contacts->have_posts()):
+                                $contacts->the_post(); ?>
+
+                                <li class="content-contact__list-item list-inline-item m-3">
+                                    <a href="<?= get_post_meta(get_the_ID(), 'link', true) ?>" class="content-contact__link"
+                                        title="<?php the_title();
+                                        echo " " . get_the_content(); ?>" alt="<?php the_title(); ?>">
+                                        <i class="<?= get_post_meta(get_the_ID(), 'icon_class', true) ?> fa-3x"></i>
+                                    </a>
+                                </li>
+
+                                <?php
+                            endwhile;
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

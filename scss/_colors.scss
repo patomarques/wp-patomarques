@@ -5,3 +5,16 @@ $color-contrast: #ffc93c;
 
 $color-white: #ffffff;
 $color-black: #000000;
+$color-gold: #ffc93c;
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.bg-black {
+    background-color: $color-black;
+}
+
+.bg-white {
+    background-color: $color-white;
+}
