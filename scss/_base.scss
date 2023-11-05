@@ -15,12 +15,16 @@ a {
     }
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 #wpadminbar {
     display: none;
 }
 
 .content-main {
-    margin: 80px 0;
+    margin: 120px 0;
 }
 
 .content-blog {
@@ -150,7 +154,7 @@ a {
         transform: rotate(-45deg);
         z-index: -1;
         margin-left: -35px;
-        margin-top: -10px;
+        margin-top: -6px;
     }
 
     &:hover {

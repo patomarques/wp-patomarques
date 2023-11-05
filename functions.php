@@ -57,5 +57,18 @@ function wporg_custom_post_type()
       'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
     )
   );
+
+  register_post_type(
+    'technologies',
+    array(
+      'labels' => array(
+        'name' => __('Tecnologias', 'textdomain'),
+        'singular_name' => __('Tecnologia', 'textdomain'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+    )
+  );
 }
 add_action('init', 'wporg_custom_post_type');

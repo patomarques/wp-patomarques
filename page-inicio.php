@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <section id="section-home-intro" class="container-full content-centered">
     <div class="content-centered__box-text">
         <h2 class="bg-fullscreen__title bold logo-text display-1">
@@ -7,7 +9,7 @@
         </h3>
 
         <div class="content-btn-scroll">
-            <a href="#page" class="btn-scroll-down">
+            <a href="#masthead" class="btn-scroll-down">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
         </div>
@@ -15,30 +17,41 @@
 
 </section>
 
-<?php get_header(); ?>
 
-<section id="section-about" class="container-full content-main">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="content-about">
-                    <h3 class="content-about__title title-section">Sobre</h3>
-                    <h4 class="content-about__subtitle">Desde 2010 atuando no desenvolvimento de
-                        sistemas web, sites e lojas online.</h4>
-                    <h5 class="content-about__description">Recife, 34 anos, Sistemas de Informação, Desenvolvedor Web.
-                    </h5>
-                    <h5 class="content-about__text">Bike, Veganismo Popular, Anti-fascismo,
-                        Anti-Racismo, LGBTQIA+, Direitos Humanos e Animais.</h5>
-                    </h5>
-                    <p class="hide">Planejamento, modelagem banco de dados, criação, prototipação, desenvolvimento e
-                        testes.</p>
-                </div>
+<?php
+$pageAbout = get_page_by_path('sobre');
+?>
+
+<section id="section-about" class="container">
+    <div class="row">
+        <div class="col-12 col-sm-8 col-md-8">
+            <div class="content-about">
+                <h3 class="content-about__title title-section">
+                    <?php echo get_the_title($pageAbout); ?>
+                </h3>
+                <h4 class="content-about__subtitle text-justify">
+                    <?php echo apply_filters('get_the_content', $pageAbout->post_content); ?>
+                </h4>
+                <a href="/sobre" class="btn btn-secondary">Continuar lendo...</a>
             </div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-3 offset-md-1">
+            <?php echo get_the_post_thumbnail($pageAbout); ?>
         </div>
     </div>
 </section>
 
-<section id="section-skills" class="container-full content-main">
+<?php
+$technologies = new WP_Query(
+    array(
+        'post_type' => 'technologies',
+        'orderby' => 'ordem',
+        'order' => 'ASC',
+    )
+);
+?>
+
+<section id="section-skills" class="content-main">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -47,20 +60,20 @@
                     <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos.
                     </h4>
 
-                    <?php
-                    $tecnologies = ['html5', 'css3', 'javascript', 'sql', 'git', 'vue', 'react', 'nodeJS', 'responsive design', 'php', 'wordpress', 'laravel'];
-                    ?>
-
                     <ul class="content-skills_list list-inline">
 
-                        <?php for ($i = 0; $i < count($tecnologies); $i++) { ?>
+                        <?php while ($technologies->have_posts()):
+                            $technologies->the_post();
+                            ?>
 
                             <li class="content-skills_list_item list-inline-item">
                                 <div class="content-skills progress-bar"></div>
-                                <?= $tecnologies[$i] ?>
+                                <?= the_title() ?>
+                                <?php echo get_post_meta(get_the_ID(), 'skill_percent')[0]; ?>
+                                <?php echo get_post_meta(get_the_ID(), 'tech_type')[0]; ?>
                             </li>
 
-                        <?php } ?>
+                        <?php endwhile; ?>
 
                     </ul>
                 </div>
@@ -69,7 +82,7 @@
     </div>
 </section>
 
-<section id="section-experience" class="container-full content-main">
+<section id="section-experience" class="content-main">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -82,7 +95,7 @@
     </div>
 </section>
 
-<section id="section-portfolio" class="container-full content-main">
+<section id="section-portfolio" class="content-main">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -117,7 +130,7 @@ $get_posts = new WP_Query();
 $posts = get_posts($args);
 ?>
 
-<section id="section-blog" class="container-full content-main">
+<section id="section-blog" class="content-main">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -193,14 +206,14 @@ $args = array(
 $contacts = new WP_Query($args);
 ?>
 
-<section id="section-contact" class="container-full content-main">
+<section id="section-contact" class="bg-black pb-5">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h3 class="title-section bold">Contato</h3>
+            <div class="col-12 text-center">
+                <h3 class="title-section bold color-white">Contato</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-12">
                 <div class="content-contact text-center">
                     <ul class="content-contact__list list-inline">
@@ -213,7 +226,7 @@ $contacts = new WP_Query($args);
                                     <a href="<?= get_post_meta(get_the_ID(), 'link', true) ?>" class="content-contact__link"
                                         title="<?php the_title();
                                         echo " " . get_the_content(); ?>" alt="<?php the_title(); ?>">
-                                        <i class="<?= get_post_meta(get_the_ID(), 'icon_class', true) ?> fa-3x"></i>
+                                        <i class="color-white <?= get_post_meta(get_the_ID(), 'icon_class', true) ?> fa-3x"></i>
                                     </a>
                                 </li>
 

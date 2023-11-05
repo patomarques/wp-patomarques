@@ -1,0 +1,5 @@
+@mixin border-shadow ($px1, $px2, $px3, $color){
+    -webkit-box-shadow: $px1 $px2 $px3 $color;
+    -moz-box-shadow: $px1 $px2 $px3 $color;
+    box-shadow: $px1 $px2 $px3 $color;
+}
