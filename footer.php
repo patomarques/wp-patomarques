@@ -32,7 +32,7 @@
 <a href="#" class="btn btn-default shadow top-button position-fixed zi-1020"><i class="fa-solid fa-chevron-up"></i><span
     class="visually-hidden-focusable">To top</span></a>
 
-</div>
+</div>  
 
 <?php wp_footer(); ?>
 

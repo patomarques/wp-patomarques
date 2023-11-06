@@ -24,3 +24,46 @@
         }
     }
 }
+
+.btn-menu-hamburguer {
+    border: none;
+    font-size: 2rem;
+    color: black;
+}
+
+.logo {
+    width: 75px;
+    margin-top: 30px;
+    background-color: $color-white;
+    padding: 0 8px 0 13px;
+}
+
+.offcanvas-title {
+    visibility: hidden;
+}
+
+.navbar-brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media(min-width: 768px) {
+    .navbar-brand {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        padding: 10px 0 0;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            padding: 0 10px !important;
+            font-size: 1.1rem !important;
+        }
+    }
+}
+
+@media(min-width: 992px) {}

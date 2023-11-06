@@ -26,13 +26,13 @@ $pageAbout = get_page_by_path('sobre');
     <div class="row">
         <div class="col-12 col-sm-8 col-md-8">
             <div class="content-about">
-                <h3 class="content-about__title title-section">
+                <h3 class="content-about__title title-section mb-4">
                     <?php echo get_the_title($pageAbout); ?>
                 </h3>
                 <h4 class="content-about__subtitle text-justify">
                     <?php echo apply_filters('get_the_content', $pageAbout->post_content); ?>
                 </h4>
-                <a href="/sobre" class="btn btn-secondary">Continuar lendo...</a>
+                <a href="/sobre" class="btn btn-secondary mb-4">Continuar lendo...</a>
             </div>
         </div>
         <div class="col-12 col-sm-4 col-md-3 offset-md-1">
@@ -82,6 +82,16 @@ $technologies = new WP_Query(
     </div>
 </section>
 
+<?php
+$experience = new WP_Query(
+    array(
+        'post_type' => 'experiences',
+        'orderby' => 'ordem',
+        'order' => 'ASC',
+    )
+);
+?>
+
 <section id="section-experience" class="content-main">
     <div class="container">
         <div class="row">
@@ -90,10 +100,31 @@ $technologies = new WP_Query(
                 <div class="content-experience">
                     Timeline.js com resumo dos anos, desde 2010 até 2023, com os principais trampos que passei.
                 </div>
+
+                <?php while ($experience->have_posts()):
+                    $experience->the_post();
+                    ?>
+
+                    <?= the_title() ?>
+                    <?php echo get_post_meta(get_the_ID(), 'data_inicio')[0]; ?>
+                    <?php echo get_post_meta(get_the_ID(), 'data_fim')[0]; ?>
+
+                <?php endwhile; ?>
+
             </div>
         </div>
     </div>
 </section>
+
+<?php
+$portfolio = new WP_Query(
+    array(
+        'post_type' => 'portfolio',
+        'orderby' => 'ordem',
+        'order' => 'ASC',
+    )
+);
+?>
 
 <section id="section-portfolio" class="content-main">
     <div class="container">
@@ -102,16 +133,20 @@ $technologies = new WP_Query(
                 <h3 class="title-section bold">Portfolio</h3>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-12 col-md-4">
-                Lula Cortes
-            </div>
-            <div class="col-12 col-md-4">
-                Eve Queiroz
-            </div>
-            <div class="col-12 col-md-4">
-                Bia Ritzzz
-            </div>
+
+            <?php while ($portfolio->have_posts()):
+                $portfolio->the_post();
+                ?>
+
+                <div class="col-12 col-md-4">
+                    <?= the_title() ?>
+                    <?php echo get_post_meta(get_the_ID(), 'data_inicio')[0]; ?>
+                </div>
+
+            <?php endwhile; ?>
+
         </div>
     </div>
 
@@ -134,7 +169,7 @@ $posts = get_posts($args);
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h3 class="title-section bold">Blog</h3>
+                <h3 class="title-section bold mb-5">Blog</h3>
             </div>
         </div>
     </div>
@@ -176,13 +211,16 @@ $posts = get_posts($args);
                         <a href="<?php echo get_permalink($post->ID); ?>" class="content-blog__post__link">
                             <?= $post->post_title ?>
                         </a>
-                    </h3>
+                    </h3>                    
                     <h5 class="content-blog__post__subtitle text-center">
                         Publicado em
                         <?= the_time('j \d\e F \d\e Y', $post->post_date) ?>
                     </h5>
+                    <p class="content-blog__post__description text-justify">
+                        <?= get_the_content($post->ID) ?>
+                    </p>
 
-                    <a href="<?php echo get_permalink($post->ID); ?>" class="content-blog__post__button">
+                    <a href="<?php echo get_permalink($post->ID); ?>" class="content-blog__post__button btn btn-dark mt-3">
                         Ler mais...
                     </a>
                 </div>
@@ -206,14 +244,14 @@ $args = array(
 $contacts = new WP_Query($args);
 ?>
 
-<section id="section-contact" class="bg-black pb-5">
+<section id="section-contact" class="bg-black pt-5 pb-5">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h3 class="title-section bold color-white">Contato</h3>
+                <h3 class="title-section bold color-white mt-5 mb-5">Contatos</h3>
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row mt-5">
             <div class="col-12">
                 <div class="content-contact text-center">
                     <ul class="content-contact__list list-inline">

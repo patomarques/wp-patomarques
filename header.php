@@ -44,7 +44,7 @@
 
       <div class="menu-bar bg-transparent">
 
-        <nav id="nav-main" class="navbar navbar-expand-lg">
+        <nav id="nav-main" class="navbar navbar-expand-lg p-0">
 
           <div class="<?= bootscore_container_class(); ?>">
 
@@ -109,7 +109,7 @@
               ?>
 
               <!-- Navbar Toggler -->
-              <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas"
+              <button class="btn btn-menu-hamburguer d-lg-none ms-1 ms-md-2 p-0" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
                 <i class="fa-solid fa-bars"></i><span class="visually-hidden-focusable">Menu</span>
               </button>
