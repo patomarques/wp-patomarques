@@ -9,7 +9,7 @@
         </h3>
 
         <div class="content-btn-scroll">
-            <a href="#masthead" class="btn-scroll-down">
+            <a href="#section-about" class="btn-scroll-down" name="target">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
         </div>
@@ -24,7 +24,7 @@ $pageAbout = get_page_by_path('sobre');
 
 <section id="section-about" class="container">
     <div class="row">
-        <div class="col-12 col-sm-8 col-md-8">
+        <div class="col-12 col-md-8 col-lg-7">
             <div class="content-about">
                 <h3 class="content-about__title title-section mb-4">
                     <?php echo get_the_title($pageAbout); ?>
@@ -32,11 +32,14 @@ $pageAbout = get_page_by_path('sobre');
                 <h4 class="content-about__subtitle text-justify">
                     <?php echo apply_filters('get_the_content', $pageAbout->post_content); ?>
                 </h4>
-                <a href="/sobre" class="btn btn-secondary mb-4">Continuar lendo...</a>
+                <a href="/sobre" class="btn btn-secondary mt-4 mb-4">Continuar lendo...</a>
             </div>
         </div>
-        <div class="col-12 col-sm-4 col-md-3 offset-md-1">
-            <?php echo get_the_post_thumbnail($pageAbout); ?>
+        <div class="col-12 col-md-4 col-lg-4 offset-lg-1">
+            <div class="square">
+                <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
+                <div class="losange"></div>
+            </div>            
         </div>
     </div>
 </section>
@@ -130,7 +133,7 @@ $portfolio = new WP_Query(
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="title-section bold">Portfolio</h3>
+                <h3 class="title-section bold text-center mt-4 mb-4">Portfolio</h3>
             </div>
         </div>
 
@@ -141,8 +144,10 @@ $portfolio = new WP_Query(
                 ?>
 
                 <div class="col-12 col-md-4">
+                    <?= get_the_post_thumbnail( get_the_ID() ) ?>
                     <?= the_title() ?>
                     <?php echo get_post_meta(get_the_ID(), 'data_inicio')[0]; ?>
+                    
                 </div>
 
             <?php endwhile; ?>

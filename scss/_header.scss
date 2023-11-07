@@ -15,9 +15,9 @@
 
 .navbar-nav {
     .nav-link {
-        font-family: $font-title;
-        padding: 0 20px !important;
-        font-size: 1.2em !important;
+        font-family: $font-default;
+        padding: 20px;
+        font-size: 2.2em !important;
 
         &:hover {
             color: $color-gold;
@@ -43,6 +43,19 @@
     visibility: hidden;
 }
 
+.offcanvas {
+    top: 0 !important;
+    width: 100vw !important;
+
+    &-body {
+        text-align: center;
+    }
+}
+
+.btn-close {
+    font-size: 1.5rem;
+}
+
 .navbar-brand {
     position: absolute;
     top: 50%;
@@ -59,7 +72,7 @@
         height: 70px;
         z-index: -1;
         position: absolute;
-        top: 40px;
+        top: 48px;
     }
 }
 
@@ -70,6 +83,10 @@
         left: 0;
         transform: none;
         padding: 10px 0 0;
+
+        &:after {
+            display: none;
+        }
     }
 
     .navbar-nav {
@@ -80,4 +97,10 @@
     }
 }
 
-@media(min-width: 992px) {}
+@media(min-width: 992px) {
+    .navbar-nav {
+        .nav-link {
+            font-size: 1.2em !important;
+        }
+    }
+}
