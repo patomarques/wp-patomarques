@@ -1,7 +1,5 @@
 jQuery(function ($) {
     var target = $('a[name=target]');
-    console.log('target', $('a[href=#target]'));
-    console.log('target', target);
 
     if(target.length > 0) {
         target.click(function () {
@@ -14,8 +12,6 @@ jQuery(function ($) {
             return false;
         });
     }
-
-    
 });
 
 window.addEventListener("load", (event) => {
@@ -30,5 +26,4 @@ window.addEventListener("load", (event) => {
             menu.classList.add("hide");
         }
     }
-    console.log("page is fully loaded", offset);
 });

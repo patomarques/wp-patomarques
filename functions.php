@@ -72,3 +72,5 @@ function wporg_custom_post_type()
   );
 }
 add_action('init', 'wporg_custom_post_type');
+
+

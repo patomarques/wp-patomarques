@@ -24,7 +24,13 @@ $pageAbout = get_page_by_path('sobre');
 
 <section id="section-about" class="container">
     <div class="row">
-        <div class="col-12 col-md-8 col-lg-7">
+        <div class="col-12 col-md-4 col-lg-4">
+            <div class="square">
+                <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
+                <div class="losange"></div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-7 offset-lg-1">
             <div class="content-about">
                 <h3 class="content-about__title title-section mb-4">
                     <?php echo get_the_title($pageAbout); ?>
@@ -35,12 +41,7 @@ $pageAbout = get_page_by_path('sobre');
                 <a href="/sobre" class="btn btn-secondary mt-4 mb-4">Continuar lendo...</a>
             </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-4 offset-lg-1">
-            <div class="square">
-                <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
-                <div class="losange"></div>
-            </div>
-        </div>
+        
     </div>
 </section>
 
@@ -58,35 +59,23 @@ $technologiesFormatted = [];
 
 while ($technologies->have_posts()):
     $technologies->the_post();
-    
+
     $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
     $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
-    //$technologies = ["name" => $techType];
-    //$technologies[$techType] = ["name" => get_the_title(), "type" => $techType, "percent" => $skillPercent];
-    if(get_the_title() == 'reactJS' || get_the_title() == 'react') {
-        //echo get_the_title();
-        //echo $techType;
-        //echo $skillPercent;        
-    }
-
-    if($techType != 'language'){
-        //echo get_the_title() . "<br/>";
-    }
 
     $techData = [
         "name" => get_the_title(),
-        "percents" => $skillPercent            
+        "percents" => $skillPercent,
+        "type" => $techType
     ];
 
-    if(array_key_exists($techType, $technologiesFormatted)) {
-        array_push($technologiesFormatted[$techType], $techData);
-    }else {
-        $technologiesFormatted[$techType] = $techData;
-    }
-    
-endwhile; 
+    if (!array_key_exists($techType, $technologiesFormatted)) {
+        $technologiesFormatted[$techType] = [];
+    } 
 
-print_r($technologiesFormatted);
+    array_push($technologiesFormatted[$techType], $techData);
+
+endwhile;
 ?>
 
 <section id="section-skills" class="content-main">
@@ -100,118 +89,38 @@ print_r($technologiesFormatted);
         </div>
         <div class="row content-skills">
 
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="content-skills__subtitle bold">Linguagens</h5>
+            <?php foreach ($technologiesFormatted as $key => $techs) { ?>
 
-                <?php while ($technologies->have_posts()):
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h5 class="content-skills__subtitle bold">
+                        <?= $key ?>
+                    </h5>
 
-                    $technologies->the_post();
+                    <?php for ($index = 0; $index < count($techs); $index++) { ?>
 
-                    $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
+                        <div class="content-skills_item">
+                            <div class="content-skills_list_item mb-2">
+                                <div class="content-skills progress-bar"></div>
+                                <span class="">
+                                    <?= $techs[$index]["name"] ?>
+                                </span>
 
-                    $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
-
-                    if ($techType != 'language') {
-                        break;
-                    }
-
-                    ?>
-
-                    <div class="content-skills_item">
-                        <div class="content-skills_list_item mb-2">
-                            <div class="content-skills progress-bar"></div>
-                            <span class="">
-                                <?= the_title() ?>
-                            </span>
-
-                            <div class="progress">
-                                <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
-                                    role="progressbar" style="width: <?= $skillPercent ?>%;"
-                                    aria-valuenow="<?= $skillPercent ?>" aria-valuemin="0" aria-valuemax="100">
-                                    <?= $skillPercent ?>%
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
+                                        role="progressbar" style="width: <?= $techs[$index]['percents'] ?>%;"
+                                        aria-valuenow="<?= $techs[$index]['percents'] ?>" aria-valuemin="0" aria-valuemax="100">
+                                        <?= $techs[$index]['percents'] ?>%
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                <?php endwhile; 
-                    wp_reset_postdata();
-                ?>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="content-skills__subtitle bold">Frameworks</h5>
+                    <?php } ?>
 
-                <?php while ($technologies->have_posts()):
+                </div>
 
-                    $technologies->the_post();
+            <?php } ?>
 
-                    $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
-
-                    $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
-                    
-                    if ($techType != 'framework') {
-                        break;
-                    }
-                    ?>
-
-                    <div class="content-skills_item">
-                        <div class="content-skills_list_item mb-2">
-                            <div class="content-skills progress-bar"></div>
-                            <span class="">
-                                <?= the_title() ?>
-                            </span>
-
-                            <div class="progress">
-                                <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
-                                    role="progressbar" style="width: <?= $skillPercent ?>%;"
-                                    aria-valuenow="<?= $skillPercent ?>" aria-valuemin="0" aria-valuemax="100">
-                                    <?= $skillPercent ?>%
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <?php endwhile; 
-                    wp_reset_postdata();
-                ?>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="content-skills__subtitle bold">Tecnologias</h5>
-
-                <?php while ($technologies->have_posts()):
-
-                    $technologies->the_post();
-
-                    $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
-
-                    $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
-
-                    if ($techType != 'technology') {
-                        break;
-                    }
-                    ?>
-
-                    <div class="content-skills_item">
-                        <div class="content-skills_list_item mb-2">
-                            <div class="content-skills progress-bar"></div>
-                            <span class="">
-                                <?= the_title() ?>
-                            </span>
-
-                            <div class="progress">
-                                <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
-                                    role="progressbar" style="width: <?= $skillPercent ?>%;"
-                                    aria-valuenow="<?= $skillPercent ?>" aria-valuemin="0" aria-valuemax="100">
-                                    <?= $skillPercent ?>%
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <?php endwhile; 
-                    wp_reset_postdata();
-                ?>
-            </div>
         </div>
     </div>
 </section>
