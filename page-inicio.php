@@ -39,7 +39,7 @@ $pageAbout = get_page_by_path('sobre');
             <div class="square">
                 <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
                 <div class="losange"></div>
-            </div>            
+            </div>
         </div>
     </div>
 </section>
@@ -50,36 +50,167 @@ $technologies = new WP_Query(
         'post_type' => 'technologies',
         'orderby' => 'ordem',
         'order' => 'ASC',
+        'posts_per_page' => -1,
     )
 );
+
+$technologiesFormatted = [];
+
+while ($technologies->have_posts()):
+    $technologies->the_post();
+    
+    $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
+    $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
+    //$technologies = ["name" => $techType];
+    //$technologies[$techType] = ["name" => get_the_title(), "type" => $techType, "percent" => $skillPercent];
+    if(get_the_title() == 'reactJS' || get_the_title() == 'react') {
+        //echo get_the_title();
+        //echo $techType;
+        //echo $skillPercent;        
+    }
+
+    if($techType != 'language'){
+        //echo get_the_title() . "<br/>";
+    }
+
+    $techData = [
+        "name" => get_the_title(),
+        "percents" => $skillPercent            
+    ];
+
+    if(array_key_exists($techType, $technologiesFormatted)) {
+        array_push($technologiesFormatted[$techType], $techData);
+    }else {
+        $technologiesFormatted[$techType] = $techData;
+    }
+    
+endwhile; 
+
+print_r($technologiesFormatted);
 ?>
 
 <section id="section-skills" class="content-main">
     <div class="container">
-        <div class="row">
+        <div class="row mb-4">
             <div class="col-12">
-                <div class="content-skills">
-                    <h3 class="content-skills__title title-section bold">Tecnologias</h3>
-                    <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos.
-                    </h4>
+                <h3 class="content-skills__title title-section bold">Tecnologias</h3>
+                <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos.
+                </h4>
+            </div>
+        </div>
+        <div class="row content-skills">
 
-                    <ul class="content-skills_list list-inline">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="content-skills__subtitle bold">Linguagens</h5>
 
-                        <?php while ($technologies->have_posts()):
-                            $technologies->the_post();
-                            ?>
+                <?php while ($technologies->have_posts()):
 
-                            <li class="content-skills_list_item list-inline-item">
-                                <div class="content-skills progress-bar"></div>
+                    $technologies->the_post();
+
+                    $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
+
+                    $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
+
+                    if ($techType != 'language') {
+                        break;
+                    }
+
+                    ?>
+
+                    <div class="content-skills_item">
+                        <div class="content-skills_list_item mb-2">
+                            <div class="content-skills progress-bar"></div>
+                            <span class="">
                                 <?= the_title() ?>
-                                <?php echo get_post_meta(get_the_ID(), 'skill_percent')[0]; ?>
-                                <?php echo get_post_meta(get_the_ID(), 'tech_type')[0]; ?>
-                            </li>
+                            </span>
 
-                        <?php endwhile; ?>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
+                                    role="progressbar" style="width: <?= $skillPercent ?>%;"
+                                    aria-valuenow="<?= $skillPercent ?>" aria-valuemin="0" aria-valuemax="100">
+                                    <?= $skillPercent ?>%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    </ul>
-                </div>
+                <?php endwhile; 
+                    wp_reset_postdata();
+                ?>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="content-skills__subtitle bold">Frameworks</h5>
+
+                <?php while ($technologies->have_posts()):
+
+                    $technologies->the_post();
+
+                    $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
+
+                    $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
+                    
+                    if ($techType != 'framework') {
+                        break;
+                    }
+                    ?>
+
+                    <div class="content-skills_item">
+                        <div class="content-skills_list_item mb-2">
+                            <div class="content-skills progress-bar"></div>
+                            <span class="">
+                                <?= the_title() ?>
+                            </span>
+
+                            <div class="progress">
+                                <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
+                                    role="progressbar" style="width: <?= $skillPercent ?>%;"
+                                    aria-valuenow="<?= $skillPercent ?>" aria-valuemin="0" aria-valuemax="100">
+                                    <?= $skillPercent ?>%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php endwhile; 
+                    wp_reset_postdata();
+                ?>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="content-skills__subtitle bold">Tecnologias</h5>
+
+                <?php while ($technologies->have_posts()):
+
+                    $technologies->the_post();
+
+                    $skillPercent = get_post_meta(get_the_ID(), 'skill_percent')[0];
+
+                    $techType = get_post_meta(get_the_ID(), 'tech_type')[0];
+
+                    if ($techType != 'technology') {
+                        break;
+                    }
+                    ?>
+
+                    <div class="content-skills_item">
+                        <div class="content-skills_list_item mb-2">
+                            <div class="content-skills progress-bar"></div>
+                            <span class="">
+                                <?= the_title() ?>
+                            </span>
+
+                            <div class="progress">
+                                <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
+                                    role="progressbar" style="width: <?= $skillPercent ?>%;"
+                                    aria-valuenow="<?= $skillPercent ?>" aria-valuemin="0" aria-valuemax="100">
+                                    <?= $skillPercent ?>%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php endwhile; 
+                    wp_reset_postdata();
+                ?>
             </div>
         </div>
     </div>
@@ -123,7 +254,7 @@ $experience = new WP_Query(
 $portfolio = new WP_Query(
     array(
         'post_type' => 'portfolio',
-        'orderby' => 'ordem',
+        'orderby' => 'data_inicio',
         'order' => 'ASC',
     )
 );
@@ -144,10 +275,28 @@ $portfolio = new WP_Query(
                 ?>
 
                 <div class="col-12 col-md-4">
-                    <?= get_the_post_thumbnail( get_the_ID() ) ?>
-                    <?= the_title() ?>
-                    <?php echo get_post_meta(get_the_ID(), 'data_inicio')[0]; ?>
-                    
+
+                    <div class="card">
+                        <img class="card-img-top" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?= the_title() ?>
+                            </h5>
+                            <h4 class="card-subtitle">
+                                <?php echo get_post_meta(get_the_ID(), 'data_inicio')[0]; ?>
+                            </h4>
+                            <p class="card-text">
+                                <?= get_the_excerpt(get_the_ID()) ?>
+                            </p>
+                            <a href="#" class="btn btn-dark m-auto">Ver mais</a>
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
 
             <?php endwhile; ?>
@@ -216,7 +365,7 @@ $posts = get_posts($args);
                         <a href="<?php echo get_permalink($post->ID); ?>" class="content-blog__post__link">
                             <?= $post->post_title ?>
                         </a>
-                    </h3>                    
+                    </h3>
                     <h5 class="content-blog__post__subtitle text-center">
                         Publicado em
                         <?= the_time('j \d\e F \d\e Y', $post->post_date) ?>
