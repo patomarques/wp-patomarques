@@ -5,10 +5,12 @@ $color-contrast: #ffc93c;
 
 $color-white: #ffffff;
 $color-black: #000000;
-$color-gold: #ffc93c;
+//$color-gold: #ffc60a; 
+$color-gold: #f5b700; 
 
 $border: 3px solid $color-black;
 $border-dark: 3px solid $color-white;
+$border-gold: 3px solid $color-gold;
 
 .bg-transparent {
     background-color: transparent !important;

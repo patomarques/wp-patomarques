@@ -68,7 +68,7 @@
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                   aria-label="Close"></button>
               </div>
-              <div class="offcanvas-body">
+              <div class="offcanvas-body d-none d-xxl-flex">
 
                 <!-- Bootstrap 5 Nav Walker Main Menu -->
                 <?php
@@ -109,7 +109,7 @@
               ?>
 
               <!-- Navbar Toggler -->
-              <button class="btn btn-menu-hamburguer d-lg-none ms-1 ms-md-2 p-1" type="button" data-bs-toggle="offcanvas"
+              <button class="btn btn-menu-hamburguer d-xxl-none ms-1 ms-md-2 p-1" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
                 <i class="fa-solid fa-bars"></i><span class="visually-hidden-focusable">Menu</span>
               </button>
