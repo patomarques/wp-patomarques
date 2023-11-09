@@ -1,3 +1,7 @@
+html {
+    margin-top: 0 !important; 
+}
+
 html,
 body {
     font-family: $font-default;
@@ -197,6 +201,18 @@ p {
         border: 3px dashed $color-white;
     }
 
+}
+
+.bg-dark {
+    .btn-scroll-down{
+        i {
+            color: $color-white;
+        }
+
+        &:after {
+            border: $border;
+        }
+    }
 }
 
 @media(min-width: 320px){

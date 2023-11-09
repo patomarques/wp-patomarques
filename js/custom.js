@@ -3,10 +3,9 @@ jQuery(function ($) {
 
     if(target.length > 0) {
         target.click(function () {
-            console.log('click');
             var top = target.offset().top;
             console.log('top', top);
-            top = top + 300;
+            top = top + 400;
             console.log('top', top);
             $('html,body').animate({ scrollTop: top }, 1000);
             return false;

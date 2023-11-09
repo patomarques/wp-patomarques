@@ -14,7 +14,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="mt-0">
 
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">

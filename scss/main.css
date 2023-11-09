@@ -6,6 +6,11 @@
   background-color: transparent !important;
 }
 
+.bg-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .bg-black {
   background-color: #000000;
 }
@@ -40,6 +45,10 @@
 
 .logo-text {
   font-family: "Zeyada", cursive;
+}
+
+html {
+  margin-top: 0 !important;
 }
 
 html,
@@ -222,6 +231,13 @@ p {
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
   border: 3px dashed #ffffff;
+}
+
+.bg-dark .btn-scroll-down i {
+  color: #ffffff;
+}
+.bg-dark .btn-scroll-down:after {
+  border: 3px solid #000000;
 }
 
 @media (min-width: 320px) {

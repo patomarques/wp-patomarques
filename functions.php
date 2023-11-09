@@ -70,6 +70,19 @@ function wporg_custom_post_type()
       'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
     )
   );
+
+  register_post_type(
+    'services',
+    array(
+      'labels' => array(
+        'name' => __('Serviços', 'textdomain'),
+        'singular_name' => __('Serviço', 'textdomain'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+    )
+  );
 }
 add_action('init', 'wporg_custom_post_type');
 
