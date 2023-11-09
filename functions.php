@@ -83,6 +83,19 @@ function wporg_custom_post_type()
       'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
     )
   );
+
+  register_post_type(
+    'fight-flags',
+    array(
+      'labels' => array(
+        'name' => __('Bandeiras de Luta', 'textdomain'),
+        'singular_name' => __('Bandeira de Luta', 'textdomain'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+    )
+  );
 }
 add_action('init', 'wporg_custom_post_type');
 

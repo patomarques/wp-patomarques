@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<section id="section-home-intro" class="container-full content-centered bg-dark mb-5">
+<section id="section-home-intro" class="container-full content-centered container-home bg-dark mb-5">
+    <img class="container-home__bg-video-full" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-mandala.gif"; ?>" alt="Mandala Futurist Background">
+    <img class="container-home__bg-video-full img-grayscale" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-caleidoscopio.gif"; ?>" alt="Caleidoscopio Futurist Background">
     <div class="content-centered__box-text">
         <h2 class="bg-fullscreen__title bold logo-text display-1">
             < Pato Marques />
@@ -20,6 +22,14 @@
 
 <?php
 $pageAbout = get_page_by_path('sobre');
+
+$fightFlags = new WP_Query(
+    array(
+        'post_type' => 'fight-flags',
+        'orderby' => 'ordem',
+        'order' => 'ASC',
+    )
+);
 ?>
 
 <section id="section-about" class="container pt-5">
@@ -38,7 +48,20 @@ $pageAbout = get_page_by_path('sobre');
                 <h4 class="content-about__subtitle text-justify">
                     <?php echo apply_filters('get_the_content', $pageAbout->post_content); ?>
                 </h4>
-                <a href="/sobre" class="btn btn-secondary mt-4 mb-4">Continuar lendo...</a>
+
+
+                <div class="row mt-3">
+                    <?php while($fightFlags->have_posts()) {
+                        $fightFlags->the_post(); ?>
+
+                    <div class="col-3">
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>" class="img-fluid p-3">
+                    </div>
+
+                    <?php } ?>
+
+                </div>
+                <a href="/sobre" class="btn btn-dark mt-3 mb-4">Continuar lendo...</a>
             </div>
         </div>
         
@@ -78,7 +101,7 @@ while ($technologies->have_posts()):
 endwhile;
 ?>
 
-<section id="section-skills" class="content-main">
+<section id="section-skills" class="content-main bg-dark pt-5 pb-5">
     <div class="container">
         <div class="row mb-4">
             <div class="col-12">

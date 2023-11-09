@@ -47,7 +47,7 @@
   font-family: "Zeyada", cursive;
 }
 
-.trans, a {
+.trans, .img-grayscale, a {
   transition: all 1.4s ease;
   transform: translateX(0);
 }
@@ -94,6 +94,14 @@ p {
 
 .content-main {
   margin: 120px 0;
+}
+
+.container-home__bg-video-full {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+  background-size: cover;
 }
 
 .content-blog {
@@ -150,6 +158,7 @@ p {
 .content-centered {
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 .content-centered__box-text {
   text-align: center;
@@ -254,6 +263,13 @@ p {
 .bg-dark .btn-scroll-down:hover:after {
   border: 3px solid #f5b700 !important;
   background-color: transparent;
+}
+
+.img-grayscale {
+  filter: grayscale(100);
+}
+.img-grayscale:hover {
+  filter: grayscale(0);
 }
 
 @media (min-width: 320px) {

@@ -45,6 +45,16 @@ p {
     margin: 120px 0;
 }
 
+.container-home {
+    &__bg-video-full {
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        position: absolute;
+        background-size: cover;
+    }
+}
+
 .content-blog {
     display: flex;
 
@@ -96,7 +106,7 @@ p {
 .container-full {
     width: 100vw;
     height: 100vh;
-    margin: 0;
+    margin: 0; 
     padding: 0;
     position: relative;
 }
@@ -108,6 +118,7 @@ p {
 .content-centered {
     display: flex;
     align-items: center;
+    z-index: 10;
 
     &__box-text {
         text-align: center;
@@ -229,6 +240,15 @@ p {
                 background-color: transparent;
             }
         }
+    }
+}
+
+.img-grayscale{
+    filter: grayscale(100);
+    @extend .trans;
+
+    &:hover{
+        filter: grayscale(0);
     }
 }
 
