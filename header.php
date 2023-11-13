@@ -68,7 +68,7 @@
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                   aria-label="Close"></button>
               </div>
-              <div class="offcanvas-body d-none d-xxl-flex">
+              <div class="offcanvas-body d-md-none d-xxl-flex">
 
                 <!-- Bootstrap 5 Nav Walker Main Menu -->
                 <?php

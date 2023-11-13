@@ -1,8 +1,14 @@
 <?php get_header(); ?>
 
 <section id="section-home-intro" class="container-full content-centered container-home bg-dark mb-5">
-    <img class="container-home__bg-video-full" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-mandala.gif"; ?>" alt="Mandala Futurist Background">
-    <img class="container-home__bg-video-full img-grayscale" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-caleidoscopio.gif"; ?>" alt="Caleidoscopio Futurist Background">
+    <!-- <img class="container-home__bg-video-full" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-mandala.gif"; ?>" alt="Mandala Futurist Background">
+    <img class="container-home__bg-video-full img-grayscale" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-caleidoscopio.gif"; ?>" alt="Caleidoscopio Futurist Background"> -->
+    
+    <video class="container-home__bg-video-full" autoplay loop>
+        <source src="<?php echo get_stylesheet_directory_uri() . "/img/nature.mp4"; ?>" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="content-centered__box-text">
         <h2 class="bg-fullscreen__title bold logo-text display-1">
             < Pato Marques />
