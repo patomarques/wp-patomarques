@@ -50,7 +50,7 @@
 
             <div class="text-center d-block">
               <a class="navbar-brand md d-none d-md-block text-center" href="<?= esc_url(home_url()); ?>">
-                <h1 class="logo-text m-0"><?php echo "< Pato Marques />"; ?></h1>
+                <h1 class="logo-text m-0 p-0 pb-3"><?php echo "< Pato Marques />"; ?></h1>
               </a>
             </div>
 

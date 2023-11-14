@@ -1,5 +1,5 @@
 html {
-    margin-top: 0 !important; 
+    margin-top: 0 !important;
 }
 
 html,
@@ -16,7 +16,7 @@ a {
     font-size: 1.2rem;
     @extend .trans;
 
-    &:hover {        
+    &:hover {
         color: $color-gold;
 
         i {
@@ -35,6 +35,11 @@ p {
 
 .text-justify {
     text-align: justify;
+}
+
+.logo-text {
+    padding-bottom: 50px;
+    text-shadow: 1px 1px 2px $color-black;    
 }
 
 #wpadminbar {
@@ -107,7 +112,7 @@ p {
 .container-full {
     width: 100vw;
     height: 100vh;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     position: relative;
 }
@@ -124,12 +129,10 @@ p {
     &__box-text {
         text-align: center;
         margin: auto;
-
-        .logo-text {
-            margin-top: -120px;
-        }
     }
 }
+
+
 
 .box-square {
     background-color: $color-main;
@@ -173,24 +176,28 @@ p {
     text-align: center;
     margin: 0 auto 35px;
     position: relative;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
 
     &:after {
         content: "";
         border: 3px solid $color-black;
-        padding: 20px;
+        text-shadow: 1px 1px 2px $color-black;   
+        padding: 24px;
         position: absolute;
         transform: rotate(-45deg);
-        z-index: 9;
-        margin-left: -35px;
-        margin-top: -5px;
+        margin-left: -43px;
+        margin-top: -4px;
     }
 
     &:hover {
-        color: $color-gold;
+        
+        i{ 
+            color: $color-black !important;
+        }
 
         &:after {
-            background-color: $color-black;
+            background-color: $color-white;
+            z-index: -1;
         }
     }
 }
@@ -216,44 +223,51 @@ p {
         object-fit: cover;
         object-position: 50% 50%;
         border: 3px dashed $color-white;
+        filter: saturate(50%);
     }
 
 }
 
 .bg-dark {
-    .btn-scroll-down{
+    .btn-scroll-down {
         i {
             color: $color-white;
-        } 
+        }
 
         &:after {
             border: $border-dark !important;
-            z-index: 9; 
         }
 
         &:hover {
             i {
-                color: $color-gold !important;
+                color: $color-black;
             }
 
             &:after {
-                border: $border-gold !important;
-                background-color: transparent;
+                //border: $border-gold !important;
+                background-color: $color-white;
+                color: $color-black;
             }
         }
     }
 }
 
-.img-grayscale{
+.img-grayscale {
     filter: grayscale(100);
     @extend .trans;
 
-    &:hover{
+    &:hover {
         filter: grayscale(0);
     }
 }
 
-@media(min-width: 320px){
+.content-about {
+    img {
+        filter: saturate(25%);
+    }
+}
+
+@media(min-width: 320px) {
     .content-centered {
         &__box-text {
             .logo-text {

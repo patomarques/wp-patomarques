@@ -1,6 +1,12 @@
 .site-header {
     margin-bottom: 70px;
     @include border-shadow(0, 0, 3px, $color-secondary);
+
+    .logo-text {
+        font-size: 1.4em;
+        font-weight: 300;
+        text-shadow: none;
+    }
 }
 
 .fixed-top {

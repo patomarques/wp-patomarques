@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<section id="section-home-intro" class="container-full content-centered container-home bg-dark mb-5">
+<section id="section-home-intro" class="container-full bg-dark content-centered container-home mb-5">
     <!-- <img class="container-home__bg-video-full" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-mandala.gif"; ?>" alt="Mandala Futurist Background">
     <img class="container-home__bg-video-full img-grayscale" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-caleidoscopio.gif"; ?>" alt="Caleidoscopio Futurist Background"> -->
-    
+
     <video class="container-home__bg-video-full" autoplay loop>
         <source src="<?php echo get_stylesheet_directory_uri() . "/img/nature.mp4"; ?>" type="video/mp4">
         Your browser does not support the video tag.
@@ -13,10 +13,23 @@
         <h2 class="bg-fullscreen__title bold logo-text display-1">
             < Pato Marques />
         </h2>
-        <h3 class="bg-fullscreen__subtitle">Desenvolvedor WEB | Wordpress | Laravel | Front-end | Back-end
-        </h3>
 
-        <div class="content-btn-scroll">
+        <div class="words-effect">
+            <div class="words-effect__container">
+                <p class="words-effect__container__text">                    
+                    Desenvolvedor
+                </p>
+
+                <ul class="words-effect__container__list text-center">
+                    <li class="words-effect__container__list__item">< front-end /></li>
+                    <li class="words-effect__container__list__item">back-end(){}</li>
+                    <li class="words-effect__container__list__item">[wordpress]</li>
+                    <li class="words-effect__container__list__item">{{ laravel }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-btn-scroll mt-5">
             <a href="#section-about" class="btn-scroll-down" name="target">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
@@ -57,12 +70,13 @@ $fightFlags = new WP_Query(
 
 
                 <div class="row mt-3">
-                    <?php while($fightFlags->have_posts()) {
+                    <?php while ($fightFlags->have_posts()) {
                         $fightFlags->the_post(); ?>
 
-                    <div class="col-3">
-                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>" class="img-fluid p-3">
-                    </div>
+                        <div class="col-3">
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>"
+                                class="img-fluid p-3">
+                        </div>
 
                     <?php } ?>
 
@@ -70,7 +84,7 @@ $fightFlags = new WP_Query(
                 <a href="/sobre" class="btn btn-dark mt-3 mb-4">Continuar lendo...</a>
             </div>
         </div>
-        
+
     </div>
 </section>
 
@@ -100,7 +114,7 @@ while ($technologies->have_posts()):
 
     if (!array_key_exists($techType, $technologiesFormatted)) {
         $technologiesFormatted[$techType] = [];
-    } 
+    }
 
     array_push($technologiesFormatted[$techType], $techData);
 
@@ -112,7 +126,8 @@ endwhile;
         <div class="row mb-4">
             <div class="col-12">
                 <h3 class="content-skills__title title-section bold">Habilidades</h3>
-                <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos 13 anos.</h4>
+                <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos 13
+                    anos.</h4>
             </div>
         </div>
         <div class="row content-skills">
