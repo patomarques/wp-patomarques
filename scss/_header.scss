@@ -21,13 +21,26 @@
 
 .navbar-nav {
     .nav-link {
-        font-family: $font-default;
+        font-family: $font-logo;
         padding: 20px;
         font-size: 2.2em !important;
+        @extend .trans;
 
         &:hover {
-            color: $color-gold;
+            opacity: .7;
+            
+            &:after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                top: 13px;
+                left: 0;
+                background-color: $color-gold;
+            }
         }
+
+        
     }
 }
 

@@ -39,7 +39,7 @@ p {
 
 .logo-text {
     padding-bottom: 50px;
-    text-shadow: 1px 1px 2px $color-black;    
+    text-shadow: 1px 1px 2px $color-black;
 }
 
 #wpadminbar {
@@ -132,8 +132,6 @@ p {
     }
 }
 
-
-
 .box-square {
     background-color: $color-main;
     width: 25vw;
@@ -181,7 +179,7 @@ p {
     &:after {
         content: "";
         border: 3px solid $color-black;
-        text-shadow: 1px 1px 2px $color-black;   
+        text-shadow: 1px 1px 2px $color-black;
         padding: 24px;
         position: absolute;
         transform: rotate(-45deg);
@@ -190,8 +188,8 @@ p {
     }
 
     &:hover {
-        
-        i{ 
+
+        i {
             color: $color-black !important;
         }
 
@@ -224,8 +222,12 @@ p {
         object-position: 50% 50%;
         border: 3px dashed $color-white;
         filter: saturate(50%);
-    }
+        @extend .trans;
 
+        &:hover {
+            filter: saturate(100%);
+        }
+    }
 }
 
 .bg-dark {
@@ -244,7 +246,6 @@ p {
             }
 
             &:after {
-                //border: $border-gold !important;
                 background-color: $color-white;
                 color: $color-black;
             }

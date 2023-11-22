@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
 <section id="section-home-intro" class="container-full bg-dark content-centered container-home mb-5">
-    <!-- <img class="container-home__bg-video-full" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-mandala.gif"; ?>" alt="Mandala Futurist Background">
-    <img class="container-home__bg-video-full img-grayscale" src="<?php echo get_stylesheet_directory_uri() . "/img/bg-caleidoscopio.gif"; ?>" alt="Caleidoscopio Futurist Background"> -->
-
     <video class="container-home__bg-video-full" autoplay loop>
         <source src="<?php echo get_stylesheet_directory_uri() . "/img/nature.mp4"; ?>" type="video/mp4">
         Your browser does not support the video tag.
@@ -16,12 +13,14 @@
 
         <div class="words-effect">
             <div class="words-effect__container">
-                <p class="words-effect__container__text">                    
+                <p class="words-effect__container__text">
                     Desenvolvedor
                 </p>
 
                 <ul class="words-effect__container__list text-center">
-                    <li class="words-effect__container__list__item">< front-end /></li>
+                    <li class="words-effect__container__list__item">
+                        < front-end />
+                    </li>
                     <li class="words-effect__container__list__item">back-end(){}</li>
                     <li class="words-effect__container__list__item">[wordpress]</li>
                     <li class="words-effect__container__list__item">{{ laravel }}</li>
@@ -51,40 +50,43 @@ $fightFlags = new WP_Query(
 );
 ?>
 
-<section id="section-about" class="container pt-5">
-    <div class="row">
-        <div class="col-12 col-md-4 col-lg-4">
-            <div class="square">
-                <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
-                <div class="losange"></div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 col-lg-7 offset-lg-1">
-            <div class="content-about">
-                <h3 class="content-about__title title-section mb-4">
-                    <?php echo get_the_title($pageAbout); ?>
-                </h3>
-                <h4 class="content-about__subtitle text-justify">
-                    <?php echo apply_filters('get_the_content', $pageAbout->post_content); ?>
-                </h4>
-
-
-                <div class="row mt-3">
-                    <?php while ($fightFlags->have_posts()) {
-                        $fightFlags->the_post(); ?>
-
-                        <div class="col-3">
-                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>"
-                                class="img-fluid p-3">
-                        </div>
-
-                    <?php } ?>
-
+<section id="section-about" class="content-main">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="square">
+                    <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
+                    <div class="losange"></div>
                 </div>
-                <a href="/sobre" class="btn btn-dark mt-3 mb-4">Continuar lendo...</a>
             </div>
-        </div>
+            <div class="col-12 col-md-8 col-lg-7 offset-lg-1">
+                <div class="content-about">
+                    <h3 class="content-about__title title-section mb-4">
+                        <?php echo get_the_title($pageAbout); ?>
+                    </h3>
+                    <h4 class="content-about__subtitle text-justify">
+                        <?php echo apply_filters('get_the_content', $pageAbout->post_content); ?>
+                    </h4>
 
+
+                    <div class="row mt-4 mb-3">
+                        <?php while ($fightFlags->have_posts()) {
+                            $fightFlags->the_post(); ?>
+
+                            <div class="col-2">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>"
+                                    class="img-fluid p-3">
+                            </div>
+
+                        <?php } ?>
+
+                    </div>
+                    <a href="/sobre" class="btn btn-dark mt-3 mb-4">Continuar lendo...</a>
+                    <button>Button</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 
