@@ -80,7 +80,7 @@ function wporg_custom_post_type()
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'excerpt')
     )
   );
 

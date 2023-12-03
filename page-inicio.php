@@ -81,14 +81,68 @@ $fightFlags = new WP_Query(
                         <?php } ?>
 
                     </div>
-                    <a href="/sobre" class="btn btn-dark mt-3 mb-4">Continuar lendo...</a>
-                    <button>Button</button>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="d-block mt-4 mb-4">
+                                <a href="/sobre" class="button-border-effect mt-3 mb-4">Continuar lendo...</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+<?php
+$services = new WP_Query(
+    array(
+        "post_type" => "services",
+        'orderby' => 'ordem',
+        'order' => 'ASC',
+        'posts_per_page' => -1,
+    )
+);
+?>
+
+<section class="bg-dark section-container">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h3 class="title-section mb-5">Serviços</h3>
+            </div>
+        </div>
+        <div class="row content-services">
+
+            <?php
+            while ($services->have_posts()):
+                $services->the_post(); ?>
+
+                <div class="col-12 col-md-4 content-services__item text-center">
+                    <div class="d-block m-auto text-center mb-3">
+                        <img src="<?= the_post_thumbnail_url('medium') ?>" alt="<?= the_title() ?>"
+                            class="img-fluid img-invert">
+                    </div>
+                    <h3 class="content-services__item__title text-center bold">
+                        <?= the_title() ?>
+                    </h3>
+                    <h4 class="content-services__item__description">
+                        <?= the_excerpt() ?>
+                    </h4>
+                </div>
+
+            <?php endwhile; ?>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center mt-5">
+                <a href="/servicos" class="button-border-effect btn-dark ">Saiba mais...</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php get_template_part( 'template-parts/experiences' ); ?>
 
 <?php
 $technologies = new WP_Query(
@@ -123,7 +177,7 @@ while ($technologies->have_posts()):
 endwhile;
 ?>
 
-<section id="section-skills" class="content-main bg-dark pt-5 pb-5">
+<section id="section-skills" class="bg-dark section-container">
     <div class="container">
         <div class="row mb-4">
             <div class="col-12">
@@ -166,40 +220,6 @@ endwhile;
 
             <?php } ?>
 
-        </div>
-    </div>
-</section>
-
-<?php
-$experience = new WP_Query(
-    array(
-        'post_type' => 'experiences',
-        'orderby' => 'ordem',
-        'order' => 'ASC',
-    )
-);
-?>
-
-<section id="section-experience" class="content-main">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="title-section">Experiência</h3>
-                <div class="content-experience">
-                    Timeline.js com resumo dos anos, desde 2010 até 2023, com os principais trampos que passei.
-                </div>
-
-                <?php while ($experience->have_posts()):
-                    $experience->the_post();
-                    ?>
-
-                    <?= the_title() ?>
-                    <?php echo get_post_meta(get_the_ID(), 'data_inicio')[0]; ?>
-                    <?php echo get_post_meta(get_the_ID(), 'data_fim')[0]; ?>
-
-                <?php endwhile; ?>
-
-            </div>
         </div>
     </div>
 </section>

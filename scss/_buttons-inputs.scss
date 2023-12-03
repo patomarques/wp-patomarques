@@ -1,0 +1,63 @@
+.button-border-effect {
+    --b: 1px;
+    /* border thickness */
+    --s: .8em;
+    /* size of the corner */
+    --color: $color-main;
+
+    padding: 1.8em;
+    color: $color-main;
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), $color-white 90deg, $color-main 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid transparent;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    &:hover {
+        padding: 1em;
+    }
+
+    &:hover,
+    &:focus-visible {
+        --_p: 0px;
+        background: $color-main;
+        outline-color: $color-main;
+        outline-offset: .1em;
+    }
+
+    &:active {
+        background: $color-main;
+        color: $color-white;
+    }
+}
+
+.btn-dark {
+    --b: 1px;
+    --s: .8em;
+    --color: $color-main;
+
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), $color-black 90deg, $color-white 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    color: $color-white;
+
+    &:hover,
+    &:focus-visible {
+        background: $color-white;
+        color: $color-black;
+        outline-color: $color-white;
+        outline-offset: .1em;
+    }
+
+    &:active {
+        background: $color-white;
+        color: $color-black;
+    }
+}

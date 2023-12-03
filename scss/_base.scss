@@ -26,7 +26,7 @@ a {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .bold {
@@ -231,6 +231,8 @@ p {
 }
 
 .bg-dark {
+    background-color: $color-black !important; 
+
     .btn-scroll-down {
         i {
             color: $color-white;
@@ -253,6 +255,10 @@ p {
     }
 }
 
+.img-invert {
+    filter: invert(1);
+}
+
 .img-grayscale {
     filter: grayscale(100);
     @extend .trans;
@@ -266,6 +272,33 @@ p {
     img {
         filter: saturate(25%);
     }
+}
+
+.content-services {
+    &__item {
+        &:nth-child(1) {
+            img {
+                width: 124px;
+            }
+        }
+
+        &:nth-child(2) {
+            img {
+                width: 112px;
+            }
+        }
+        
+        &:nth-child(3) {
+            img {
+                width: 140px;
+                margin-top: -14px;
+            }
+        }
+    }
+}
+
+.section-container {
+    padding: 100px 0 120px;
 }
 
 @media(min-width: 320px) {
