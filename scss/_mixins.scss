@@ -95,6 +95,6 @@
 }
 
 .trans {
-    @include transition(all 1.4s ease);
+    @include transition(all .8s ease);
     @include transform(translateX(0));//another one below
 }

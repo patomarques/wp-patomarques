@@ -33,6 +33,10 @@ p {
     font-weight: 700;
 }
 
+.italic { 
+    font-style: italic;
+}
+
 .text-justify {
     text-align: justify;
 }
@@ -253,6 +257,16 @@ p {
             }
         }
     }
+    
+    .button-border-effect {
+        @extend .btn-dark;
+    }
+
+    .fight-flags {
+        img[alt="Direitos Animais"]{
+            filter: invert(1);
+        }
+    }
 }
 
 .img-invert {
@@ -298,7 +312,17 @@ p {
 }
 
 .section-container {
-    padding: 100px 0 120px;
+    padding: 15vh 0 10vh;
+}
+
+.timeline-info {
+    &__title {
+        font-size: 2.8rem;
+        
+        &__company {
+            font-size: 1.6rem;
+        }
+    }
 }
 
 @media(min-width: 320px) {

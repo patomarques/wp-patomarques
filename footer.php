@@ -14,7 +14,7 @@
 
 ?>
 
-<footer class="bg-black p-4">
+<footer class="bg-dark p-4">
   <div class="text-center">
     <div class="<?= bootscore_container_class(); ?>">
       <small class="bootscore-copyright color-white">

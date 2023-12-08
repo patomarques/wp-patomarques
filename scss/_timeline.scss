@@ -1,8 +1,3 @@
-/* -------------------------------- 
-
-Main Components 
-
--------------------------------- */
 *,
 *::after,
 *::before {
@@ -71,7 +66,7 @@ Main Components
     top: 49px;
     height: 2px;
     /* width will be set using JavaScript */
-    background: #fff;
+    background: $color-white;
     -webkit-transition: -webkit-transform 0.4s;
     -moz-transition: -moz-transform 0.4s;
     transition: transform 0.4s;
@@ -85,7 +80,7 @@ Main Components
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #FF3D7F;
+    background-color: $color-gold;
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
     -ms-transform: scaleX(0);
@@ -109,16 +104,29 @@ Main Components
     text-align: center;
     font-size: 1.3rem;
     padding-bottom: 15px;
-    color: #383838;
+    color: $color-main;
     /* fix bug on Safari - text flickering while timeline translates */
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
-    color: white;
+    color: $color-white;
     padding: 5px;
     margin-bottom: 20px;
+
+    cursor: pointer;
+    @extend .trans;
+
+    &:hover {
+        opacity: .7;
+        color: $color-gold;
+    }
+
+    &.older-event,
+    &.selected {
+        color: $color-gold !important;
+    }
 }
 
 /* custom*/
@@ -127,7 +135,7 @@ Main Components
     position: absolute;
     width: 1px;
     height: 20px;
-    background: #fff;
+    background: $color-white;
     bottom: -20px;
     left: 50%;
 }
@@ -147,16 +155,16 @@ Main Components
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    border: 2px solid #fff;
-    background-color: #fff;
+    border: 2px solid $color-white;
+    background-color: $color-white;
     -webkit-transition: background-color 0.3s, border-color 0.3s;
     -moz-transition: background-color 0.3s, border-color 0.3s;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-    background-color: #FF3D7F;
-    border-color: #fff;
+    background-color: $color-gold;
+    border-color: $color-white;
 }
 
 .cd-horizontal-timeline .events a.selected {
@@ -164,18 +172,18 @@ Main Components
 }
 
 .cd-horizontal-timeline .events a.selected::after {
-    background-color: #FF3D7F;
-    border-color: #FF3D7F;
+    background-color: $color-gold;
+    border-color: $color-gold;
 }
 
 .cd-horizontal-timeline .events a.older-event::after {
-    border-color: #FF3D7F;
+    border-color: $color-gold;
 }
 
 @media only screen and (min-width: 1100px) {
-    .cd-horizontal-timeline {
-        margin: 6em auto;
-    }
+    // .cd-horizontal-timeline {
+    //     margin: 6em auto;
+    // }
 
     .cd-horizontal-timeline::before {
         /* never visible - this is used in jQuery to check the current MQ */
@@ -197,7 +205,7 @@ Main Components
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid $color-white;
     /* replace text with an icon */
     overflow: hidden;
     color: transparent;
@@ -237,11 +245,11 @@ Main Components
 
 .cd-timeline-navigation a.next {
     right: 0;
-    color: #fff;
+    color: $color-white;
 }
 
 .no-touch .cd-timeline-navigation a:hover {
-    border-color: #FF3D7F;
+    border-color: $color-gold;
 }
 
 .cd-timeline-navigation a.inactive {
@@ -253,7 +261,7 @@ Main Components
 }
 
 .no-touch .cd-timeline-navigation a.inactive:hover {
-    border-color: #FF3D7F;
+    border-color: $color-gold;
 }
 
 .cd-horizontal-timeline .events-content {
@@ -344,7 +352,7 @@ Main Components
 
 .cd-horizontal-timeline .events-content p {
     font-size: 1.5em !important;
-    color: #fff;
+    color: $color-white;
 }
 
 .cd-horizontal-timeline .events-content em,

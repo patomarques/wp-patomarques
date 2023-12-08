@@ -29,11 +29,11 @@
 }
 
 .color-gold {
-  color: #f5b700;
+  color: #ffc93c;
 }
 
 .title-section {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
 }
@@ -47,8 +47,8 @@
   font-family: "Merienda", cursive;
 }
 
-.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .img-grayscale, .square__image, a {
-  transition: all 1.4s ease;
+.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .img-grayscale, .square__image, a, .cd-horizontal-timeline .events a {
+  transition: all 0.8s ease;
   transform: translateX(0);
 }
 
@@ -86,29 +86,24 @@
   color: #ffffff;
 }
 
-.btn-dark {
+.btn-dark, .bg-dark .button-border-effect {
   --b: 1px;
   --s: .8em;
   --color: $color-main;
   background: conic-gradient(from 90deg at var(--b) var(--b), #000000 90deg, #ffffff 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
   color: #ffffff;
 }
-.btn-dark:hover, .btn-dark:focus-visible {
+.btn-dark:hover, .bg-dark .button-border-effect:hover, .btn-dark:focus-visible, .bg-dark .button-border-effect:focus-visible {
   background: #ffffff;
   color: #000000;
   outline-color: #ffffff;
   outline-offset: 0.1em;
 }
-.btn-dark:active {
+.btn-dark:active, .bg-dark .button-border-effect:active {
   background: #ffffff;
   color: #000000;
 }
 
-/* -------------------------------- 
-
-Main Components 
-
--------------------------------- */
 *,
 *::after,
 *::before {
@@ -175,7 +170,7 @@ Main Components
   top: 49px;
   height: 2px;
   /* width will be set using JavaScript */
-  background: #fff;
+  background: #ffffff;
   transition: transform 0.4s;
 }
 
@@ -187,7 +182,7 @@ Main Components
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #FF3D7F;
+  background-color: #ffc93c;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.3s;
@@ -201,12 +196,20 @@ Main Components
   text-align: center;
   font-size: 1.3rem;
   padding-bottom: 15px;
-  color: #383838;
+  color: #303841;
   /* fix bug on Safari - text flickering while timeline translates */
   transform: translateZ(0);
-  color: white;
+  color: #ffffff;
   padding: 5px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+.cd-horizontal-timeline .events a:hover {
+  opacity: 0.7;
+  color: #ffc93c;
+}
+.cd-horizontal-timeline .events a.older-event, .cd-horizontal-timeline .events a.selected {
+  color: #ffc93c !important;
 }
 
 /* custom*/
@@ -215,7 +218,7 @@ Main Components
   position: absolute;
   width: 1px;
   height: 20px;
-  background: #fff;
+  background: #ffffff;
   bottom: -20px;
   left: 50%;
 }
@@ -231,14 +234,14 @@ Main Components
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: #fff;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #FF3D7F;
-  border-color: #fff;
+  background-color: #ffc93c;
+  border-color: #ffffff;
 }
 
 .cd-horizontal-timeline .events a.selected {
@@ -246,18 +249,15 @@ Main Components
 }
 
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #FF3D7F;
-  border-color: #FF3D7F;
+  background-color: #ffc93c;
+  border-color: #ffc93c;
 }
 
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #FF3D7F;
+  border-color: #ffc93c;
 }
 
 @media only screen and (min-width: 1100px) {
-  .cd-horizontal-timeline {
-    margin: 6em auto;
-  }
   .cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: "desktop";
@@ -273,7 +273,7 @@ Main Components
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   /* replace text with an icon */
   overflow: hidden;
   color: transparent;
@@ -303,11 +303,11 @@ Main Components
 
 .cd-timeline-navigation a.next {
   right: 0;
-  color: #fff;
+  color: #ffffff;
 }
 
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #FF3D7F;
+  border-color: #ffc93c;
 }
 
 .cd-timeline-navigation a.inactive {
@@ -319,7 +319,7 @@ Main Components
 }
 
 .no-touch .cd-timeline-navigation a.inactive:hover {
-  border-color: #FF3D7F;
+  border-color: #ffc93c;
 }
 
 .cd-horizontal-timeline .events-content {
@@ -390,7 +390,7 @@ Main Components
 
 .cd-horizontal-timeline .events-content p {
   font-size: 1.5em !important;
-  color: #fff;
+  color: #ffffff;
 }
 
 .cd-horizontal-timeline .events-content em,
@@ -451,10 +451,10 @@ a {
   font-size: 1.2rem;
 }
 a:hover {
-  color: #f5b700;
+  color: #ffc93c;
 }
 a:hover i {
-  color: #f5b700;
+  color: #ffc93c;
 }
 
 p {
@@ -463,6 +463,10 @@ p {
 
 .bold {
   font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .text-justify {
@@ -656,6 +660,9 @@ p {
   background-color: #ffffff;
   color: #000000;
 }
+.bg-dark .fight-flags img[alt="Direitos Animais"] {
+  filter: invert(1);
+}
 
 .img-invert {
   filter: invert(1);
@@ -684,7 +691,14 @@ p {
 }
 
 .section-container {
-  padding: 100px 0 120px;
+  padding: 15vh 0 10vh;
+}
+
+.timeline-info__title {
+  font-size: 2.8rem;
+}
+.timeline-info__title__company {
+  font-size: 1.6rem;
 }
 
 @media (min-width: 320px) {
@@ -752,7 +766,7 @@ p {
 .words-effect__container:before {
   position: absolute;
   top: 0;
-  color: #f5b700;
+  color: #ffc93c;
   font-size: 42px;
   line-height: 40px;
   -webkit-animation-name: opacity;
@@ -826,7 +840,7 @@ p {
   text-shadow: none;
 }
 .site-header .logo-text:hover {
-  color: #f5b700;
+  color: #ffc93c;
 }
 
 .fixed-top {
@@ -854,7 +868,7 @@ p {
   position: absolute;
   top: 13px;
   left: 0;
-  background-color: #f5b700;
+  background-color: #ffc93c;
 }
 
 .btn-menu-hamburguer {

@@ -96,7 +96,26 @@ function wporg_custom_post_type()
       'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
     )
   );
+
+  register_post_type(
+    'stacks-logos',
+    array(
+      'labels' => array(
+        'name' => __('Simbolos das Tecnologias', 'textdomain'),
+        'singular_name' => __('Logo da Tecnologia', 'textdomain'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+    )
+  );
 }
 add_action('init', 'wporg_custom_post_type');
 
 
+function formatDateToMMYY($date) {
+  if(str_contains($date, "/")) {
+    return explode("/",$date)[1] . "/" . explode("/",$date)[2];
+  }
+  return $date;
+}
