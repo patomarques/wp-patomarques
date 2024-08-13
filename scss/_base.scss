@@ -33,7 +33,7 @@ p {
     font-weight: 700;
 }
 
-.italic { 
+.italic {
     font-style: italic;
 }
 
@@ -44,6 +44,11 @@ p {
 .logo-text {
     padding-bottom: 50px;
     text-shadow: 1px 1px 2px $color-black;
+    color: $color-white;
+}
+
+.position-relative {
+    position: relative;
 }
 
 #wpadminbar {
@@ -162,6 +167,43 @@ p {
     }
 }
 
+.box-square-responsive {
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.card {
+    border: none;
+
+    .card-body {        
+        .card-text {
+            min-height: 110px;
+        }
+    }
+}
+
+.card-box {
+    &__header {
+        @extend .trans;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
 .hide {
     display: none !important;
 }
@@ -234,8 +276,56 @@ p {
     }
 }
 
-.bg-dark {
-    background-color: $color-black !important; 
+.btn-toggle-dark-light .checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: $color-main;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon ,
+.fa-sun {
+    color: $color-white;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+
+body.dark-theme {
+    section,
+    header {
+        background-color: $color-black !important;
+    }
+
+    .card {
+        .card-body {
+            background-color: $color-black;
+        }
+    }
 
     .btn-scroll-down {
         i {
@@ -257,15 +347,63 @@ p {
             }
         }
     }
-    
+
     .button-border-effect {
         @extend .btn-dark;
     }
 
     .fight-flags {
-        img[alt="Direitos Animais"]{
+        img[alt="Direitos Animais"] {
             filter: invert(1);
         }
+    }
+
+    .body-card {
+        background-color: $color-black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: $color-white;
+    }
+
+    .btn-menu-hamburguer {
+        color: $color-white;
+    }
+
+    .navbar-brand {
+        img {
+            filter: invert(1);
+        }
+
+        &:after {
+            background-color: $color-black;
+        }
+    }
+
+    footer {
+        background-color: $color-black;
+
+        span, a, small {
+            color: $color-white;
+        }
+    }
+
+    .content-contact__link i {
+        color: $color-white;   
+    }
+
+    .content-services__item img {
+        filter: invert(1);
+    }
+
+    .cd-horizontal-timeline .events a {
+        color: $color-white;
     }
 }
 
@@ -301,7 +439,7 @@ p {
                 width: 112px;
             }
         }
-        
+
         &:nth-child(3) {
             img {
                 width: 140px;
@@ -318,7 +456,7 @@ p {
 .timeline-info {
     &__title {
         font-size: 2.8rem;
-        
+
         &__company {
             font-size: 1.6rem;
         }

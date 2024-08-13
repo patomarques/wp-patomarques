@@ -38,103 +38,102 @@
 
   <?php wp_body_open(); ?>
 
-  <!-- <div id="page" class="site"> -->
+  <header id="masthead" class="site-header hide">
 
-    <header id="masthead" class="site-header hide">
+    <div class="menu-bar bg-transparent">
 
-      <div class="menu-bar bg-transparent">
+      <nav id="nav-main" class="navbar navbar-expand-lg p-0">
 
-        <nav id="nav-main" class="navbar navbar-expand-lg p-0">
+        <div class="<?= bootscore_container_class(); ?> position-relative">
 
-          <div class="<?= bootscore_container_class(); ?>">
-
-            <div class="text-center d-block">
-              <a class="navbar-brand md d-none d-md-block text-center" href="<?= esc_url(home_url()); ?>">
-                <h1 class="logo-text m-0 p-0 pb-3"><?php echo "< Pato Marques />"; ?></h1>
-              </a>
-            </div>
-
-            <!-- Navbar Brand -->
-            <a class="navbar-brand xs d-md-none" href="<?= esc_url(home_url()); ?>">
-              <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo.png" alt="logo" class="logo xs">
+          <div class="text-center d-block">
+            <a class="navbar-brand md d-none d-md-block text-center" href="<?= esc_url(home_url()); ?>">
+              <h1 class="logo-text m-0 p-0 pb-3">
+                <?php echo "< Pato Marques />"; ?>
+              </h1>
             </a>
+          </div>
 
-            <!-- Offcanvas Navbar -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
-              <div class="offcanvas-header">
-                <span class="h5 offcanvas-title">
-                  <?php esc_html_e('Menu', 'bootscore'); ?>
-                </span>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-md-none d-xxl-flex">
+          <a class="navbar-brand xs d-md-none" href="<?= esc_url(home_url()); ?>">
+            <img src="<?= esc_url(get_stylesheet_directory_uri()); ?>/img/logo.png" alt="logo" class="logo xs">
+          </a>
 
-                <!-- Bootstrap 5 Nav Walker Main Menu -->
-                <?php
-                wp_nav_menu(
-                  array(
-                    'theme_location' => 'main-menu',
-                    'container' => false,
-                    'menu_class' => '',
-                    'fallback_cb' => '__return_false',
-                    'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s">%3$s</ul>',
-                    'depth' => 2,
-                    'walker' => new bootstrap_5_wp_nav_menu_walker()
-                  )
-                );
-                ?>
-
-                <!-- Top Nav 2 Widget -->
-                <?php if (is_active_sidebar('top-nav-2')): ?>
-                  <?php dynamic_sidebar('top-nav-2'); ?>
-                <?php endif; ?>
-
-              </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
+            <div class="offcanvas-header">
+              <span class="h5 offcanvas-title">
+                <?php esc_html_e('Menu', 'bootscore'); ?>
+              </span>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
             </div>
 
-            <div class="header-actions d-flex align-items-center">
-
-              <!-- Top Nav Widget -->
-              <?php if (is_active_sidebar('top-nav')): ?>
-                <?php dynamic_sidebar('top-nav'); ?>
-              <?php endif; ?>
-
+            <div class="offcanvas-body">
+              <!-- Bootstrap 5 Nav Walker Main Menu -->
               <?php
-              if (class_exists('WooCommerce')):
-                get_template_part('template-parts/header/actions', 'woocommerce');
-              else:
-                get_template_part('template-parts/header/actions');
-              endif;
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'main-menu',
+                  'container' => false,
+                  'menu_class' => '',
+                  'fallback_cb' => '__return_false',
+                  'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s d-none">%3$s</ul>',
+                  'depth' => 2,
+                  'walker' => new bootstrap_5_wp_nav_menu_walker()
+                )
+              );
               ?>
+           
+            </div>
+          </div>
 
-              <!-- Navbar Toggler -->
-              <button class="btn btn-menu-hamburguer d-xxl-none ms-1 ms-md-2 p-1" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-                <i class="fa-solid fa-bars"></i><span class="visually-hidden-focusable">Menu</span>
-              </button>
+          <div class="btn-toggle-dark-light">
+            <input type="checkbox" class="checkbox" id="btn-dark-light-checkbox">
+            <label for="btn-dark-light-checkbox" class="checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
 
-            </div><!-- .header-actions -->
+          <div class="header-actions d-flex align-items-center">
+            
+            <?php if (is_active_sidebar('top-nav')): ?>
+              <?php dynamic_sidebar('top-nav'); ?>
+            <?php endif; ?>
 
-          </div><!-- bootscore_container_class(); -->
+            <?php
+            if (class_exists('WooCommerce')):
+              get_template_part('template-parts/header/actions', 'woocommerce');
+            else:
+              get_template_part('template-parts/header/actions');
+            endif;
+            ?>
 
-        </nav><!-- .navbar -->
+            <button class="btn btn-menu-hamburguer ms-1 ms-md-2 p-1" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+              <i class="fa-solid fa-bars"></i><span class="visually-hidden-focusable">Menu</span>
+            </button>
 
-        <?php
-        if (class_exists('WooCommerce')):
-          get_template_part('template-parts/header/top-nav-search-collapse', 'woocommerce');
-        else:
-          get_template_part('template-parts/header/top-nav-search-collapse');
-        endif;
-        ?>
+          </div>
 
-      </div><!-- .fixed-top .bg-light -->
+        </div>
 
-      <!-- Offcanvas User and Cart -->
+      </nav>
+
       <?php
       if (class_exists('WooCommerce')):
-        get_template_part('template-parts/header/offcanvas', 'woocommerce');
+        get_template_part('template-parts/header/top-nav-search-collapse', 'woocommerce');
+      else:
+        get_template_part('template-parts/header/top-nav-search-collapse');
       endif;
       ?>
 
-    </header><!-- #masthead -->
+    </div>
+
+    <?php
+    if (class_exists('WooCommerce')):
+      get_template_part('template-parts/header/offcanvas', 'woocommerce');
+    endif;
+    ?>
+
+  </header>

@@ -37,7 +37,7 @@ wp_reset_postdata();
 
 ?>
 
-<section id="section-experience" class="section-container bg-dark">
+<section id="section-experience" class="section-container">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 pb-5">

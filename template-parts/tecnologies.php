@@ -31,7 +31,7 @@ while ($technologies->have_posts()):
 endwhile;
 ?>
 
-<section id="section-skills" class="bg-dark section-container">
+<section id="section-skills" class="section-container">
     <div class="container">
         <div class="row mb-5 text-center">
             <div class="col-12 pb-3">

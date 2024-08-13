@@ -47,7 +47,7 @@
   font-family: "Merienda", cursive;
 }
 
-.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .img-grayscale, .square__image, a, .cd-horizontal-timeline .events a {
+.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .img-grayscale, .square__image, .card-box__header, a, .cd-horizontal-timeline .events a {
   transition: all 0.8s ease;
   transform: translateX(0);
 }
@@ -86,20 +86,20 @@
   color: #ffffff;
 }
 
-.btn-dark, .bg-dark .button-border-effect {
+.btn-dark, body.dark-theme .button-border-effect {
   --b: 1px;
   --s: .8em;
   --color: $color-main;
   background: conic-gradient(from 90deg at var(--b) var(--b), #000000 90deg, #ffffff 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
   color: #ffffff;
 }
-.btn-dark:hover, .bg-dark .button-border-effect:hover, .btn-dark:focus-visible, .bg-dark .button-border-effect:focus-visible {
+.btn-dark:hover, body.dark-theme .button-border-effect:hover, .btn-dark:focus-visible, body.dark-theme .button-border-effect:focus-visible {
   background: #ffffff;
   color: #000000;
   outline-color: #ffffff;
   outline-offset: 0.1em;
 }
-.btn-dark:active, .bg-dark .button-border-effect:active {
+.btn-dark:active, body.dark-theme .button-border-effect:active {
   background: #ffffff;
   color: #000000;
 }
@@ -199,7 +199,7 @@
   color: #303841;
   /* fix bug on Safari - text flickering while timeline translates */
   transform: translateZ(0);
-  color: #ffffff;
+  color: #000000;
   padding: 5px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -476,6 +476,11 @@ p {
 .logo-text {
   padding-bottom: 50px;
   text-shadow: 1px 1px 2px #000000;
+  color: #ffffff;
+}
+
+.position-relative {
+  position: relative;
 }
 
 #wpadminbar {
@@ -580,6 +585,32 @@ p {
   padding-bottom: 100%;
 }
 
+.box-square-responsive {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.box-square-responsive::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.box-square-responsive img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  border: none;
+}
+.card .card-body .card-text {
+  min-height: 110px;
+}
+
+.card-box__header:hover {
+  opacity: 0.7;
+}
+
 .hide {
   display: none !important;
 }
@@ -644,24 +675,102 @@ p {
   filter: saturate(100%);
 }
 
-.bg-dark {
-  background-color: #000000 !important;
+.btn-toggle-dark-light .checkbox {
+  opacity: 0;
+  position: absolute;
 }
-.bg-dark .btn-scroll-down i {
+
+.checkbox-label {
+  background-color: #303841;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon,
+.fa-sun {
   color: #ffffff;
 }
-.bg-dark .btn-scroll-down:after {
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+body.dark-theme section,
+body.dark-theme header {
+  background-color: #000000 !important;
+}
+body.dark-theme .card .card-body {
+  background-color: #000000;
+}
+body.dark-theme .btn-scroll-down i {
+  color: #ffffff;
+}
+body.dark-theme .btn-scroll-down:after {
   border: 3px solid #ffffff !important;
 }
-.bg-dark .btn-scroll-down:hover i {
+body.dark-theme .btn-scroll-down:hover i {
   color: #000000;
 }
-.bg-dark .btn-scroll-down:hover:after {
+body.dark-theme .btn-scroll-down:hover:after {
   background-color: #ffffff;
   color: #000000;
 }
-.bg-dark .fight-flags img[alt="Direitos Animais"] {
+body.dark-theme .fight-flags img[alt="Direitos Animais"] {
   filter: invert(1);
+}
+body.dark-theme .body-card {
+  background-color: #000000;
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p {
+  color: #ffffff;
+}
+body.dark-theme .btn-menu-hamburguer {
+  color: #ffffff;
+}
+body.dark-theme .navbar-brand img {
+  filter: invert(1);
+}
+body.dark-theme .navbar-brand:after {
+  background-color: #000000;
+}
+body.dark-theme footer {
+  background-color: #000000;
+}
+body.dark-theme footer span, body.dark-theme footer a, body.dark-theme footer small {
+  color: #ffffff;
+}
+body.dark-theme .content-contact__link i {
+  color: #ffffff;
+}
+body.dark-theme .content-services__item img {
+  filter: invert(1);
+}
+body.dark-theme .cd-horizontal-timeline .events a {
+  color: #ffffff;
 }
 
 .img-invert {
@@ -942,5 +1051,5 @@ p {
   }
 }
 footer a, footer i {
-  color: #ffffff;
+  color: #000000;
 }/*# sourceMappingURL=main.css.map */

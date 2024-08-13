@@ -14,14 +14,14 @@
 
 ?>
 
-<footer class="bg-dark p-4">
+<footer class="p-4">
   <div class="text-center">
     <div class="<?= bootscore_container_class(); ?>">
-      <small class="bootscore-copyright color-white">
-        <a href="/" class="color-white">
+      <small class="bootscore-copyright ">
+        <a href="/" class="">
           <?php bloginfo('name'); ?>
         </a>
-        <span class="black-flag color-white">&#127988</span>&nbsp;
+        <span class="black-flag ">&#127988</span>&nbsp;
         <?= date('Y'); ?>
       </small>
     </div>

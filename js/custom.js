@@ -15,6 +15,7 @@ jQuery(function ($) {
     $(document).ready(function () {
         $("#timeline-navigation li:last-child a").click();
         $("#timeline-years li:last-child a").click();
+        toggleSwitchDarkLightTheme();
     });
 });
 
@@ -42,4 +43,12 @@ function menuFixed() {
 function timelineYearCheck() {
     $("#timeline-years li:last-child a").click();
     $("#timeline-navigation li:last-child a").click();
+}
+
+function toggleSwitchDarkLightTheme() {
+    const checkboxToggle = document.getElementById("btn-dark-light-checkbox");
+    checkboxToggle.addEventListener("click", () => {
+        console.log('check switch');
+        document.body.classList.toggle("dark-theme");
+    });
 }
