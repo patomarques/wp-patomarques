@@ -28,25 +28,23 @@
 .navbar-nav {
     .nav-link {
         font-family: $font-default;
-        padding: 20px;
-        font-size: 2.4em !important;
         @extend .trans;
 
         &:hover {
             opacity: .7;
-            
-            &:after {
-                content: "";
-                width: 100%;
-                height: 2px;
-                position: absolute;
-                top: 13px;
-                left: 0;
-                background-color: $color-gold;
-            }
+            color: $color-gold;
+            // &:after {
+            //     content: "";
+            //     width: 100%;
+            //     height: 2px;
+            //     position: absolute;
+            //     top: 13px;
+            //     left: 0;
+            //     background-color: $color-gold;
+            // }
         }
 
-        
+
     }
 }
 
@@ -54,6 +52,12 @@
     border: none;
     font-size: 2rem;
     color: black;
+
+    .fa-x {
+        display: none;
+        color: $color-black;
+    }
+
 }
 
 .logo {
@@ -96,34 +100,145 @@
     transform: translate(-50%, -50%);
 
     &:after {
-        content: ""; 
+        content: "";
         display: block;
         background-color: #ffffff;
         padding: 10px;
         transform: rotate(45deg);
-        width: 70px; 
+        width: 70px;
         height: 70px;
         z-index: -1;
         position: absolute;
         top: 48px;
-    } 
+    }
 }
 
-#offcanvas-navbar {
-    display: none;
+// #offcanvas-navbar {
+//     display: none;
+// }
+
+.offcanvas {
+
+    &-backdrop.show {
+        opacity: 0;
+    }
+
+    &.show {
+        .offcanvas-body {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: $color-white;
+            display: block !important;
+
+            .navbar-nav {
+                margin: 100px 0 0;
+                margin-left: 0px;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+
+                .nav-item {
+                    margin: 30px 0;
+                    font-size: 2em;
+                }
+            }
+        }
+
+    }
+}
+
+.menu-fullscreen {
+    .btn-menu-hamburguer {
+        z-index: 999999;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: $color-black;
+
+        .fa-bars {
+            display: none;
+        }
+
+        .fa-x {
+            display: block;
+        }
+    }
+
+    .btn-toggle-dark-light {
+        display: none;
+    }
+
+    &.dark-theme {
+        .btn-menu-hamburguer {
+            .fa-x {
+                color: $color-white;
+            }
+        }
+
+        .offcanvas-body {
+            background-color: $color-black;
+        }
+
+        .menu-item {
+            .nav-link {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.words-effect__container {
+    //margin-top: 60px;
 }
 
 @media(min-width: 320px) {
+    .navbar {
+        padding: 10px !important;
+    }
+
+    .logo-text {
+        font-size: 2.2em;
+        padding-bottom: 40px;
+    }
+
+    .words-effect__container {
+        width: 75vw;
+        padding-left: 0;
+    }
+
     .btn-toggle-dark-light {
-        margin: 20px; 
-        position: absolute; 
+        margin: 0;
+        position: absolute;
         z-index: 9;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            font-size: 1.2em;
+            padding: 0;
+        }
+    }
+
+    .btn-scroll-down {
+        margin: auto;
+        position: absolute;
+        left: 49%;
     }
 }
 
 @media(min-width: 768px) {
-    .btn-toggle-dark-light { 
-        right: 0; 
+
+    .logo-text {
+        font-size: 4em;
+        padding-bottom: 90px;
+    }
+
+    .btn-toggle-dark-light {
+        right: 0;
         position: absolute;
         right: 50px;
         top: -4px;
@@ -147,6 +262,11 @@
             font-size: 1.1rem !important;
         }
     }
+
+
+    .words-effect__container__text {
+        display: inline-block;
+    }
 }
 
 @media(min-width: 992px) {
@@ -154,5 +274,22 @@
         .nav-link {
             font-size: 1.2em !important;
         }
+    }
+
+    .words-effect__container {
+        display: block;
+        width: 54vw;
+    }
+
+    .btn-toggle-dark-light {
+        right: 70px;
+        top: 15px;
+        z-index: 9;
+    }
+}
+
+@media(min-width: 1200px) { 
+    .words-effect__container {
+        width: 40vw;
     }
 }

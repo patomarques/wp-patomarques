@@ -655,7 +655,9 @@ p {
 .offcanvas {
   top: 0;
 }
-
+.offcanvas-body {
+  display: none !important;
+}
 .square {
   position: relative;
 }
@@ -768,7 +770,9 @@ body.dark-theme .navbar-brand:after {
 body.dark-theme footer {
   background-color: #000000;
 }
-body.dark-theme footer span, body.dark-theme footer a, body.dark-theme footer small {
+body.dark-theme footer span,
+body.dark-theme footer a,
+body.dark-theme footer small {
   color: #ffffff;
 }
 body.dark-theme .content-contact__link i {
@@ -836,6 +840,20 @@ body.dark-theme .cd-horizontal-timeline .events a {
   .content-blog .box-square {
     width: 100vw;
   }
+  .words-effect__container {
+    width: 100vw;
+  }
+  .words-effect__container__list {
+    padding-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .words-effect__container {
+    width: 65vw;
+  }
+  .words-effect__container__list {
+    padding-left: 0;
+  }
 }
 @media (min-width: 992px) {
   .content-blog {
@@ -846,6 +864,12 @@ body.dark-theme .cd-horizontal-timeline .events a {
   }
   .content-blog .box-square {
     width: auto;
+  }
+  .words-effect__container {
+    width: 62vw;
+  }
+  .words-effect__container__list {
+    padding-left: 30vw;
   }
 }
 .words-effect {
@@ -973,26 +997,20 @@ body.dark-theme .cd-horizontal-timeline .events a {
 
 .navbar-nav .nav-link {
   font-family: "Nunito", sans-serif;
-  padding: 20px;
-  font-size: 2.4em !important;
 }
 .navbar-nav .nav-link:hover {
   opacity: 0.7;
-}
-.navbar-nav .nav-link:hover:after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  top: 13px;
-  left: 0;
-  background-color: #ffc93c;
+  color: #ffc93c;
 }
 
 .btn-menu-hamburguer {
   border: none;
   font-size: 2rem;
   color: black;
+}
+.btn-menu-hamburguer .fa-x {
+  display: none;
+  color: #000000;
 }
 
 .logo {
@@ -1041,18 +1059,89 @@ body.dark-theme .cd-horizontal-timeline .events a {
   top: 48px;
 }
 
-#offcanvas-navbar {
+.offcanvas-backdrop.show {
+  opacity: 0;
+}
+.offcanvas.show .offcanvas-body {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  display: block !important;
+}
+.offcanvas.show .offcanvas-body .navbar-nav {
+  margin: 100px 0 0;
+  margin-left: 0px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.offcanvas.show .offcanvas-body .navbar-nav .nav-item {
+  margin: 30px 0;
+  font-size: 2em;
+}
+
+.menu-fullscreen .btn-menu-hamburguer {
+  z-index: 999999;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #000000;
+}
+.menu-fullscreen .btn-menu-hamburguer .fa-bars {
   display: none;
+}
+.menu-fullscreen .btn-menu-hamburguer .fa-x {
+  display: block;
+}
+.menu-fullscreen .btn-toggle-dark-light {
+  display: none;
+}
+.menu-fullscreen.dark-theme .btn-menu-hamburguer .fa-x {
+  color: #ffffff;
+}
+.menu-fullscreen.dark-theme .offcanvas-body {
+  background-color: #000000;
+}
+.menu-fullscreen.dark-theme .menu-item .nav-link {
+  color: #ffffff;
 }
 
 @media (min-width: 320px) {
+  .navbar {
+    padding: 10px !important;
+  }
+  .logo-text {
+    font-size: 2.2em;
+    padding-bottom: 40px;
+  }
+  .words-effect__container {
+    width: 75vw;
+    padding-left: 0;
+  }
   .btn-toggle-dark-light {
-    margin: 20px;
+    margin: 0;
     position: absolute;
     z-index: 9;
   }
+  .navbar-nav .nav-link {
+    font-size: 1.2em;
+    padding: 0;
+  }
+  .btn-scroll-down {
+    margin: auto;
+    position: absolute;
+    left: 49%;
+  }
 }
 @media (min-width: 768px) {
+  .logo-text {
+    font-size: 4em;
+    padding-bottom: 90px;
+  }
   .btn-toggle-dark-light {
     right: 0;
     position: absolute;
@@ -1073,10 +1162,27 @@ body.dark-theme .cd-horizontal-timeline .events a {
     padding: 0 10px !important;
     font-size: 1.1rem !important;
   }
+  .words-effect__container__text {
+    display: inline-block;
+  }
 }
 @media (min-width: 992px) {
   .navbar-nav .nav-link {
     font-size: 1.2em !important;
+  }
+  .words-effect__container {
+    display: block;
+    width: 54vw;
+  }
+  .btn-toggle-dark-light {
+    right: 70px;
+    top: 15px;
+    z-index: 9;
+  }
+}
+@media (min-width: 1200px) {
+  .words-effect__container {
+    width: 40vw;
   }
 }
 footer a, footer i {

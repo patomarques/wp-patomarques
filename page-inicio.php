@@ -7,7 +7,7 @@
     </video>
 
     <div class="content-centered__box-text">
-        <h2 class="bg-fullscreen__title bold logo-text display-1">
+        <h2 class="bg-fullscreen__title bold logo-text">
             < Pato Marques />
         </h2>
 
@@ -18,12 +18,10 @@
                 </p>
 
                 <ul class="words-effect__container__list text-center">
-                    <li class="words-effect__container__list__item">
-                        < front-end />
-                    </li>
-                    <li class="words-effect__container__list__item">back-end(){}</li>
-                    <li class="words-effect__container__list__item">[wordpress]</li>
-                    <li class="words-effect__container__list__item">{{ laravel }}</li>
+                    <li class="words-effect__container__list__item"> <?= "< front-end />" ?></li>
+                    <li class="words-effect__container__list__item"> back-end(){}</li>
+                    <li class="words-effect__container__list__item"> [wordpress]</li>
+                    <li class="words-effect__container__list__item"> {{ laravel }}</li>
                 </ul>
             </div>
         </div>

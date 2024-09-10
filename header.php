@@ -111,7 +111,9 @@
 
             <button class="btn btn-menu-hamburguer ms-1 ms-md-2 p-1" type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-              <i class="fa-solid fa-bars"></i><span class="visually-hidden-focusable">Menu</span>
+              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-x"></i>
+              <span class="visually-hidden-focusable">Menu</span>
             </button>
 
           </div>
