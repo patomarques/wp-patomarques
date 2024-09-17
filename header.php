@@ -38,7 +38,7 @@
 
   <?php wp_body_open(); ?>
 
-  <header id="masthead" class="site-header hide">
+  <header id="masthead" class="site-header <?= is_home()? 'hide' : '' ?>">
 
     <div class="menu-bar bg-transparent">
 

@@ -50,36 +50,36 @@ $fightFlags = new WP_Query(
 <section id="section-about" class="section-container">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="square mb-5">
                     <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
                     <div class="losange"></div>
                 </div>
             </div>
-            <div class="col-12 col-md-8 col-lg-7 offset-lg-1">
+            <div class="col-12 col-md-6 col-lg-7 offset-lg-1">
                 <div class="content-about">
                     <h3 class="content-about__title title-section pb-4 text-center">
                         <?php echo get_the_title($pageAbout); ?>
                     </h3>
-                    <h4 class="content-about__subtitle text-justify">
+                    <p class="content-about__subtitle text-justify">
                         <?php echo apply_filters('get_the_post_excerpt', $pageAbout->post_excerpt); ?>
-                    </h4>
+                    </p>
 
-                    <div class="row mt-4 mb-4 fight-flags">
-                        <div class="d-xs-none col-md-2"></div>
-                        <?php while ($fightFlags->have_posts()) {
-                            $fightFlags->the_post(); ?>
+                    <div class="row mt-3 mb-3 fight-flags d-none">
+                        <!-- <div class="d-xs-none col-md-2"></div> -->
+                            <?php while ($fightFlags->have_posts()) {
+                                $fightFlags->the_post(); ?>
 
-                            <div class="col-3 col-md-2">
-                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" 
-                                    alt="<?php echo get_the_title(); ?>"
-                                    class="img-fluid">
-                            </div>
+                                <div class="col p-4">
+                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" 
+                                        alt="<?php echo get_the_title(); ?>"
+                                        class="img-fluid">
+                                </div>
 
-                        <?php } ?>
-                        <div class="d-xs-none col-md-2"></div>
+                            <?php } ?>
+                        <!-- <div class="d-xs-none col-md-2"></div> -->
                     </div>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-12 text-center">
                             <div class="d-block mt-4 mb-4">
                                 <a href="/sobre" class="button-border-effect mt-3 mb-4">Continuar lendo...</a>
@@ -105,10 +105,10 @@ $services = new WP_Query(
 ?>
 
 <section class="section-container">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h3 class="title-section mb-5">Serviços</h3>
+                <h3 class="title-section">Serviços</h3>
             </div>
         </div>
         <div class="row content-services">
@@ -117,7 +117,7 @@ $services = new WP_Query(
             while ($services->have_posts()):
                 $services->the_post(); ?>
 
-                <div class="col-12 col-md-4 content-services__item text-center">
+                <div class="col-12 col-md-4 content-services__item text-center p-5">
                     <div class="d-block m-auto text-center mb-3">
                         <img src="<?= the_post_thumbnail_url('medium') ?>" alt="<?= the_title() ?>"
                             class="img-fluid">
@@ -133,7 +133,7 @@ $services = new WP_Query(
             <?php endwhile; ?>
         </div>
         <div class="row mt-5">
-            <div class="col-12 text-center mt-5">
+            <div class="col-12 text-center">
                 <a href="/servicos" class="button-border-effect">Saiba mais...</a>
             </div>
         </div>

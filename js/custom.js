@@ -43,6 +43,7 @@ jQuery(function ($) {
         let hasClicked = sessionStorage.getItem('dark-theme');
         if(hasClicked == 'true') {
             $('body').addClass('dark-theme');
+            document.getElementById("btn-dark-light-checkbox").click();
         }else{
             $('body').removeClass('dark-theme');
         }
