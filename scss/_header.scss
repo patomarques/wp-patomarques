@@ -195,6 +195,10 @@
     //margin-top: 60px;
 }
 
+.offcanvas-backdrop {
+    z-index: -99999;
+}
+
 @media(min-width: 320px) {
     .navbar {
         padding: 10px !important;

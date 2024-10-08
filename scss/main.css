@@ -33,9 +33,10 @@
 }
 
 .title-section {
-  font-size: 3.2rem;
-  font-family: "Ubuntu", sans-serif;
+  font-size: 4.5rem;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .title-section:after {
   content: "";
@@ -441,7 +442,7 @@ html,
 body {
   font-family: "Nunito", sans-serif;
   font-weight: 300;
-  color: #303841;
+  background-color: #fafeff;
 }
 
 a {
@@ -800,11 +801,14 @@ body.dark-theme .cd-horizontal-timeline .events a {
   filter: saturate(25%);
 }
 
+.content-services__item {
+  background-color: #ffffff;
+}
 .content-services__item:nth-child(1) img {
-  width: 124px;
+  width: 115px;
 }
 .content-services__item:nth-child(2) img {
-  width: 112px;
+  width: 110px;
 }
 .content-services__item:nth-child(3) img {
   width: 140px;
@@ -815,11 +819,31 @@ body.dark-theme .cd-horizontal-timeline .events a {
   padding: 15vh 0 10vh;
 }
 
+.list-tags__item__link {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5px 12px;
+  font-size: 1rem;
+}
+.list-tags__item__link:hover {
+  opacity: 0.7;
+}
+
 .timeline-info__title {
   font-size: 2.8rem;
 }
 .timeline-info__title__company {
   font-size: 1.6rem;
+}
+
+.words-effect {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+.words-effect__container__list {
+  padding-left: 0 !important;
 }
 
 @media (min-width: 320px) {
@@ -848,9 +872,6 @@ body.dark-theme .cd-horizontal-timeline .events a {
   }
 }
 @media (min-width: 768px) {
-  .words-effect__container {
-    width: 65vw;
-  }
   .words-effect__container__list {
     padding-left: 0;
   }
@@ -864,12 +885,6 @@ body.dark-theme .cd-horizontal-timeline .events a {
   }
   .content-blog .box-square {
     width: auto;
-  }
-  .words-effect__container {
-    width: 62vw;
-  }
-  .words-effect__container__list {
-    padding-left: 30vw;
   }
 }
 .words-effect {
@@ -928,7 +943,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
 
 .words-effect__container__list {
   margin-top: 0;
-  padding-left: 260px;
+  padding-left: 0;
   text-align: left;
   list-style: none;
   -webkit-animation-name: change;
@@ -1108,6 +1123,10 @@ body.dark-theme .cd-horizontal-timeline .events a {
 }
 .menu-fullscreen.dark-theme .menu-item .nav-link {
   color: #ffffff;
+}
+
+.offcanvas-backdrop {
+  z-index: -99999;
 }
 
 @media (min-width: 320px) {

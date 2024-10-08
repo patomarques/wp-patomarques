@@ -10,7 +10,7 @@ $args = array(
 $contacts = new WP_Query($args);
 ?>
 
-<section id="section-contact" class="pt-5 pb-5">
+<section id="section-contact" class="mt-5 d-block pt-5 pb-5">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -28,6 +28,7 @@ $contacts = new WP_Query($args);
 
                                 <li class="content-contact__list-item list-inline-item m-3">
                                     <a href="<?= get_post_meta(get_the_ID(), 'link', true) ?>" class="content-contact__link"
+                                        target="_blank"
                                         title="<?php the_title();
                                         echo " " . get_the_content(); ?>" alt="<?php the_title(); ?>">
                                         <i class="<?= get_post_meta(get_the_ID(), 'icon_class', true) ?> fa-3x"></i>

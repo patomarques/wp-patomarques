@@ -36,8 +36,8 @@ endwhile;
         <div class="row mb-5 text-center">
             <div class="col-12 pb-3">
                 <h3 class="content-skills__title title-section bold mb-3">Habilidades</h3>
-                <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos 13
-                    anos.</h4>
+                <!-- <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos 13
+                    anos.</h4> -->
             </div>
         </div>
         <div class="row content-skills">

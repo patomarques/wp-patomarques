@@ -6,7 +6,7 @@ html,
 body {
     font-family: $font-default;
     font-weight: 300;
-    color: $color-main;
+    background-color: $color-gray-light;
 }
 
 a {
@@ -448,15 +448,16 @@ body.dark-theme {
 
 .content-services {
     &__item {
+        background-color: $color-white;
         &:nth-child(1) {
             img {
-                width: 124px;
+                width: 115px;
             }
         }
 
         &:nth-child(2) {
             img {
-                width: 112px;
+                width: 110px;
             }
         }
 
@@ -473,12 +474,40 @@ body.dark-theme {
     padding: 15vh 0 10vh;
 }
 
+.list-tags {
+    &__item {
+        &__link {
+            background-color: $color-black;
+            color: $color-white;
+            padding: 5px 12px;
+            font-size: 1rem;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
 .timeline-info {
     &__title {
         font-size: 2.8rem;
 
         &__company {
             font-size: 1.6rem;
+        }
+    }
+}
+
+.words-effect {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    display: block;
+
+    &__container {
+        &__list {
+            padding-left: 0 !important;
         }
     }
 }
@@ -521,7 +550,7 @@ body.dark-theme {
 
 @media(min-width: 768px) {
     .words-effect__container {
-        width: 65vw;
+        // width: 65vw;
 
         &__list {
             padding-left: 0;
@@ -544,10 +573,10 @@ body.dark-theme {
     }
 
     .words-effect__container {
-        width: 62vw;
+        // width: 62vw;
 
         &__list {
-            padding-left: 30vw;
+            //padding-left: 30vw;
         }
     }
 }

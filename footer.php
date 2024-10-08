@@ -13,6 +13,7 @@
  */
 
 ?>
+<?php get_template_part( 'template-parts/contatos' ); ?>
 
 <footer class="p-4">
   <div class="text-center">

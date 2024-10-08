@@ -11,7 +11,7 @@ $get_posts = new WP_Query();
 $posts = get_posts($args);
 ?>
 
-<section id="section-blog" class="content-main hide">
+<section id="section-blog" class="content-main ">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
