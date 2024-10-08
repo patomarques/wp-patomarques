@@ -1,7 +1,11 @@
 jQuery(function ($) {
     var target = $('a[name=target]');
 
+<<<<<<< HEAD
     if (target.length > 0) { 
+=======
+    if (target.length > 0) {
+>>>>>>> 51475f252e7ad2a9e26ffb36349b344792d747ab
         target.click(function () {
             var top = target.offset().top;
             console.log('top', top);
@@ -15,6 +19,7 @@ jQuery(function ($) {
     $(document).ready(function () {
         $("#timeline-navigation li:last-child a").click();
         $("#timeline-years li:last-child a").click();
+<<<<<<< HEAD
         loadDarkTheme();
         toggleSwitchDarkLightTheme();
         clickMenuFull();
@@ -48,6 +53,10 @@ jQuery(function ($) {
             $('body').removeClass('dark-theme');
         }
     }
+=======
+        toggleSwitchDarkLightTheme();
+    });
+>>>>>>> 51475f252e7ad2a9e26ffb36349b344792d747ab
 });
 
 let menu = document.getElementById('masthead');
@@ -75,3 +84,14 @@ function timelineYearCheck() {
     $("#timeline-years li:last-child a").click();
     $("#timeline-navigation li:last-child a").click();
 }
+<<<<<<< HEAD
+=======
+
+function toggleSwitchDarkLightTheme() {
+    const checkboxToggle = document.getElementById("btn-dark-light-checkbox");
+    checkboxToggle.addEventListener("click", () => {
+        console.log('check switch');
+        document.body.classList.toggle("dark-theme");
+    });
+}
+>>>>>>> 51475f252e7ad2a9e26ffb36349b344792d747ab

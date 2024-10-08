@@ -191,6 +191,4 @@ $services = new WP_Query(
 
 <?php get_template_part('template-parts/blog-recent-posts'); ?>
 
-
-
 <?php get_footer(); ?>
