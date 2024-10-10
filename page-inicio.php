@@ -16,8 +16,6 @@
 
         <div class="words-effect hide">
             <div class="words-effect__container">
-
-
                 <!-- <ul class="words-effect__container__list text-center">
                     <li class="words-effect__container__list__item"> <?= "< front-end />" ?></li>
                     <li class="words-effect__container__list__item"> back-end(){}</li>
@@ -120,16 +118,17 @@ $fightFlags = new WP_Query(
                         <!-- <div class="d-xs-none col-md-2"></div> -->
 
                     </div>
-                    <div class="row mt-5">
-                        <div class="col-12 text-center">
-                            <div class="d-block mt-4 mb-4">
-                                <a href="/sobre" class="button-border-effect mt-3 mb-4">Continuar lendo...</a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="d-block mt-4 mb-4">
+                    <a href="/sobre" class="button-border-effect mt-3 mb-4">Continuar lendo...</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -76,11 +76,7 @@
                   'container' => false,
                   'menu_class' => '',
                   'fallback_cb' => '__return_false',
-<<<<<<< HEAD
                   'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s">%3$s</ul>',
-=======
-                  'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s d-none">%3$s</ul>',
->>>>>>> 51475f252e7ad2a9e26ffb36349b344792d747ab
                   'depth' => 2,
                   'walker' => new bootstrap_5_wp_nav_menu_walker()
                 )
@@ -115,13 +111,9 @@
 
             <button class="btn btn-menu-hamburguer ms-1 ms-md-2 p-1" type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-<<<<<<< HEAD
               <i class="fa-solid fa-bars"></i>
               <i class="fa-solid fa-x"></i>
               <span class="visually-hidden-focusable">Menu</span>
-=======
-              <i class="fa-solid fa-bars"></i><span class="visually-hidden-focusable">Menu</span>
->>>>>>> 51475f252e7ad2a9e26ffb36349b344792d747ab
             </button>
 
           </div>
