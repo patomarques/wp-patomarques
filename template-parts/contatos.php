@@ -12,7 +12,7 @@ $contacts = new WP_Query($args);
 
 <section id="section-contact" class="mt-5 d-block pt-5 pb-5">
     <div class="container">
-        <div class="row">
+        <div class="row d-none">
             <div class="col-12 text-center">
                 <h3 class="title-section bold mt-5 mb-5">Contatos</h3>
             </div>

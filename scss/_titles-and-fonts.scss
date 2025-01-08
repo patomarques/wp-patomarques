@@ -7,9 +7,10 @@ $font-logo: 'Merienda', cursive;
 
 .title-section {
     font-size: 4.5rem;
-    font-family: $font-default;
-    font-weight: 700;
-    text-transform: uppercase;
+    // font-family: $font-default;
+    // font-weight: 700;
+    // text-transform: uppercase;
+    @extend .tsukimi-rounded-regular;
 
     &:after {
         content: '';
@@ -20,4 +21,10 @@ $font-logo: 'Merienda', cursive;
 
 .logo-text {
     font-family: $font-logo;
+}
+
+.tsukimi-rounded-regular {
+    font-family: "Tsukimi Rounded", serif;
+    font-weight: 400;
+    font-style: normal;
 }

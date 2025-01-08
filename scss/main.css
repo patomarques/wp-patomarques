@@ -34,9 +34,6 @@
 
 .title-section {
   font-size: 4.5rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 .title-section:after {
   content: "";
@@ -48,7 +45,13 @@
   font-family: "Merienda", cursive;
 }
 
-.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
+.tsukimi-rounded-regular, .title-section {
+  font-family: "Tsukimi Rounded", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
   transition: all 0.8s ease;
   transform: translateX(0);
 }
@@ -721,6 +724,9 @@ p {
   transform: translateX(24px);
 }
 
+body.dark-theme {
+  background-color: #000000 !important;
+}
 body.dark-theme section,
 body.dark-theme header {
   background-color: #000000 !important;
@@ -804,15 +810,33 @@ body.dark-theme .cd-horizontal-timeline .events a {
 .content-services__item {
   background-color: #ffffff;
 }
+.content-services__item__title {
+  margin-top: 20px;
+}
+.content-services__item__box {
+  display: block;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 4rem !important;
+}
+.content-services__item__box:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  color: #000000;
+}
 .content-services__item:nth-child(1) img {
-  width: 115px;
+  width: 90px;
+}
+.content-services__item:nth-child(2) {
+  padding-bottom: 10px;
 }
 .content-services__item:nth-child(2) img {
-  width: 110px;
+  width: 88px;
 }
 .content-services__item:nth-child(3) img {
-  width: 140px;
-  margin-top: -14px;
+  width: 100px;
+  margin-top: -10px;
 }
 
 .section-container {
@@ -1202,6 +1226,9 @@ body.dark-theme .cd-horizontal-timeline .events a {
   }
 }
 @media (min-width: 992px) {
+  .navbar {
+    padding: 5px !important;
+  }
   .navbar-nav .nav-link {
     font-size: 1.2em !important;
   }

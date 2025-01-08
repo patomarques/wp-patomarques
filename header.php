@@ -32,13 +32,16 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <?php wp_head(); ?>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap');
+</style>
 </head>
 
 <body <?php body_class(); ?>>
 
   <?php wp_body_open(); ?>
 
-  <header id="masthead" class="site-header <?= is_home()? 'hide' : '' ?>">
+  <header id="masthead" class="site-header <?= is_home() ? 'd-none' : '' ?>">
 
     <div class="menu-bar bg-transparent">
 
@@ -82,7 +85,7 @@
                 )
               );
               ?>
-           
+
             </div>
           </div>
 
@@ -96,7 +99,7 @@
           </div>
 
           <div class="header-actions d-flex align-items-center">
-            
+
             <?php if (is_active_sidebar('top-nav')): ?>
               <?php dynamic_sidebar('top-nav'); ?>
             <?php endif; ?>

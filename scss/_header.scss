@@ -296,6 +296,10 @@
 }
 
 @media(min-width: 992px) {
+    .navbar {
+        padding: 5px !important;
+    }
+
     .navbar-nav {
         .nav-link {
             font-size: 1.2em !important;

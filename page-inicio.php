@@ -7,7 +7,7 @@
     </video>
 
     <div class="content-centered__box-text">
-        <h2 class="bg-fullscreen__title bold logo-text">
+        <h2 class="bg-fullscreen__title bold logo-text pb-0">
             < Pato Marques />
         </h2>
         <p class="h2  hide color-white">
@@ -68,18 +68,20 @@ $fightFlags = new WP_Query(
                     <div class="content-about__subtitle text-justify pb-4">
                         <?php //echo apply_filters('get_the_post_excerpt', $pageAbout->post_excerpt); 
                         ?>
-                        <p class="h1">Olá, me chamo Pato</p>
-                        <p class="h4 pb-3">Recife, Brasil - 35 anos - Analista Desenvolvedor Web;</p>
-                        <p class="h3 pb-3">Bacharel em sistemas de informação na UniNabuco (2012);</p>
-                        <p class="h3 pb-3">Experiência na criação de sites, lojas online e aplicações web
-                            <span class="h5">(desde 2010)</span>;
+                        <!-- <p class="h1">Olá, me chamo Pato Marques</p> -->
+                        <p class="h3 pb-3">Recife, Desenvolvedor web, Sistemas de Informação </p>
+                        <p class="h3 pb-3">+13 anos trabalhando com sites, lojas online e aplicações web
+                            <span class="h5 hide">(desde 2010)</span>;
                         </p>
-                        <p class="h3">Entusiasta no desenvolvimento com 
+                        <p class="h3">Desenvolvedor
                             <a href="https://www.php.net/" class="link h3 bold" target="_blank">php,</a>
                             <a href="https://br.wordpress.org/" class="link h3 bold" target="_blank">wordpress,</a>
                             <a href="https://laravel.com/" class="link h3 bold" target="_blank">laravel</a>
                             e tecnologias de código aberto.
                         </p>
+
+                        <?php get_template_part('template-parts/technologies-icons'); ?>
+
                     </div>
 
                     <ul class="list-unstyled list-inline list-tags">
@@ -87,19 +89,19 @@ $fightFlags = new WP_Query(
                             <a href="<?= get_site_url() . '/category/frontend'?>" class="list-tags__item__link">#frontend</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/'?>" class="list-tags__item__link">#backend</a>
+                            <a href="<?= get_site_url() . '/category/backend'?>" class="list-tags__item__link">#backend</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/'?>" class="list-tags__item__link">#ux/ui</a>
+                            <a href="<?= get_site_url() . '/category/ux/ui'?>" class="list-tags__item__link">#ux/ui</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
                             <a href="<?= get_site_url() . '/category/wordpress'?>" class="list-tags__item__link">#wordpress</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/'?>" class="list-tags__item__link">#laravel</a>
+                            <a href="<?= get_site_url() . '/category/wordpress'?>" class="list-tags__item__link">#laravel</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/'?>" class="list-tags__item__link">#linux</a>
+                            <a href="<?= get_site_url() . '/category/linux'?>" class="list-tags__item__link">#linux</a>
                         </li>
                     </ul>
 
@@ -133,54 +135,7 @@ $fightFlags = new WP_Query(
     </div>
 </section>
 
-<?php
-$services = new WP_Query(
-    array(
-        "post_type" => "services",
-        'orderby' => 'ordem',
-        'order' => 'ASC',
-        'posts_per_page' => -1,
-    )
-);
-?>
-
-<section class="section-container">
-    <div class="container-fluid">
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h3 class="title-section">Serviços</h3>
-            </div>
-        </div>
-        <div class="row content-services">
-
-            <?php
-            while ($services->have_posts()):
-                $services->the_post(); ?>
-
-                <div class="col-12 col-md-4">
-                    <div class="content-services__item text-center p-5">
-                        <div class="d-block m-auto text-center mb-1">
-                            <img src="<?= the_post_thumbnail_url('medium') ?>" alt="<?= the_title() ?>"
-                                class="img-fluid">
-                        </div>
-                        <h3 class="content-services__item__title text-center bold">
-                            <?= the_title() ?>
-                        </h3>
-                        <h4 class="content-services__item__description">
-                            <?= the_excerpt() ?>
-                        </h4>
-                    </div>
-                </div>
-
-            <?php endwhile; ?>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <a href="/servicos" class="button-border-effect">Saiba mais...</a>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part('template-parts/services'); ?>
 
 <?php get_template_part('template-parts/experiences'); ?>
 
@@ -188,6 +143,16 @@ $services = new WP_Query(
 
 <?php get_template_part('template-parts/portfolio'); ?>
 
-<?php get_template_part('template-parts/blog-recent-posts'); ?>
+<?//php get_template_part('template-parts/blog-recent-posts'); ?>
 
+<div class="container-fluid mt-5 mb-5 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h4 class="h1 text">Entre em contato, vamos construir algo.</h4>
+                <h5 class="h1 larger">ola@patomarques.com.br</h5>
+            </div>
+        </div>
+    </div>
+</div>
 <?php get_footer(); ?>
