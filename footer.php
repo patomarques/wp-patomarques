@@ -13,9 +13,8 @@
  */
 
 ?>
-<?php get_template_part( 'template-parts/contatos' ); ?>
 
-<footer class="p-4">
+<footer class="p-4 mt-5">
   <div class="text-center">
     <div class="<?= bootscore_container_class(); ?>">
       <small class="bootscore-copyright ">

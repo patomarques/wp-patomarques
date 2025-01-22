@@ -29,6 +29,7 @@ while ($technologies->have_posts()):
     array_push($technologiesFormatted[$techType], $techData);
 
 endwhile;
+
 ?>
 
 <section id="section-skills" class="section-container">
@@ -45,21 +46,21 @@ endwhile;
             <?php foreach ($technologiesFormatted as $key => $techs) { ?>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                    <h5 class="content-skills__subtitle bold">
+                    <h4 class="content-skills__subtitle bold pb-3">
                         <?= $key ?>
-                    </h5>
+                    </h4>
 
                     <?php for ($index = 0; $index < count($techs); $index++) { ?>
 
-                        <div class="content-skills_item">
+                        <div class="content-skills_item mb-3">
                             <div class="content-skills_list_item mb-2">
                                 <div class="content-skills progress-bar"></div>
-                                <span class="">
+                                <span class="h4 d-block">
                                     <?= $techs[$index]["name"] ?>
                                 </span>
 
                                 <div class="progress">
-                                    <div class="progress-bar bg-dark progress-bar-striped color-gold progress-bar-animated"
+                                    <div class="progress-bar bg-dark bold progress-bar-striped  progress-bar-animated"
                                         role="progressbar" style="width: <?= $techs[$index]['percents'] ?>%;"
                                         aria-valuenow="<?= $techs[$index]['percents'] ?>" aria-valuemin="0" aria-valuemax="100">
                                         <?= $techs[$index]['percents'] ?>%

@@ -68,7 +68,7 @@ $fightFlags = new WP_Query(
                     <div class="content-about__subtitle text-justify pb-4">
                         <?php //echo apply_filters('get_the_post_excerpt', $pageAbout->post_excerpt); 
                         ?>
-                        <!-- <p class="h1">Olá, me chamo Pato Marques</p> -->
+                        <p class="h1">Pato Marques</p>
                         <p class="h3 pb-3">Recife, Desenvolvedor web, Sistemas de Informação </p>
                         <p class="h3 pb-3">+13 anos trabalhando com sites, lojas online e aplicações web
                             <span class="h5 hide">(desde 2010)</span>;
@@ -125,7 +125,7 @@ $fightFlags = new WP_Query(
             </div>
 
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 hide">
             <div class="col-12 text-center">
                 <div class="d-block mt-4 mb-4">
                     <a href="/sobre" class="button-border-effect mt-3 mb-4">Continuar lendo...</a>
@@ -150,9 +150,12 @@ $fightFlags = new WP_Query(
         <div class="row">
             <div class="col-12 text-center">
                 <h4 class="h1 text">Entre em contato, vamos construir algo.</h4>
-                <h5 class="h1 larger">ola@patomarques.com.br</h5>
+                <h5 class="h1 title-section">ola@patomarques.com.br</h5>
             </div>
         </div>
     </div>
 </div>
+
+<?php get_template_part( 'template-parts/contatos' ); ?>
+
 <?php get_footer(); ?>

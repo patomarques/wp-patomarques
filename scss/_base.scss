@@ -27,6 +27,8 @@ a {
 
 p {
     font-size: 1.8rem;
+    font-family: $font-default;
+    font-weight: 300;
 }
 
 .bold {
@@ -457,7 +459,9 @@ body.dark-theme {
 
         &__box {
             display: block;
-            border: 1px solid $color-black;
+            //border: 1px solid $color-black;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px, rgba(0, 0, 0, 0.23) 0px 2px 6px;
+
             border-radius: 5px;
             padding: 4rem !important;
             @extend .trans;
@@ -469,6 +473,17 @@ body.dark-theme {
                 color: #000000;
             }
 
+            &__icon {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-size: cover;
+                fill: gold !important;
+
+                g {
+                    fill: gold !important;
+                }
+            }
         }
 
         &:nth-child(1) {
@@ -491,6 +506,14 @@ body.dark-theme {
                 margin-top: -10px;
             }
         }
+    }
+}
+
+.services__svg-icon {
+    g {
+        fill: gold;
+        color: red;
+        filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
     }
 }
 

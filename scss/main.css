@@ -1,7 +1,8 @@
 /*!
  * bootScore custom styles
  */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&family=Ubuntu:wght@300;700&family=Merienda:wght@300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .bg-transparent {
   background-color: transparent !important;
 }
@@ -33,7 +34,11 @@
 }
 
 .title-section {
-  font-size: 4.5rem;
+  font-size: 5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
 }
 .title-section:after {
   content: "";
@@ -43,12 +48,6 @@
 
 .logo-text {
   font-family: "Merienda", cursive;
-}
-
-.tsukimi-rounded-regular, .title-section {
-  font-family: "Tsukimi Rounded", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
@@ -443,7 +442,7 @@ html {
 
 html,
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   background-color: #fafeff;
 }
@@ -463,6 +462,8 @@ a:hover i {
 
 p {
   font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
 
 .bold {
@@ -815,7 +816,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
 }
 .content-services__item__box {
   display: block;
-  border: 1px solid #000000;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px, rgba(0, 0, 0, 0.23) 0px 2px 6px;
   border-radius: 5px;
   padding: 4rem !important;
 }
@@ -824,6 +825,16 @@ body.dark-theme .cd-horizontal-timeline .events a {
   cursor: pointer;
   background-color: #f1f1f1;
   color: #000000;
+}
+.content-services__item__box__icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  fill: gold !important;
+}
+.content-services__item__box__icon g {
+  fill: gold !important;
 }
 .content-services__item:nth-child(1) img {
   width: 90px;
@@ -837,6 +848,12 @@ body.dark-theme .cd-horizontal-timeline .events a {
 .content-services__item:nth-child(3) img {
   width: 100px;
   margin-top: -10px;
+}
+
+.services__svg-icon g {
+  fill: gold;
+  color: red;
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
 .section-container {
@@ -918,7 +935,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
   transform: translate(-50%, -50%);
   height: auto;
   overflow: hidden;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 35px;
   line-height: 40px;
   color: #ffffff;
@@ -1035,7 +1052,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
 }
 
 .navbar-nav .nav-link {
-  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .navbar-nav .nav-link:hover {
   opacity: 0.7;

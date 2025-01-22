@@ -1,4 +1,3 @@
-
 <?php
 $services = new WP_Query(
     array(
@@ -26,8 +25,8 @@ $services = new WP_Query(
                 <div class="col-12 col-md-4 content-services__item">
                     <a href="#" class="content-services__item__box text-center">
                         <div class="d-block m-auto text-center mb-1">
-                            <img src="<?= the_post_thumbnail_url('medium') ?>" alt="<?= the_title() ?>"
-                                class="img-fluid">
+                            <div style="background-image: url('<?php echo get_stylesheet_directory_uri() . '/' .  get_post_meta(get_the_ID(), 'svg_icon_url')[0]; ?>')"
+                                class="img-fluid content-services__item__box__icon"></div>
                         </div>
                         <h3 class="content-services__item__title text-center bold">
                             <?= the_title() ?>
@@ -40,7 +39,7 @@ $services = new WP_Query(
 
             <?php endwhile; ?>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 hide">
             <div class="col-12 text-center">
                 <a href="/servicos" class="button-border-effect">Saiba mais...</a>
             </div>
