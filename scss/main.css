@@ -61,6 +61,14 @@
   font-weight: 300;
 }
 
+.title-contact {
+  font-size: 2.2rem;
+}
+
+.text-send-mail {
+  font-size: 3.4rem;
+}
+
 .trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
   transition: all 0.8s ease;
   transform: translateX(0);
@@ -895,6 +903,16 @@ body.dark-theme .cd-horizontal-timeline .events a {
   padding-left: 0 !important;
 }
 
+.container-divider .icon-arrows {
+  width: 75px;
+  margin: auto !important;
+  display: block;
+  text-align: center;
+}
+.container-divider .icon-arrows.rotate180 {
+  rotate: 180deg;
+}
+
 @media (min-width: 320px) {
   .content-centered__box-text .logo-text {
     margin-top: 0;
@@ -1250,7 +1268,6 @@ footer i {
 
 .flex-center {
   width: 100%;
-  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;

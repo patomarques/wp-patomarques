@@ -563,6 +563,19 @@ body.dark-theme {
     }
 }
 
+.container-divider {
+    .icon-arrows {
+        width: 75px;
+        margin: auto !important;
+        display: block;
+        text-align: center;
+
+        &.rotate180 {
+            rotate: 180deg;
+        }
+    }
+}
+
 @media(min-width: 320px) {
     .content-centered {
         &__box-text {

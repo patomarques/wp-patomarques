@@ -14,7 +14,7 @@
 
 ?>
 
-<footer class="p-4 mt-5">
+<footer class="p-4 mt-5 pt-5">
   <div class="text-center">
     <div class="<?= bootscore_container_class(); ?>">
       <small class="bootscore-copyright ">
