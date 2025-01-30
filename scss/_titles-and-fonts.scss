@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-$font-default: 'Open Sans', sans-serif;
-$font-title: 'Roboto', sans-serif;
-$font-subtitle: "Open Sans", serif;
-
-$font-logo: 'Merienda', cursive;
+$font-default: "Raleway", serif;
+$font-title: "Roboto Mono", serif;
+$font-subtitle: "Raleway", serif;
+$font-logo: 'Shadows Into Light', cursive;
 
 .title-section {
     font-size: 5rem;
-    font-family: $font-title;
-    font-weight: 400;
+    font-family: $font-title !important;
+    font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
 
@@ -23,4 +23,13 @@ $font-logo: 'Merienda', cursive;
 
 .logo-text {
     font-family: $font-logo;
+    font-size: 6em;
+    text-shadow: 5px 4px 2px rgba(210,210,210,0.6);
+}
+
+.logo-subtitle {
+    font-size: 1.2em;
+    text-transform: lowercase;
+    font-family: $font-default;
+    font-weight: 300;
 }

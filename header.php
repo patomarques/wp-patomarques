@@ -31,17 +31,16 @@
   <link rel="mask-icon" href="<?= get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#0d6efd">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+
   <?php wp_head(); ?>
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap');
-</style>
+
 </head>
 
 <body <?php body_class(); ?>>
 
   <?php wp_body_open(); ?>
 
-  <header id="masthead" class="site-header <?= is_home() ? 'd-none' : '' ?>">
+  <header id="masthead" class="site-header <?= is_home() ? 'd-none ' : '' ?>">
 
     <div class="menu-bar bg-transparent">
 

@@ -7,25 +7,25 @@
     </video>
 
     <div class="content-centered__box-text">
-        <h2 class="bg-fullscreen__title bold logo-text pb-0">
+        <h2 class="bg-fullscreen__title bold logo-text pb-5">
             < Pato Marques />
         </h2>
-        <p class="h2  hide color-white">
-            <span class="color-yellow">[</span> Desenvolvedor Web <span class="color-yellow">]</span>
-        </p>
 
-        <div class="words-effect hide">
-            <div class="words-effect__container">
-                <!-- <ul class="words-effect__container__list text-center">
+        <div class="words-effect mt-4">
+            <div class="words-effect__dev logo-subtitle color-white">
+                Desenvolvimento Web
+            </div>
+            <div class="words-effect__container pb-5 hide">
+                <ul class="words-effect__container__list text-center pl-5">
                     <li class="words-effect__container__list__item"> <?= "< front-end />" ?></li>
                     <li class="words-effect__container__list__item"> back-end(){}</li>
-                    <li class="words-effect__container__list__item"> [wordpress]</li>
+                    <li class="words-effect__container__list__item"><?php echo '<?= "wordpress" ?>'?></li>
                     <li class="words-effect__container__list__item"> {{ laravel }}</li>
-                </ul> -->
+                </ul>
             </div>
         </div>
 
-        <div class="content-btn-scroll mt-5">
+        <div class="content-btn-scroll mt-5 pt-5">
             <a href="#section-about" class="btn-scroll-down" name="target">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
@@ -65,7 +65,7 @@ $fightFlags = new WP_Query(
             <div class="col-12 col-md-6 col-lg-7 offset-lg-1">
                 <div class="content-about">
 
-                    <div class="content-about__subtitle text-justify pb-4">
+                    <div class="content-about__subtitle text-justify pt-3 pb-4">
                         <?php //echo apply_filters('get_the_post_excerpt', $pageAbout->post_excerpt); 
                         ?>
                         <p class="h1">Pato Marques</p>
@@ -80,28 +80,30 @@ $fightFlags = new WP_Query(
                             e tecnologias de código aberto.
                         </p>
 
-                        <?php get_template_part('template-parts/technologies-icons'); ?>
+                        <div class="pt-3">
+                            <?php get_template_part('template-parts/technologies-icons'); ?>
+                        </div>
 
                     </div>
 
-                    <ul class="list-unstyled list-inline list-tags">
+                    <ul class="list-unstyled list-inline list-tags d-none">
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/frontend'?>" class="list-tags__item__link">#frontend</a>
+                            <a href="<?= get_site_url() . '/category/frontend' ?>" class="list-tags__item__link">#frontend</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/backend'?>" class="list-tags__item__link">#backend</a>
+                            <a href="<?= get_site_url() . '/category/backend' ?>" class="list-tags__item__link">#backend</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/ux/ui'?>" class="list-tags__item__link">#ux/ui</a>
+                            <a href="<?= get_site_url() . '/category/ux/ui' ?>" class="list-tags__item__link">#ux/ui</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/wordpress'?>" class="list-tags__item__link">#wordpress</a>
+                            <a href="<?= get_site_url() . '/category/wordpress' ?>" class="list-tags__item__link">#wordpress</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/wordpress'?>" class="list-tags__item__link">#laravel</a>
+                            <a href="<?= get_site_url() . '/category/wordpress' ?>" class="list-tags__item__link">#laravel</a>
                         </li>
                         <li class="list-inline-item list-tags__item">
-                            <a href="<?= get_site_url() . '/category/linux'?>" class="list-tags__item__link">#linux</a>
+                            <a href="<?= get_site_url() . '/category/linux' ?>" class="list-tags__item__link">#linux</a>
                         </li>
                     </ul>
 
@@ -120,7 +122,7 @@ $fightFlags = new WP_Query(
                         <!-- <div class="d-xs-none col-md-2"></div> -->
 
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -143,19 +145,20 @@ $fightFlags = new WP_Query(
 
 <?php get_template_part('template-parts/portfolio'); ?>
 
-<?//php get_template_part('template-parts/blog-recent-posts'); ?>
+<? //php get_template_part('template-parts/blog-recent-posts'); 
+?>
 
 <div class="container-fluid mt-5 mb-5 pt-5 pb-5">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h4 class="h1 text">Entre em contato, vamos construir algo.</h4>
-                <h5 class="h1 title-section">ola@patomarques.com.br</h5>
+                <h4 class="h1 title-section">Contatos</h4>
+                <!-- <h5 class="h1">ola@patomarques.com.br</h5> -->
             </div>
         </div>
     </div>
 </div>
 
-<?php get_template_part( 'template-parts/contatos' ); ?>
+<?php get_template_part('template-parts/contatos'); ?>
 
 <?php get_footer(); ?>

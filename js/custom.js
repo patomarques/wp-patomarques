@@ -51,7 +51,7 @@ jQuery(function ($) {
 });
 
 let menu = document.getElementById('masthead');
-let offset = document.getElementById("section-home-intro").offsetHeight - 300;
+let offset = document.getElementById("section-home-intro").offsetHeight - 70;
 
 window.addEventListener("load", (event) => {
     menuFixed();

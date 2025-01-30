@@ -7,6 +7,7 @@ body {
     font-family: $font-default;
     font-weight: 300;
     background-color: $color-gray-light;
+    //display: none;
 }
 
 a {
@@ -19,9 +20,9 @@ a {
     &:hover {
         color: $color-gold;
 
-        i {
-            color: $color-gold;
-        }
+        // i {
+        //     color: $color-gold;
+        // }
     }
 }
 
@@ -555,6 +556,9 @@ body.dark-theme {
     &__container {
         &__list {
             padding-left: 0 !important;
+            // padding: 0 20px;
+
+            // &:nth-child(1) {}
         }
     }
 }
@@ -597,8 +601,6 @@ body.dark-theme {
 
 @media(min-width: 768px) {
     .words-effect__container {
-        // width: 65vw;
-
         &__list {
             padding-left: 0;
         }

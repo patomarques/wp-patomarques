@@ -191,8 +191,10 @@
     }
 }
 
-.words-effect__container {
-    //margin-top: 60px;
+.words-effect {
+    &__container {
+        width: auto;
+    }
 }
 
 .offcanvas-backdrop {
@@ -205,12 +207,11 @@
     }
 
     .logo-text {
-        font-size: 2.3em;
+        //font-size: 2.3em;
         padding-bottom: 40px;
     }
 
     .words-effect__container {
-        width: 90vw;
         padding-left: 0;
 
         &__text {
@@ -252,7 +253,7 @@
 @media(min-width: 768px) {
 
     .logo-text {
-        font-size: 4em;
+        //font-size: 4em;
         padding-bottom: 90px;
     }
 
@@ -283,8 +284,6 @@
     }
 
     .words-effect__container {
-        padding-left: 80px;
-
         &__text {
             display: inline-block;
         }
@@ -308,7 +307,6 @@
 
     .words-effect__container {
         display: block;
-        width: 60vw;
     }
 
     .btn-toggle-dark-light {
@@ -318,8 +316,4 @@
     }
 }
 
-@media(min-width: 1200px) {
-    .words-effect__container {
-        width: 50vw;
-    }
-}
+@media(min-width: 1200px) {}
