@@ -38,13 +38,13 @@ wp_reset_postdata();
 ?>
 
 <section id="section-experience" class="section-container">
-    <div class="container">
-        <div class="row mb-5">
+    <div class="container mb-5">
+        <div class="row">
             <div class="col-12 pb-5">
                 <h3 class="title-section">Experiência</h3>
-                <div class="content-experience">
-                    <h4 class="content-experience__description">Linha do tempo com resumo dos principais trampos que
-                        passeis desde 2010 até agora...</h4>
+                <div class="content-experience mt-5">
+                    <h4 class="h2 ontent-experience__description mt-5 text-justify">Linha do tempo dos principais trabalhos que
+                        estive desde 2010 até agora.</h4>
                 </div>
             </div>
         </div>

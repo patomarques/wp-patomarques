@@ -49,8 +49,8 @@
         <div class="<?= bootscore_container_class(); ?> position-relative">
 
           <div class="text-center d-block">
-            <a class="navbar-brand md d-none d-md-block text-center" href="<?= esc_url(home_url()); ?>">
-              <h1 class="logo-text m-0 p-0 pb-3">
+            <a class="navbar-brand md d-none d-md-block text-center p-0 m-0" href="<?= esc_url(home_url()); ?>">
+              <h1 class="logo-text m-0 p-0">
                 <?php echo "< Pato Marques />"; ?>
               </h1>
             </a>

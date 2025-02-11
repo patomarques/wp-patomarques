@@ -22,6 +22,8 @@ $contacts = new WP_Query($args);
                                 $contacts->the_post(); ?>
 
                                 <li class="content-contact__list-item list-inline-item m-5">
+                                    <a href="<?php echo get_post_meta(get_the_ID(), 'link', true) ?>" class="content-contact__link"
+                                        target="_blank"
                                         title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
                                         <i class="<?= get_post_meta(get_the_ID(), 'icon_class', true) ?> fa-5x icon-3d"></i>
                                     </a>

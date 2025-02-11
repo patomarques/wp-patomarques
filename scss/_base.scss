@@ -32,6 +32,17 @@ p {
     font-weight: 300;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    font-family: $font-default;
+}
+
 .bold {
     font-weight: 700;
 }
@@ -458,6 +469,22 @@ body.dark-theme {
             margin-top: 20px;
         }
 
+        &:hover {
+            cursor: pointer;
+            background-color: $color-black;
+            color: $color-white;
+
+            &__box {
+                display: none;
+
+                &__icon {
+                    display: none;
+                    filter: brightness(0) saturate(100%) invert(86%) sepia(72%) saturate(2144%) hue-rotate(320deg) brightness(98%) contrast(105%);
+                }
+            }
+     
+        }
+
         &__box {
             display: block;
             //border: 1px solid $color-black;
@@ -467,23 +494,12 @@ body.dark-theme {
             padding: 4rem !important;
             @extend .trans;
 
-            &:hover {
-                opacity: .7;
-                cursor: pointer;
-                background-color: #f1f1f1;
-                color: #000000;
-            }
+           
 
             &__icon {
                 display: inline-block;
                 width: 100px;
                 height: 100px;
-                background-size: cover;
-                fill: gold !important;
-
-                g {
-                    fill: gold !important;
-                }
             }
         }
 
@@ -502,9 +518,12 @@ body.dark-theme {
         }
 
         &:nth-child(3) {
-            img {
-                width: 100px;
-                margin-top: -10px;
+            .content-services__item__box {
+                &__icon {
+                    width: 85px;
+                    height: 85px;
+                    margin-top: 15px;
+                }
             }
         }
     }
@@ -575,6 +594,8 @@ body.dark-theme {
         }
     }
 }
+
+.text-send-mail {}
 
 @media(min-width: 320px) {
     .content-centered {

@@ -12,7 +12,7 @@ $portfolio = new WP_Query(
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">
-                <h3 class="title-section text-center mb-5">Portfolio</h3>
+                <h3 class="title-section text-center mb-5">Portfólio</h3>
             </div>
         </div>
 

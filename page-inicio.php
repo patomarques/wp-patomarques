@@ -11,7 +11,7 @@
             < Pato Marques />
         </h2>
 
-        <div class="words-effect mt-4">
+        <div class="words-effect mt-5">
             <div class="words-effect__dev logo-subtitle color-white">
                 Desenvolvimento Web
             </div>
@@ -46,8 +46,8 @@ $fightFlags = new WP_Query(
 
 ?>
 
-<section id="section-about" class="section-container">
-    <div class="container">
+<section id="section-about" class="section-container mt-5">
+    <div class="container mt-3">
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h3 class="content-about__title title-section pb-4 text-center">
@@ -70,7 +70,7 @@ $fightFlags = new WP_Query(
                         ?>
                         <p class="h1">Pato Marques</p>
                         <p class="h3 pb-3">Recife, Desenvolvedor web, Sistemas de Informação </p>
-                        <p class="h3 pb-3">+13 anos trabalhando com sites, lojas online e aplicações web
+                        <p class="h3 pb-3">+13 anos trampando com sites, lojas online e aplicações web
                             <span class="h5 hide">(desde 2010)</span>;
                         </p>
                         <p class="h3">Desenvolvedor
@@ -154,16 +154,16 @@ $fightFlags = new WP_Query(
     </div>
 </div>
 
-<div class="container-fluid mt-5 mb-5 pt-5 pb-5">
-    <div class="container">
+<section class="container-fluid">
+    <div class="container mt-5 mb-5 pt-5 pb-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h4 class="title-contact">Entre em <b>contato</b>, compartilhe sua ideia e solicite um orçamento</h4>
-                <h5 class="text-send-mail">ola@patomarques.com.br</h5>
+                <h4 class="title-contact">Compartilhe sua ideia e solicite um orçamento</h4>
+                <h5 class="text-send-mail title-default bold">contato@patomarques.com.br</h5>
             </div>
         </div>
-    </div>
-</div>
+     </div>
+</section>
 
 <div class="container-fluid container-divider">
     <div class="d-flex text-center">

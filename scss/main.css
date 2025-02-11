@@ -2,9 +2,7 @@
 /*!
  * bootScore custom styles
  */
-@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Lavishly+Yours&family=Qwitcher+Grypen:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 .bg-transparent {
   background-color: transparent !important;
 }
@@ -36,28 +34,26 @@
 }
 
 .title-section {
-  font-size: 5rem;
-  font-family: "Roboto Mono", serif !important;
-  font-weight: 700;
+  font-size: 6rem;
+  font-family: "Eagle Lake", serif !important;
+  font-weight: 100;
   font-style: normal;
-  text-transform: uppercase;
-}
-.title-section:after {
-  content: "";
-  width: 100px;
-  height: 3px;
+  text-transform: capitalize;
+  position: relative;
+  display: block;
 }
 
 .logo-text {
-  font-family: "Shadows Into Light", cursive;
-  font-size: 6em;
+  font-family: "Qwitcher Grypen", serif;
+  font-size: 10rem;
+  font-weight: 700;
   text-shadow: 5px 4px 2px rgba(210, 210, 210, 0.6);
 }
 
 .logo-subtitle {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-transform: lowercase;
-  font-family: "Raleway", serif;
+  font-family: "Eagle Lake", serif;
   font-weight: 300;
 }
 
@@ -67,6 +63,8 @@
 
 .text-send-mail {
   font-size: 3.4rem;
+  text-transform: lowercase;
+  font-family: "Eagle Lake", serif;
 }
 
 .trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
@@ -124,6 +122,12 @@
 .btn-dark:active, body.dark-theme .button-border-effect:active {
   background: #ffffff;
   color: #000000;
+}
+
+.top-button {
+  font-size: 2rem;
+  bottom: 0;
+  box-shadow: inherit !important;
 }
 
 *,
@@ -461,7 +465,7 @@ html {
 
 html,
 body {
-  font-family: "Raleway", serif;
+  font-family: "Titillium Web", serif;
   font-weight: 300;
   background-color: #fafeff;
 }
@@ -478,8 +482,19 @@ a:hover {
 
 p {
   font-size: 1.8rem;
-  font-family: "Raleway", serif;
+  font-family: "Titillium Web", serif;
   font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  font-family: "Titillium Web", serif;
 }
 
 .bold {
@@ -830,27 +845,28 @@ body.dark-theme .cd-horizontal-timeline .events a {
 .content-services__item__title {
   margin-top: 20px;
 }
+.content-services__item:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}
+.content-services__item:hover__box {
+  display: none;
+}
+.content-services__item:hover__box__icon {
+  display: none;
+  filter: brightness(0) saturate(100%) invert(86%) sepia(72%) saturate(2144%) hue-rotate(320deg) brightness(98%) contrast(105%);
+}
 .content-services__item__box {
   display: block;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px, rgba(0, 0, 0, 0.23) 0px 2px 6px;
   border-radius: 5px;
   padding: 4rem !important;
 }
-.content-services__item__box:hover {
-  opacity: 0.7;
-  cursor: pointer;
-  background-color: #f1f1f1;
-  color: #000000;
-}
 .content-services__item__box__icon {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background-size: cover;
-  fill: gold !important;
-}
-.content-services__item__box__icon g {
-  fill: gold !important;
 }
 .content-services__item:nth-child(1) img {
   width: 90px;
@@ -861,9 +877,10 @@ body.dark-theme .cd-horizontal-timeline .events a {
 .content-services__item:nth-child(2) img {
   width: 88px;
 }
-.content-services__item:nth-child(3) img {
-  width: 100px;
-  margin-top: -10px;
+.content-services__item:nth-child(3) .content-services__item__box__icon {
+  width: 85px;
+  height: 85px;
+  margin-top: 15px;
 }
 
 .services__svg-icon g {
@@ -961,7 +978,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
   transform: translate(-50%, -50%);
   height: auto;
   overflow: hidden;
-  font-family: "Roboto Mono", serif;
+  font-family: "Eagle Lake", serif;
   font-size: 35px;
   line-height: 40px;
   color: #ffffff;
@@ -1037,10 +1054,13 @@ body.dark-theme .cd-horizontal-timeline .events a {
   box-shadow: 0 0 3px #3a4750;
 }
 .site-header .logo-text {
-  font-size: 1.4em;
+  font-size: 3em;
   font-weight: 300;
   text-shadow: none;
   color: #000000;
+  top: -5px;
+  display: block;
+  position: relative;
 }
 .site-header .logo-text:hover {
   color: #ffc93c;
@@ -1057,7 +1077,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
 }
 
 .navbar-nav .nav-link {
-  font-family: "Raleway", serif;
+  font-family: "Titillium Web", serif;
 }
 .navbar-nav .nav-link:hover {
   opacity: 0.7;
@@ -1222,7 +1242,6 @@ body.dark-theme .cd-horizontal-timeline .events a {
     right: 0;
     position: absolute;
     right: 50px;
-    top: -4px;
   }
   .navbar-brand {
     position: relative;
@@ -1257,7 +1276,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
   }
   .btn-toggle-dark-light {
     right: 70px;
-    top: 15px;
+    top: 22px;
     z-index: 9;
   }
 }
