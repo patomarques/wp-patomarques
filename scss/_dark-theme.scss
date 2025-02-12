@@ -1,0 +1,107 @@
+body.dark-theme {
+    background-color: $color-black !important;
+
+    section,
+    header {
+        background-color: $color-black !important;
+    }
+
+    .card {
+        .card-body {
+            background-color: $color-black;
+        }
+    }
+
+    .btn-scroll-down {
+        i {
+            color: $color-white;
+        }
+
+        &:after {
+            border: $border-dark !important;
+        }
+
+        &:hover {
+            i {
+                color: $color-black;
+            }
+
+            &:after {
+                background-color: $color-white;
+                color: $color-black;
+            }
+        }
+    }
+
+    .logo-text {
+        color: $color-white;
+    }
+
+    .button-border-effect {
+        @extend .btn-dark;
+    }
+
+    .fight-flags {
+        img[alt="Direitos Animais"] {
+            filter: invert(1);
+        }
+    }
+
+    .body-card {
+        background-color: $color-black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: $color-white;
+    }
+
+    .btn-menu-hamburguer {
+        color: $color-white;
+    }
+
+    .navbar-brand {
+        img {
+            filter: invert(1);
+        }
+
+        &:after {
+            background-color: $color-black;
+        }
+    }
+
+    footer {
+        background-color: $color-black;
+
+        span,
+        a,
+        small {
+            color: $color-white;
+        }
+    }
+
+    .content-contact__link i {
+        color: $color-white;
+    }
+
+    .content-services__item img {
+        filter: invert(1);
+    }
+
+    .cd-horizontal-timeline .events a {
+        color: $color-white;
+    }
+
+    .content-services__item {
+        background-color: $color-black;
+
+        &__box {
+            box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 6px, rgba(255, 255, 255, 0.23) 0px 2px 6px;
+        }
+    }
+}

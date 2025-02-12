@@ -459,6 +459,80 @@
     transform: translateX(0%);
   }
 }
+body.dark-theme {
+  background-color: #000000 !important;
+}
+body.dark-theme section,
+body.dark-theme header {
+  background-color: #000000 !important;
+}
+body.dark-theme .card .card-body {
+  background-color: #000000;
+}
+body.dark-theme .btn-scroll-down i {
+  color: #ffffff;
+}
+body.dark-theme .btn-scroll-down:after {
+  border: 3px solid #ffffff !important;
+}
+body.dark-theme .btn-scroll-down:hover i {
+  color: #000000;
+}
+body.dark-theme .btn-scroll-down:hover:after {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.dark-theme .logo-text {
+  color: #ffffff;
+}
+body.dark-theme .fight-flags img[alt="Direitos Animais"] {
+  filter: invert(1);
+}
+body.dark-theme .body-card {
+  background-color: #000000;
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p {
+  color: #ffffff;
+}
+body.dark-theme .btn-menu-hamburguer {
+  color: #ffffff;
+}
+body.dark-theme .navbar-brand img {
+  filter: invert(1);
+}
+body.dark-theme .navbar-brand:after {
+  background-color: #000000;
+}
+body.dark-theme footer {
+  background-color: #000000;
+}
+body.dark-theme footer span,
+body.dark-theme footer a,
+body.dark-theme footer small {
+  color: #ffffff;
+}
+body.dark-theme .content-contact__link i {
+  color: #ffffff;
+}
+body.dark-theme .content-services__item img {
+  filter: invert(1);
+}
+body.dark-theme .cd-horizontal-timeline .events a {
+  color: #ffffff;
+}
+body.dark-theme .content-services__item {
+  background-color: #000000;
+}
+body.dark-theme .content-services__item__box {
+  box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 6px, rgba(255, 255, 255, 0.23) 0px 2px 6px;
+}
+
 html {
   margin-top: 0 !important;
 }
@@ -756,74 +830,6 @@ p {
   transform: translateX(24px);
 }
 
-body.dark-theme {
-  background-color: #000000 !important;
-}
-body.dark-theme section,
-body.dark-theme header {
-  background-color: #000000 !important;
-}
-body.dark-theme .card .card-body {
-  background-color: #000000;
-}
-body.dark-theme .btn-scroll-down i {
-  color: #ffffff;
-}
-body.dark-theme .btn-scroll-down:after {
-  border: 3px solid #ffffff !important;
-}
-body.dark-theme .btn-scroll-down:hover i {
-  color: #000000;
-}
-body.dark-theme .btn-scroll-down:hover:after {
-  background-color: #ffffff;
-  color: #000000;
-}
-body.dark-theme .logo-text {
-  color: #ffffff;
-}
-body.dark-theme .fight-flags img[alt="Direitos Animais"] {
-  filter: invert(1);
-}
-body.dark-theme .body-card {
-  background-color: #000000;
-}
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3,
-body.dark-theme h4,
-body.dark-theme h5,
-body.dark-theme h6,
-body.dark-theme p {
-  color: #ffffff;
-}
-body.dark-theme .btn-menu-hamburguer {
-  color: #ffffff;
-}
-body.dark-theme .navbar-brand img {
-  filter: invert(1);
-}
-body.dark-theme .navbar-brand:after {
-  background-color: #000000;
-}
-body.dark-theme footer {
-  background-color: #000000;
-}
-body.dark-theme footer span,
-body.dark-theme footer a,
-body.dark-theme footer small {
-  color: #ffffff;
-}
-body.dark-theme .content-contact__link i {
-  color: #ffffff;
-}
-body.dark-theme .content-services__item img {
-  filter: invert(1);
-}
-body.dark-theme .cd-horizontal-timeline .events a {
-  color: #ffffff;
-}
-
 .img-invert {
   filter: invert(1);
 }
@@ -858,6 +864,7 @@ body.dark-theme .cd-horizontal-timeline .events a {
 }
 .content-services__item__box:hover {
   background-color: #000000;
+  cursor: auto;
 }
 .content-services__item__box:hover__title {
   color: #ffffff !important;
