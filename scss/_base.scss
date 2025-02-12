@@ -469,22 +469,6 @@ body.dark-theme {
             margin-top: 20px;
         }
 
-        &:hover {
-            cursor: pointer;
-            background-color: $color-black;
-            color: $color-white;
-
-            &__box {
-                display: none;
-
-                &__icon {
-                    display: none;
-                    filter: brightness(0) saturate(100%) invert(86%) sepia(72%) saturate(2144%) hue-rotate(320deg) brightness(98%) contrast(105%);
-                }
-            }
-     
-        }
-
         &__box {
             display: block;
             //border: 1px solid $color-black;
@@ -494,12 +478,27 @@ body.dark-theme {
             padding: 4rem !important;
             @extend .trans;
 
-           
-
             &__icon {
                 display: inline-block;
                 width: 100px;
                 height: 100px;
+            }
+
+            &:hover {
+                background-color: $color-black;
+
+                &__title {
+                    color: $color-white !important;
+                    display: none;
+                }
+
+                p {
+                    color: $color-white !important;
+                }
+
+                .content-services__item__box__icon {
+                    filter: brightness(0) saturate(100%) invert(86%) sepia(72%) saturate(2144%) hue-rotate(320deg) brightness(98%) contrast(105%);
+                }
             }
         }
 
@@ -520,9 +519,10 @@ body.dark-theme {
         &:nth-child(3) {
             .content-services__item__box {
                 &__icon {
-                    width: 85px;
-                    height: 85px;
-                    margin-top: 15px;
+                    width: 80px;
+                    height: 80px;
+                    margin-top: 15px !important;
+                    margin-bottom: 30px;
                 }
             }
         }

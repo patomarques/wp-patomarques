@@ -13,7 +13,7 @@ $services = new WP_Query(
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h3 class="title-section">Serviços</h3>
+                <h3 class="title-section mb-4">Serviços</h3>
             </div>
         </div>
         <div class="row content-services pb-5">
@@ -24,13 +24,12 @@ $services = new WP_Query(
 
                 <div class="col-12 col-md-4 content-services__item">
                     <a href="#" class="content-services__item__box text-center">
-                        <div class="d-block m-auto text-center mb-1">
-                            <img src="<?php echo get_stylesheet_directory_uri() . '/' .  get_post_meta(get_the_ID(), 'svg_icon_url')[0]; ?>" alt="" class="img-fluid content-services__item__box__icon">
-                        </div>
-                        <h3 class="content-services__item__title text-center bold">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/' .  get_post_meta(get_the_ID(), 'svg_icon_url')[0]; ?>" alt="" class="img-fluid content-services__item__box__icon content-services__item__box__icon--gold d-block m-auto text-center mb-4
+                        ">
+                        <h3 class="content-services__item__box__title text-center bold h2">
                             <?= the_title() ?>
                         </h3>
-                        <h4 class="content-services__item__description">
+                        <h4 class="content-services__item__box__description">
                             <?= the_excerpt() ?>
                         </h4>
                     </a>
