@@ -32,9 +32,8 @@ jQuery(function ($) {
         const checkboxToggle = document.getElementById("btn-dark-light-checkbox");
         let hasClicked;
         checkboxToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-theme");
-            hasClicked = $('body').hasClass('dark-theme');
-            console.log('check switch', hasClicked);
+            document.documentElement.classList.toggle("dark-theme");
+            hasClicked = $('html').hasClass('dark-theme');
             sessionStorage.setItem('dark-theme', hasClicked);
         });
     }
@@ -42,10 +41,10 @@ jQuery(function ($) {
     function loadDarkTheme() {
         let hasClicked = sessionStorage.getItem('dark-theme');
         if(hasClicked == 'true') {
-            $('body').addClass('dark-theme');
+            $('html').addClass('dark-theme');
             document.getElementById("btn-dark-light-checkbox").click();
         }else{
-            $('body').removeClass('dark-theme');
+            $('html').removeClass('dark-theme');
         }
     }
 });
