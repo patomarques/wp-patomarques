@@ -93,12 +93,12 @@ wp_reset_postdata();
                                                                         echo "selected";
                                                                     } ?>">
                         <h3 class="timeline-info__title pb-2">
-                            <span class="bold">
+                            <span class="">
                                 <?= $e['cargo'] ?>
                             </span>
                             <span class="timeline-info__title__company">
                                 na
-                                <span class="italic">
+                                <span class="bold">
                                     <?= $e['title'] ?>
                                 </span>
                             </span>
@@ -109,10 +109,10 @@ wp_reset_postdata();
                             <?= formatDateToMMYY($e['start_date']) ?> à
                             <?= formatDateToMMYY($e['end_date']) ?>
                         </h4>
-                        <h4 class="timeline-info__description pb-3 text-justify">
+                        <h4 class="timeline-info__description pb-3 text-justify h2">
                             <?= $e['excerpt'] ?>
                         </h4>
-                        <h5 class="timeline-info__techs">
+                        <h5 class="timeline-info__techs h3 mt-3">
                             <span class="bold">Tecnologias: </span>
                             <?= $e['techs'] ?>
                         </h5>

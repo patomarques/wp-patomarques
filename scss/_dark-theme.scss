@@ -110,4 +110,21 @@
             @extend .img-invert;
         }
     }
+
+    .timeline-years {
+        a {
+            color: $color-white !important;
+
+            &.selected {
+                color: $color-gold !important;
+            }
+        }
+    }
+
+    .cd-timeline-navigation {
+        .fa-angle-right,
+        .fa-angle-left {
+            color: $color-gray-light !important;
+        }
+    }
 }
