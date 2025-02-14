@@ -42,9 +42,9 @@ wp_reset_postdata();
         <div class="row">
             <div class="col-12 pb-5">
                 <h3 class="title-section">Experiência</h3>
-                <div class="content-experience mt-5">
-                    <h4 class="h2 ontent-experience__description mt-5 text-justify">Linha do tempo dos principais trabalhos que
-                        estive desde 2010 até agora.</h4>
+                <div class="content-experience">
+                    <h4 class="h2 ontent-experience__description mt-4 text-justify">Linha do tempo com os principais trabalhos que
+                        passei desde 2010 até agora...</h4>
                 </div>
             </div>
         </div>
@@ -53,16 +53,14 @@ wp_reset_postdata();
         <div class="timeline">
             <div class="events-wrapper">
                 <div class="events">
-                    <ol id="timeline-years" class="list-unstyled">
+                    <ol id="timeline-years" class="list-unstyled timeline-years">
 
                         <?php
                         $count = 0;
                         foreach ($experiencesFormatted as $e) { ?>
 
                             <li>
-                                <a href="#0" data-date="<?= $e['start_date'] ?>" class="<?php if ($count == 0) {
-                                      echo "selected";
-                                  } ?>">
+                                <a href="#0" data-date="<?= $e['start_date'] ?>" class="<?php if ($count == 0) { echo "selected"; } ?>">
                                     <?= $e['year'] ?>
                                 </a>
                             </li>
@@ -75,8 +73,12 @@ wp_reset_postdata();
             </div>
 
             <ul id="timeline-navigation" class="cd-timeline-navigation list-unstyled">
-                <li><a href="#0" class="prev inactive">Prev</a></li>
-                <li><a href="#0" class="next">Next</a></li>
+                <li>
+                    <a href="#0" class="prev inactive">
+                        <i class="fa-solid fa-angle-right fa-5x"></i>
+                    </a>
+                </li>
+                <li><a href="#0" class="next"><i class="fa-solid fa-angle-right fa-5x"></i></a></li>
             </ul>
         </div>
 
@@ -88,8 +90,8 @@ wp_reset_postdata();
                 foreach ($experiencesFormatted as $e) { ?>
 
                     <li data-date="<?= $e['start_date'] ?>" class="<?php if ($index == 0) {
-                          echo "selected";
-                      } ?>">
+                                                                        echo "selected";
+                                                                    } ?>">
                         <h3 class="timeline-info__title pb-2">
                             <span class="bold">
                                 <?= $e['cargo'] ?>

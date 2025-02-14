@@ -29,13 +29,14 @@
     height: 100px;
     width: 100%;
     margin: 0 auto;
-    max-width: 1320px;
+    max-width: 98vw;
 }
 
 .cd-horizontal-timeline .events-wrapper {
     position: relative;
     height: 100%;
-    margin: 0 40px;
+    //margin: 0 40px;
+    margin: 0 6vw;
     overflow: hidden;
 }
 
@@ -63,10 +64,10 @@
     position: absolute;
     z-index: 1;
     left: 0;
-    top: 49px;
-    height: 2px;
+    top: 60px;
+    height: 3px;
     /* width will be set using JavaScript */
-    background: $color-white;
+    background: $color-graylight;
     -webkit-transition: -webkit-transform 0.4s;
     -moz-transition: -moz-transform 0.4s;
     transition: transform 0.4s;
@@ -120,13 +121,26 @@
 
     &:hover {
         opacity: .7;
-        color: $color-gold;
+        color: $color-gold !important;
+
+        &:after {
+            border-color: $color-gold;
+            background-color: $color-gold;
+        }
     }
 
-    &.older-event,
     &.selected {
-        color: $color-gold !important;
+        color: $color-black !important;
     }
+
+    &.older-event {
+        color: $color-secondary !important;
+
+        &:hover {
+            color: $color-gold !important;
+        }
+    }
+
 }
 
 /* custom*/
@@ -151,12 +165,12 @@
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: -25px;
-    height: 12px;
-    width: 12px;
+    bottom: -31px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
-    border: 2px solid $color-white;
-    background-color: $color-white;
+    border: 4px solid $color-graylight;
+    background-color: $color-graylight;
     -webkit-transition: background-color 0.3s, border-color 0.3s;
     -moz-transition: background-color 0.3s, border-color 0.3s;
     transition: background-color 0.3s, border-color 0.3s;
@@ -202,37 +216,38 @@
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 2px solid $color-white;
+    //height: 30px;
+    // width: 30px;
+    // border-radius: 50%;
+    //border: 2px solid $color-white;
     /* replace text with an icon */
-    overflow: hidden;
-    color: transparent;
-    text-indent: 100%;
-    white-space: nowrap;
+    // overflow: hidden;
+    // color: transparent;
+    // text-indent: 100%;
+    // white-space: nowrap;
     -webkit-transition: border-color 0.3s;
     -moz-transition: border-color 0.3s;
     transition: border-color 0.3s;
+
+    &:after {
+        /* arrow icon */
+        content: '';
+        position: absolute;
+        //height: 16px;
+        // width: 16px;
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        // -webkit-transform: translateX(-50%) translateY(-50%);
+        // -moz-transform: translateX(-50%) translateY(-50%);
+        // -ms-transform: translateX(-50%) translateY(-50%);
+        // -o-transform: translateX(-50%) translateY(-50%);
+        // transform: translateX(-50%) translateY(-50%);
+        // background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRw%0D%0AOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhl%0D%0AaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDE2IDMyIj48ZyAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUo%0D%0AMCwgMCkiPjxwb2x5Z29uIGZpbGw9IiM3YjlkNmYiIHBvaW50cz0iNiwxMy40IDQuNiwxMiA4LjYs%0D%0AOCA0LjYsNCA2LDIuNiAxMS40LDggIi8+PC9nPjxnICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAx%0D%0ANikiPjxwb2x5Z29uIGZpbGw9IiNkZmRmZGYiIHBvaW50cz0iNiwxMy40IDQuNiwxMiA4LjYsOCA0%0D%0ALjYsNCA2LDIuNiAxMS40LDggIi8+PC9nPjwvc3ZnPg==) no-repeat 0 0;
+    }
 }
 
-.cd-timeline-navigation a::after {
-    /* arrow icon */
-    content: '';
-    position: absolute;
-    height: 16px;
-    width: 16px;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRw%0D%0AOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhl%0D%0AaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDE2IDMyIj48ZyAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUo%0D%0AMCwgMCkiPjxwb2x5Z29uIGZpbGw9IiM3YjlkNmYiIHBvaW50cz0iNiwxMy40IDQuNiwxMiA4LjYs%0D%0AOCA0LjYsNCA2LDIuNiAxMS40LDggIi8+PC9nPjxnICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAx%0D%0ANikiPjxwb2x5Z29uIGZpbGw9IiNkZmRmZGYiIHBvaW50cz0iNiwxMy40IDQuNiwxMiA4LjYsOCA0%0D%0ALjYsNCA2LDIuNiAxMS40LDggIi8+PC9nPjwvc3ZnPg==) no-repeat 0 0;
-}
 
 .cd-timeline-navigation a.prev {
     left: 0;
@@ -245,15 +260,20 @@
 
 .cd-timeline-navigation a.next {
     right: 0;
-    color: $color-white;
+    color: $color-black;
+
+    &:hover {
+        color: $color-gold !important;
+    }
 }
 
 .no-touch .cd-timeline-navigation a:hover {
-    border-color: $color-gold;
+    border-color: $color-gold !important;
 }
 
 .cd-timeline-navigation a.inactive {
     cursor: not-allowed;
+    opacity: .1;
 }
 
 .cd-timeline-navigation a.inactive::after {
@@ -365,6 +385,13 @@
         li {
             list-style: none !important;
         }
+    }
+}
+
+.timeline-years {
+    a {
+        font-size: 1.5rem !important;
+        color: $color-black !important;
     }
 }
 
