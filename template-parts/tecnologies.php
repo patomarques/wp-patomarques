@@ -30,6 +30,11 @@ while ($technologies->have_posts()):
 
 endwhile;
 
+$skills = array(
+    'languages' => 'Linguagens',
+    'frameworks' => 'Frameworks',
+    'technologies' => 'Tecnologias',
+);
 ?>
 
 <section id="section-skills" class="section-container">
@@ -47,7 +52,7 @@ endwhile;
 
                 <div class="col-12 col-md-6 col-lg-4">
                     <h4 class="content-skills__subtitle bold pb-3">
-                        <?= $key ?>
+                        <?= $skills[$key] ?>
                     </h4>
 
                     <?php for ($index = 0; $index < count($techs); $index++) { ?>
@@ -55,7 +60,7 @@ endwhile;
                         <div class="content-skills_item mb-3">
                             <div class="content-skills_list_item mb-2">
                                 <div class="content-skills progress-bar"></div>
-                                <span class="h4 d-block">
+                                <span class="content-skills__legends h4 d-block">
                                     <?= $techs[$index]["name"] ?>
                                 </span>
 

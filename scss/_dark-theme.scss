@@ -127,4 +127,14 @@
             color: $color-gray-light !important;
         }
     }
+
+    .content-skills {
+        &__subtitle {
+            color: $color-gold;
+        }
+
+        &__legends {
+            color: $color-white;
+        }
+    }
 }
