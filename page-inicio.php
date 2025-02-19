@@ -7,11 +7,11 @@
     </video>
 
     <div class="content-centered__box-text">
-        <h2 class="bg-fullscreen__title bold logo-text pb-5">
+        <h2 class="bg-fullscreen__title bold logo-text">
             < Pato Marques />
         </h2>
 
-        <div class="words-effect mt-5">
+        <div class="words-effect">
             <div class="words-effect__dev logo-subtitle color-white">
                 Desenvolvimento Web
             </div>
