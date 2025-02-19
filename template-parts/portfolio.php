@@ -8,7 +8,7 @@ $portfolio = new WP_Query(
 );
 ?>
 
-<section id="section-portfolio" class="section-container">
+<section id="portfolio" class="section-container">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">

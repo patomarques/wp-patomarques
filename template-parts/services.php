@@ -9,7 +9,7 @@ $services = new WP_Query(
 );
 ?>
 
-<section class="section-container">
+<section id="services" class="section-container">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12 text-center">

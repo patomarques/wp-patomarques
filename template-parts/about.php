@@ -11,7 +11,7 @@ $fightFlags = new WP_Query(
 
 ?>
 
-<section id="section-about" class="section-container mt-5">
+<section id="about" class="section-container mt-5">
     <div class="container mt-3">
         <div class="row mb-5">
             <div class="col-12 text-center">

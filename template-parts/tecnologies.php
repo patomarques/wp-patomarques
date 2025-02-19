@@ -37,7 +37,7 @@ $skills = array(
 );
 ?>
 
-<section id="section-skills" class="section-container">
+<section id="skills" class="section-container">
     <div class="container">
         <div class="row mb-5 text-center">
             <div class="col-12 pb-3">
