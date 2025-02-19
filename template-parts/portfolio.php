@@ -24,9 +24,9 @@ $portfolio = new WP_Query(
                 <div class="col-12 col-md-4">
 
                     <div class="card">
-                        <a href="<?php echo get_post_meta(get_the_ID(), 'link')[0]; ?>" class="card__box-header box-square-responsive">
+                        <a href="<?php echo get_post_meta(get_the_ID(), 'link')[0]; ?>" class="card__box-header box-square-responsive card-img-top">
                             <img class="card__box-header__image" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>"
-                                alt="Card image cap">
+                                alt="<?= get_the_title() ?>">
                         </a>
                         <div class="card-body">
                             <h3 class="card-title text-center bold">

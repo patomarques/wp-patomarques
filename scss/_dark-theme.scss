@@ -33,8 +33,39 @@
         }
     }
 
+    .btn-menu-hamburguer {
+        &:hover {
+            i {
+                color: $color-gold;
+            }
+        }
+    }
+
+    .offcanvas {
+        &.show {
+            .offcanvas-body {
+                background-color: $color-black;
+
+                .btn-menu-hamburguer i,
+                .nav-link {
+                    color: $color-white !important;
+
+                    &:hover {
+                        i {
+                            color: $color-gold !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .logo-text {
-        color: $color-white;
+        color: $color-white !important;
+
+        &:hover {
+            color: $color-gold !important;
+        }
     }
 
     .button-border-effect {
@@ -122,6 +153,7 @@
     }
 
     .cd-timeline-navigation {
+
         .fa-angle-right,
         .fa-angle-left {
             color: $color-gray-light !important;
