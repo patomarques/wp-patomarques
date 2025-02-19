@@ -1,4 +1,6 @@
-                                                                                                <?php
+
+
+<?php
 $args = array(
     'post_type' => 'contatos',
     'public' => true,
@@ -10,7 +12,9 @@ $args = array(
 $contacts = new WP_Query($args);
 ?>
 
-<section id="section-contact" class="d-block mt-5 pt-5 mb-5 pb-5">
+<section id="contact" class="d-block mt-5 pt-5 mb-5 pb-5">
+<?php get_template_part('template-parts/contact-notification'); ?>
+
     <div class="container flex-center pt-5">
         <div class="row">
             <div class="col-12">
