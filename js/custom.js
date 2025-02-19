@@ -15,10 +15,15 @@ jQuery(function ($) {
     $(document).ready(function () {
         $("#timeline-navigation li:last-child a").click();
         $("#timeline-years li:last-child a").click();
+        
         loadDarkTheme();
         toggleSwitchDarkLightTheme();
         clickMenuFull();
 
+        $('.nav-link').on('click', function() {
+            console.log('click', $(this).prop('href').split('#')[1]);
+            $('body').toggleClass('menu-fullscreen');
+        });
     });
 
 
