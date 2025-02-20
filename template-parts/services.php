@@ -11,19 +11,19 @@ $services = new WP_Query(
 
 <section id="services" class="section-container">
     <div class="container">
-        <div class="row mb-5">
+        <div class="row">
             <div class="col-12 text-center">
-                <h3 class="title-section mb-4">Serviços</h3>
+                <h3 class="title-section">Serviços</h3>
             </div>
         </div>
-        <div class="row content-services pb-5">
+        <div class="row content-services">
 
             <?php
             while ($services->have_posts()):
                 $services->the_post(); ?>
 
                 <div class="col-12 col-md-4 content-services__item">
-                    <a href="#" class="content-services__item__box text-center">
+                    <a href="javascript::void()" class="content-services__item__box text-center">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/' .  get_post_meta(get_the_ID(), 'svg_icon_url')[0]; ?>" alt="" class="img-fluid content-services__item__box__icon content-services__item__box__icon--gold d-block m-auto text-center mb-4
                         ">
                         <h3 class="content-services__item__box__title text-center bold h2">

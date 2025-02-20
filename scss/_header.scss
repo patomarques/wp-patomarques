@@ -253,6 +253,12 @@
 
 }
 
+@media(min-width: 320px) {
+    .title-section {
+        font-size: 4rem;
+    }
+}
+
 @media(min-width: 768px) {
     .bg-fullscreen {
         &__title {

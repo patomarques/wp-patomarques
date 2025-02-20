@@ -39,8 +39,8 @@ $skills = array(
 
 <section id="skills" class="section-container">
     <div class="container">
-        <div class="row mb-5 text-center">
-            <div class="col-12 pb-3">
+        <div class="row text-center">
+            <div class="col-12">
                 <h3 class="content-skills__title title-section mb-3">Habilidades</h3>
                 <!-- <h4 class="content-skills_description">Essas foram as tecnologias que trabalhei nos ultimos anos 13
                     anos.</h4> -->
