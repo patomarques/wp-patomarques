@@ -10,9 +10,9 @@ $portfolio = new WP_Query(
 
 <section id="portfolio" class="section-container">
     <div class="container">
-        <div class="row mb-5">
+        <div class="row">
             <div class="col-12">
-                <h3 class="title-section text-center mb-5">Portfólio</h3>
+                <h3 class="title-section text-center">Portfólio</h3>
             </div>
         </div>
 

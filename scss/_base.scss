@@ -527,10 +527,6 @@ p {
         }
     }
 
-    .title-contact {
-        font-size: 1.6rem;
-    }
-
     .content-btn-scroll {
         margin-top: 40px;
     }
@@ -569,10 +565,6 @@ p {
         }
 
     }
-
-    .title-section {
-        font-size: 5.5rem;
-    }
 }
 
 @media(min-width: 992px) {
@@ -594,10 +586,6 @@ p {
         &__list {
             //padding-left: 30vw;
         }
-    }
-
-    .title-contact {
-        font-size: 2.5rem;
     }
 
     .text-send-mail {

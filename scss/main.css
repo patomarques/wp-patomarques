@@ -41,7 +41,7 @@
   text-transform: capitalize;
   position: relative;
   display: block;
-  margin-bottom: 50px !important;
+  margin-bottom: 80px !important;
 }
 
 .logo-text {
@@ -68,6 +68,22 @@
   font-family: "Eagle Lake", serif;
 }
 
+@media (min-width: 320px) {
+  .title-section {
+    font-size: 3rem;
+  }
+  .title-contact {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .title-section {
+    font-size: 5rem;
+  }
+  .title-contact {
+    font-size: 3rem;
+  }
+}
 .trans, .navbar, .site-header .logo-text, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
   transition: all 0.8s ease;
   transform: translateX(0);
@@ -473,6 +489,21 @@
 .dark-theme header {
   background-color: #000000 !important;
 }
+.dark-theme .menu-fullscreen .btn-menu-hamburguer i {
+  color: #ffffff;
+}
+.dark-theme .menu-fullscreen .btn-menu-hamburguer:hover {
+  color: #ffc93c;
+}
+.dark-theme .offcanvas.show .offcanvas-body {
+  background-color: #000000;
+}
+.dark-theme .offcanvas.show .offcanvas-body .nav-link {
+  color: #ffffff;
+}
+.dark-theme .offcanvas.show .offcanvas-body .nav-link:hover {
+  color: #ffc93c;
+}
 .dark-theme .card .card-body {
   background-color: #000000;
 }
@@ -490,7 +521,10 @@
   color: #000000;
 }
 .dark-theme .logo-text {
-  color: #ffffff;
+  color: #ffffff !important;
+}
+.dark-theme .logo-text:hover {
+  color: #ffc93c !important;
 }
 .dark-theme .fight-flags img[alt="Direitos Animais"] {
   filter: invert(1);
@@ -985,9 +1019,6 @@ p {
   .content-centered__box-text .logo-text {
     margin-top: 0;
   }
-  .title-contact {
-    font-size: 1.6rem;
-  }
   .content-btn-scroll {
     margin-top: 40px;
   }
@@ -1016,9 +1047,6 @@ p {
   .words-effect__container__list {
     padding-left: 0;
   }
-  .title-section {
-    font-size: 5.5rem;
-  }
 }
 @media (min-width: 992px) {
   .content-blog {
@@ -1029,9 +1057,6 @@ p {
   }
   .content-blog .box-square {
     width: auto;
-  }
-  .title-contact {
-    font-size: 2.5rem;
   }
   .text-send-mail {
     font-size: 3rem;
@@ -1207,13 +1232,16 @@ p {
   opacity: 0;
 }
 .offcanvas.show .offcanvas-body {
+  transition: 0.52s;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  background: #ffffff;
   display: block !important;
+  z-index: 999;
+  overflow: hidden;
 }
 .offcanvas.show .offcanvas-body .navbar-nav {
   padding: 0;
@@ -1304,11 +1332,6 @@ p {
     left: 49%;
   }
 }
-@media (min-width: 320px) {
-  .title-section {
-    font-size: 4rem;
-  }
-}
 @media (min-width: 768px) {
   .bg-fullscreen__title {
     font-size: 7rem;
@@ -1333,6 +1356,12 @@ p {
   }
   .words-effect__container__list {
     padding-left: 200px;
+  }
+  .offcanvas.show .offcanvas-body .navbar-nav {
+    margin-top: 8vh;
+  }
+  .offcanvas.show .offcanvas-body .navbar-nav .nav-item .nav-link {
+    font-size: 4rem;
   }
 }
 @media (min-width: 992px) {

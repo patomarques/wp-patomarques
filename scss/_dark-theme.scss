@@ -6,6 +6,34 @@
         background-color: $color-black !important;
     }
 
+
+    .menu-fullscreen {
+        .btn-menu-hamburguer{
+            i {
+                color: $color-white;
+            }
+
+            &:hover {
+                color: $color-gold;
+            }
+        }
+    }
+    .offcanvas {
+        &.show {
+            .offcanvas-body {
+                background-color: $color-black;
+                
+                .nav-link {
+                    color: $color-white;
+
+                    &:hover {
+                        color: $color-gold;
+                    }
+                }
+            }
+        }
+    }
+
     .card {
         .card-body {
             background-color: $color-black;
@@ -34,7 +62,11 @@
     }
 
     .logo-text {
-        color: $color-white;
+        color: $color-white !important;
+
+        &:hover {
+            color: $color-gold !important;
+        }
     }
 
     .button-border-effect {
@@ -88,14 +120,14 @@
     .content-contact__link i {
         color: $color-white;
     }
-    
+
     .content-services {
         &__item {
             img {
                 filter: invert(1);
 
             }
-        }   
+        }
     }
 
     .cd-horizontal-timeline .events a {
@@ -127,6 +159,7 @@
     }
 
     .cd-timeline-navigation {
+
         .fa-angle-right,
         .fa-angle-left {
             color: $color-gray-light !important;

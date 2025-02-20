@@ -110,13 +110,18 @@
 
     &.show {
         .offcanvas-body {
+            transition: 0.52s;
             width: 100vw;
             height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: $color-white;
+            //background-color: $color-white;
+            background: $color-white;
             display: block !important;
+            z-index: 999;
+            overflow: hidden;
+            //@extend .trans;
 
             .navbar-nav {
                 padding: 0;
@@ -249,14 +254,6 @@
         position: absolute;
         left: 49%;
     }
-
-
-}
-
-@media(min-width: 320px) {
-    .title-section {
-        font-size: 4rem;
-    }
 }
 
 @media(min-width: 768px) {
@@ -295,6 +292,24 @@
 
         &__list {
             padding-left: 200px;
+        }
+    }
+
+    .offcanvas {
+        &.show {
+            .offcanvas-body {
+                .navbar-nav {
+                    margin-top: 8vh;
+
+                    .nav-item {
+                        .nav-link {
+                            font-size: 4rem;
+                        }
+
+                    }
+
+                }
+            }
         }
     }
 }

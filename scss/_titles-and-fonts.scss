@@ -15,7 +15,7 @@ $font-subtitle: "Raleway", serif;
     text-transform: capitalize;
     position: relative;
     display: block;
-    margin-bottom: 50px !important;
+    margin-bottom: 80px !important;
 
     // &:after {
     //     content: '';
@@ -52,4 +52,29 @@ $font-subtitle: "Raleway", serif;
     font-size: 3.4rem;
     text-transform: lowercase;
     font-family: $font-title;
+}
+
+@media(min-width: 320px) {
+    .title-section {
+        font-size: 3rem;
+    }
+
+    .title-contact {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media(min-width: 768px) {
+   
+}
+
+@media(min-width: 992px) {
+    .title-section {
+        font-size: 5rem;
+    }
+
+    .title-contact {
+        font-size: 3rem;
+    }
 }

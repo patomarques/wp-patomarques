@@ -40,7 +40,7 @@ wp_reset_postdata();
 <section id="experiences" class="section-container">
     <div class="container mb-5">
         <div class="row">
-            <div class="col-12 pb-5">
+            <div class="col-12 text-center">
                 <h3 class="title-section">Experiência</h3>
                 <div class="content-experience">
                     <h4 class="h2 ontent-experience__description mt-4 text-justify">Linha do tempo com os principais trabalhos que
