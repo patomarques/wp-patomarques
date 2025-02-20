@@ -437,7 +437,7 @@ p {
 
 .technologies-icons {
     display: flex;
-    
+
     svg {
         margin: 20px;
         color: $color-black;
@@ -510,7 +510,13 @@ p {
     }
 }
 
-.text-send-mail {}
+.card {
+    &__box-header {
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
 
 @media(min-width: 320px) {
     .content-centered {
@@ -519,6 +525,10 @@ p {
                 margin-top: 0;
             }
         }
+    }
+
+    .title-contact {
+        font-size: 1.6rem;
     }
 
     .content-btn-scroll {
@@ -546,6 +556,10 @@ p {
         }
 
     }
+
+    .text-send-mail {
+        font-size: 1.5rem;
+    }
 }
 
 @media(min-width: 768px) {
@@ -554,6 +568,10 @@ p {
             padding-left: 0;
         }
 
+    }
+
+    .title-section {
+        font-size: 5.5rem;
     }
 }
 
@@ -576,5 +594,13 @@ p {
         &__list {
             //padding-left: 30vw;
         }
+    }
+
+    .title-contact {
+        font-size: 2.5rem;
+    }
+
+    .text-send-mail {
+        font-size: 3rem;
     }
 }

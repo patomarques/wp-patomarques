@@ -12,14 +12,14 @@ $args = array(
 $contacts = new WP_Query($args);
 ?>
 
-<section id="contact" class="d-block mt-5 pt-5 mb-5 pb-5">
+<section id="contact" class="d-block">
 <?php get_template_part('template-parts/contact-notification'); ?>
 
     <div class="container flex-center pt-5">
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <ul class="list-inline">
+                    <ul class="d-flex">
 
                         <?php if ($contacts->have_posts()) {
                             while ($contacts->have_posts()):

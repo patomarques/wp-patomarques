@@ -88,9 +88,14 @@
     .content-contact__link i {
         color: $color-white;
     }
+    
+    .content-services {
+        &__item {
+            img {
+                filter: invert(1);
 
-    .content-services__item img {
-        filter: invert(1);
+            }
+        }   
     }
 
     .cd-horizontal-timeline .events a {

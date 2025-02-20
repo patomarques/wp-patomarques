@@ -977,9 +977,16 @@ p {
   rotate: 180deg;
 }
 
+.card__box-header:hover {
+  opacity: 0.6;
+}
+
 @media (min-width: 320px) {
   .content-centered__box-text .logo-text {
     margin-top: 0;
+  }
+  .title-contact {
+    font-size: 1.6rem;
   }
   .content-btn-scroll {
     margin-top: 40px;
@@ -1001,10 +1008,16 @@ p {
   .words-effect__container__list {
     padding-left: 0;
   }
+  .text-send-mail {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 768px) {
   .words-effect__container__list {
     padding-left: 0;
+  }
+  .title-section {
+    font-size: 5.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -1016,6 +1029,12 @@ p {
   }
   .content-blog .box-square {
     width: auto;
+  }
+  .title-contact {
+    font-size: 2.5rem;
+  }
+  .text-send-mail {
+    font-size: 3rem;
   }
 }
 .words-effect {
