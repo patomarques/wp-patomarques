@@ -1231,8 +1231,14 @@ p {
 .offcanvas-backdrop.show {
   opacity: 0;
 }
+.offcanvas .offcanvas-body {
+  overflow: hidden;
+  transition-duration: 0.5s;
+  backface-visibility: none;
+  opacity: 0;
+  visibility: hidden;
+}
 .offcanvas.show .offcanvas-body {
-  transition: 0.52s;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -1241,7 +1247,8 @@ p {
   background: #ffffff;
   display: block !important;
   z-index: 999;
-  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
 }
 .offcanvas.show .offcanvas-body .navbar-nav {
   padding: 0;
