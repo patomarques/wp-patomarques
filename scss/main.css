@@ -83,6 +83,13 @@
   .title-contact {
     font-size: 3rem;
   }
+  .logo-text {
+    font-size: 9rem;
+  }
+  .logo-subtitle {
+    font-size: 2.5rem;
+    margin-top: 25px;
+  }
 }
 .trans, .navbar, .site-header .logo-text, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
   transition: all 0.8s ease;
@@ -142,9 +149,14 @@
 }
 
 .top-button {
-  font-size: 2rem;
+  font-size: 2.6rem;
   bottom: 0;
   box-shadow: inherit !important;
+  padding: 0;
+  margin: 0;
+}
+.top-button:hover {
+  color: #ffc93c;
 }
 
 *,
@@ -1163,10 +1175,6 @@ p {
   background-color: #ffffff;
 }
 
-.navbar-brand {
-  padding-bottom: 0 !important;
-}
-
 .btn-menu-hamburguer {
   border: none;
   font-size: 2rem;
@@ -1178,8 +1186,8 @@ p {
 }
 
 .logo {
-  width: 75px;
-  margin-top: 30px;
+  width: 70px;
+  margin-top: 51px;
   z-index: 9;
   position: relative;
   padding: 10px;
@@ -1225,7 +1233,10 @@ p {
   height: 70px;
   z-index: -1;
   position: absolute;
-  top: 48px;
+  top: 58.5px;
+  box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .offcanvas-backdrop.show {
@@ -1302,9 +1313,6 @@ p {
 @media (min-width: 320px) {
   .bg-fullscreen__title {
     font-size: 5rem;
-  }
-  .navbar {
-    padding: 10px !important;
   }
   .offcanvas.show .offcanvas-body .navbar-nav {
     margin-top: 5vh;
