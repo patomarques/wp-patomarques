@@ -7,15 +7,14 @@
     </video>
 
     <div class="content-centered__box-text">
-        <h2 class="bg-fullscreen__title bold logo-text pb-5">
+        <h2 class="bg-fullscreen__title bold logo-text mb-0">
             < Pato Marques />
         </h2>
-
-        <div class="words-effect mt-5">
-            <div class="words-effect__dev logo-subtitle color-white">
-                Desenvolvimento Web
-            </div>
-            <div class="words-effect__container pb-5 hide">
+        <div class="logo-subtitle color-white">
+            Desenvolvimento Web
+        </div>
+        <div class="words-effect hide">
+            <div class="words-effect__container hide">
                 <ul class="words-effect__container__list text-center pl-5">
                     <li class="words-effect__container__list__item"> <?= "< front-end />" ?></li>
                     <li class="words-effect__container__list__item"> back-end(){}</li>
@@ -25,7 +24,7 @@
             </div>
         </div>
 
-        <div class="content-btn-scroll mt-5 pt-5">
+        <div class="content-btn-scroll mt-5">
             <a href="#section-about" class="btn-scroll-down" name="target">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
@@ -77,7 +76,7 @@ $fightFlags = new WP_Query(
                             <a href="https://www.php.net/" class="link h3 bold" target="_blank">php,</a>
                             <a href="https://br.wordpress.org/" class="link h3 bold" target="_blank">wordpress,</a>
                             <a href="https://laravel.com/" class="link h3 bold" target="_blank">laravel</a>
-                            e tecnologias de código aberto.
+                            e entusiasta em tecnologias de código aberto.
                         </p>
 
                         <div class="pt-3">
@@ -158,8 +157,9 @@ $fightFlags = new WP_Query(
     <div class="container mt-5 mb-5 pt-5 pb-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h4 class="title-contact">Compartilhe sua ideia e solicite um orçamento</h4>
-                <h5 class="text-send-mail title-default bold">contato@patomarques.com.br</h5>
+                <h4 class="text-send-mail title-default bold pb-5">Entre em contato</h4>
+                <h4 class="text-send-mail title-default bold pb-5">compartilhe sua ideia</h4>
+                <h4 class="text-send-mail title-default bold pb-5">solicite um orçamento</h4>
             </div>
         </div>
      </div>
