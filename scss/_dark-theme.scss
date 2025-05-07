@@ -92,8 +92,9 @@
   .content-services {
     &__item {
       &__box {
-        &__title {
-        }
+        &:hover {
+           
+        }   
       }
     }
   }

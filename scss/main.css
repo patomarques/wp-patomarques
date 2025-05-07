@@ -61,12 +61,6 @@
   font-size: 2.2rem;
 }
 
-.text-send-mail {
-  font-size: 3.4rem;
-  text-transform: lowercase;
-  font-family: "Eagle Lake", serif;
-}
-
 .trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .site-header, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down:after, .card-box__header, a, .cd-horizontal-timeline .events a {
   transition: all 1.5s ease;
   transform: translateX(0);
@@ -881,9 +875,11 @@ p {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px, rgba(0, 0, 0, 0.23) 0px 2px 6px;
   border-radius: 5px;
   padding: 4rem !important;
+  margin-bottom: 50px;
 }
 .content-services__item__box__title {
   margin-top: 20px;
+  font-size: 1.8em;
 }
 .content-services__item__box__icon {
   display: inline-block;
@@ -953,7 +949,15 @@ p {
   rotate: 180deg;
 }
 
+.text-send-mail {
+  text-transform: lowercase;
+  font-family: "Eagle Lake", serif;
+}
+
 @media (min-width: 320px) {
+  .text-send-mail {
+    font-size: 3.2rem;
+  }
   .content-centered__box-text .logo-text {
     margin-top: 0;
   }
