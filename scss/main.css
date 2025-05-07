@@ -67,8 +67,8 @@
   font-family: "Eagle Lake", serif;
 }
 
-.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
-  transition: all 0.8s ease;
+.trans, .navbar, .navbar-nav .nav-link, .site-header .logo-text, .site-header, .content-services__item__box, .img-grayscale, .square__image, .btn-scroll-down, .card-box__header, a, .cd-horizontal-timeline .events a {
+  transition: all 1.5s ease;
   transform: translateX(0);
 }
 
@@ -870,14 +870,14 @@ p {
 .content-services__item {
   background-color: #ffffff;
 }
-.content-services__item__title {
-  margin-top: 20px;
-}
 .content-services__item__box {
   display: block;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px, rgba(0, 0, 0, 0.23) 0px 2px 6px;
   border-radius: 5px;
   padding: 4rem !important;
+}
+.content-services__item__box__title {
+  margin-top: 20px;
 }
 .content-services__item__box__icon {
   display: inline-block;
@@ -887,10 +887,6 @@ p {
 .content-services__item__box:hover {
   background-color: #000000;
   cursor: auto;
-}
-.content-services__item__box:hover__title {
-  color: #ffffff !important;
-  display: none;
 }
 .content-services__item__box:hover p {
   color: #ffffff !important;
@@ -1082,7 +1078,7 @@ p {
 }
 .site-header {
   margin-bottom: 70px;
-  box-shadow: 0 0 3px #808080;
+  box-shadow: 0 0 2px #808080;
 }
 .site-header .logo-text {
   font-size: 3em;
@@ -1101,6 +1097,9 @@ p {
   top: 0 !important;
   position: fixed;
   background-color: #ffffff;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
 }
 
 .navbar-brand {
@@ -1108,7 +1107,7 @@ p {
 }
 
 .navbar-nav .nav-link {
-  font-family: "Titillium Web", serif;
+  font-family: "Eagle Lake", serif !important;
 }
 .navbar-nav .nav-link:hover {
   opacity: 0.7;
@@ -1286,7 +1285,7 @@ p {
   }
   .navbar-nav .nav-link {
     padding: 0 10px !important;
-    font-size: 1.1rem !important;
+    font-size: 1.1rem;
   }
   .words-effect__container__text {
     display: inline-block;
@@ -1300,7 +1299,7 @@ p {
     padding: 5px !important;
   }
   .navbar-nav .nav-link {
-    font-size: 1.2em !important;
+    font-size: 1.2em;
   }
   .words-effect__container {
     display: block;
@@ -1309,6 +1308,11 @@ p {
     right: 70px;
     top: 22px;
     z-index: 9;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-nav .nav-link {
+    font-size: 2em;
   }
 }
 footer a,

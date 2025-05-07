@@ -89,6 +89,14 @@
         color: $color-white;
     }
 
+    .content-services {
+        &__item {
+            &__box {
+                &__title {
+                }
+            }
+        }
+    }
     .content-services__item img {
         filter: invert(1);
     }

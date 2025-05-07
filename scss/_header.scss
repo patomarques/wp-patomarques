@@ -1,6 +1,7 @@
 .site-header {
     margin-bottom: 70px;
-    @include border-shadow(0, 0, 3px, $color-secondary);
+    @include border-shadow(0, 0, 2px, $color-secondary);
+    @extend .trans;
 
     .logo-text {
         font-size: 3em;
@@ -22,6 +23,9 @@
     top: 0 !important;
     position: fixed;
     background-color: $color-white;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
 }
 
 .navbar-brand {
@@ -30,7 +34,7 @@
 
 .navbar-nav {
     .nav-link {
-        font-family: $font-default;
+        font-family: $font-title !important;
         @extend .trans;
 
         &:hover {
@@ -281,7 +285,7 @@
     .navbar-nav {
         .nav-link {
             padding: 0 10px !important;
-            font-size: 1.1rem !important;
+            font-size: 1.1rem ;
         }
     }
 
@@ -303,7 +307,7 @@
 
     .navbar-nav {
         .nav-link {
-            font-size: 1.2em !important;
+            font-size: 1.2em ;
         }
     }
 
@@ -318,4 +322,10 @@
     }
 }
 
-@media(min-width: 1200px) {}
+@media(min-width: 1200px) {
+    .navbar-nav {
+        .nav-link {
+            font-size: 2em;
+        }
+    }
+}
