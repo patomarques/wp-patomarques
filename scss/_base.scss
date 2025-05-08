@@ -580,23 +580,6 @@ p {
     }
   }
 
-  .content-btn-scroll {
-    margin-top: 40px;
-  }
-
-  .content-blog {
-    display: block;
-    columns: 1;
-
-    &__post {
-      margin-bottom: 35px;
-    }
-
-    .box-square {
-      width: 100vw;
-    }
-  }
-
   .words-effect__container {
     width: 100vw;
 
@@ -607,12 +590,6 @@ p {
 
   .text-send-mail {
     font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 320px) {
-  .text-send-mail {
-    font-size: 3.2rem;
   }
 
   .content-centered {
@@ -692,9 +669,9 @@ p {
     .box-square {
       width: auto;
     }
+  }
 
-    .text-send-mail {
-      font-size: 3rem;
-    }
+  .title-section {
+    font-size: 7em;
   }
 }

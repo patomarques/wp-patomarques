@@ -19,7 +19,7 @@ $contacts = new WP_Query($args);
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <ul class="d-flex">
+                    <ul class="contact-social-icons d-flex">
 
                         <?php if ($contacts->have_posts()) {
                             while ($contacts->have_posts()):

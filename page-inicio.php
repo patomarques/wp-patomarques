@@ -45,11 +45,11 @@ $fightFlags = new WP_Query(
 
 ?>
 
-<section id="section-about" class="section-container mt-5">
-    <div class="container mt-3">
-        <div class="row mb-5">
+<section id="section-about" class="section-container">
+    <div class="container">
+        <div class="row">
             <div class="col-12 text-center">
-                <h3 class="content-about__title title-section pb-4 text-center">
+                <h3 class="content-about__title title-section text-center">
                     <?php echo get_the_title($pageAbout); ?>
                 </h3>
             </div>

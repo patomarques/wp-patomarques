@@ -1085,20 +1085,6 @@ p {
   .content-centered__box-text .logo-text {
     margin-top: 0;
   }
-  .content-btn-scroll {
-    margin-top: 40px;
-  }
-  .content-blog {
-    display: block;
-    -moz-columns: 1;
-         columns: 1;
-  }
-  .content-blog__post {
-    margin-bottom: 35px;
-  }
-  .content-blog .box-square {
-    width: 100vw;
-  }
   .words-effect__container {
     width: 100vw;
   }
@@ -1107,11 +1093,6 @@ p {
   }
   .text-send-mail {
     font-size: 1.5rem;
-  }
-}
-@media (min-width: 320px) {
-  .text-send-mail {
-    font-size: 3.2rem;
   }
   .content-centered__box-text .logo-text {
     margin-top: 0;
@@ -1167,8 +1148,8 @@ p {
   .content-blog .box-square {
     width: auto;
   }
-  .content-blog .text-send-mail {
-    font-size: 3rem;
+  .title-section {
+    font-size: 7em;
   }
 }
 .words-effect {
@@ -1510,9 +1491,14 @@ p {
     font-size: 2em;
   }
 }
+footer {
+  margin-top: 160px;
+  margin-bottom: 20px;
+}
 footer a,
 footer i {
   color: #000000;
+  font-family: "Titillium Web", serif;
 }
 
 .flex-center {
@@ -1551,6 +1537,10 @@ footer i {
 .content-contact__link i {
   font-size: 4em;
   margin: 10px;
+}
+
+.contact-social-icons {
+  margin-top: 80px;
 }
 
 @media (min-width: 992px) {

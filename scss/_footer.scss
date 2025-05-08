@@ -1,7 +1,11 @@
 footer {
+  margin-top: 160px;
+  margin-bottom: 20px;
+
   a,
   i {
     color: $color-black;
+    font-family: $font-default;
   }
 }
 
@@ -65,6 +69,10 @@ $blueColor: rgba(33, 150, 243, 1);
             margin: 10px;
         }
     }
+}
+
+.contact-social-icons {
+  margin-top: 80px;
 }
 
 @media (min-width: 992px) {
