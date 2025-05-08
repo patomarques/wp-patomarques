@@ -122,10 +122,15 @@
     &__item {
       &__box {
         &:hover {
+          img {
+            filter: brightness(0) saturate(100%) invert(86%) sepia(72%)
+              saturate(2144%) hue-rotate(320deg) brightness(98%) contrast(105%);
+          }
         }
       }
     }
   }
+  
   .content-services__item img {
     filter: invert(1);
   }
