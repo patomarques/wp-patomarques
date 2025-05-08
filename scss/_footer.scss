@@ -66,3 +66,12 @@ $blueColor: rgba(33, 150, 243, 1);
         }
     }
 }
+
+@media (min-width: 992px) {
+  .content-contact__link {
+    i {
+      font-size: 5em;
+      margin: 40px;
+    }
+  }
+}

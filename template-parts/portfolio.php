@@ -21,7 +21,7 @@ $portfolio = new WP_Query(
             <?php while ($portfolio->have_posts()):
                 $portfolio->the_post(); ?>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-lg-4">
 
                     <div class="card mb-5  ">
                         <a href="<?php echo get_post_meta(get_the_ID(), 'link')[0]; ?>" class="card__box-header box-square-responsive border">

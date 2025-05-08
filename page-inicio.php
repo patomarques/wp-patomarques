@@ -55,13 +55,13 @@ $fightFlags = new WP_Query(
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-lg-4">
                 <div class="square mb-5">
                     <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
                     <div class="losange"></div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-7 offset-lg-1">
+            <div class="col-12 col-lg-7 offset-lg-1">
                 <div class="content-about">
 
                     <div class="content-about__subtitle text-justify pt-3 pb-4">

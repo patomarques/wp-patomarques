@@ -269,14 +269,17 @@
 @media(min-width: 768px) {
 
     .logo-text {
-        //font-size: 4em;
-        padding-bottom: 90px;
+        font-size: 7em;
+    }
+
+    .logo-subtitle {
+        font-size: 2.2em;
     }
 
     .btn-toggle-dark-light {
         right: 0;
         position: absolute;
-        right: 50px;
+        right: 65px;
     }
 
     .navbar-brand {

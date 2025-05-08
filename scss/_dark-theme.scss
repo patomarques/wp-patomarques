@@ -34,7 +34,7 @@
   }
 
   .logo-text {
-    color: $color-white;
+    color: $color-white !important;
   }
 
   .button-border-effect {
@@ -153,6 +153,16 @@
 
     g {
         fill: $color-white;
+    }
+  }
+
+  .top-button {
+    i {
+      color: $color-white;
+
+      &:hover {
+        color: $color-gold;
+      }
     }
   }
 }

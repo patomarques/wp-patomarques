@@ -537,6 +537,10 @@ p {
 }
 
 @media (min-width: 768px) {
+  .title-section {
+    font-size: 5.5em;
+  }
+
   .words-effect__container {
     &__list {
       padding-left: 0;
@@ -545,6 +549,10 @@ p {
 }
 
 @media (min-width: 992px) {
+  .text-send-mail {
+    font-size: 5rem;
+  }
+
   .content-blog {
     display: flex;
 
