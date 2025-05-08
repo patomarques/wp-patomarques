@@ -21,10 +21,10 @@ $portfolio = new WP_Query(
             <?php while ($portfolio->have_posts()):
                 $portfolio->the_post(); ?>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-lg-4">
 
-                    <div class="card">
-                        <a href="<?php echo get_post_meta(get_the_ID(), 'link')[0]; ?>" class="card__box-header box-square-responsive"  target="_blank" >
+                    <div class="card mb-5  ">
+                        <a href="<?php echo get_post_meta(get_the_ID(), 'link')[0]; ?>" class="card__box-header box-square-responsive border">
                             <img class="card__box-header__image" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>"
                                 alt="Card image cap">
                         </a>

@@ -1,86 +1,204 @@
 .dark-theme {
+  background-color: $color-black !important;
+
+  section,
+  header {
     background-color: $color-black !important;
+  }
 
-    section,
-    header {
-        background-color: $color-black !important;
+  .card {
+    .card-body {
+      background-color: $color-black;
     }
+  }
 
+  .btn-scroll-down {
+    i {
+      color: $color-white;
+    }
 
     .menu-fullscreen {
-        .btn-menu-hamburguer{
-            i {
-                color: $color-white;
-            }
-
-            &:hover {
-                color: $color-gold;
-            }
+      .btn-menu-hamburguer {
+        i {
+          color: $color-white;
         }
+
+        &:hover {
+          color: $color-gold;
+        }
+      }
     }
     .offcanvas {
-        &.show {
-            .offcanvas-body {
-                background-color: $color-black;
-                
-                .nav-link {
-                    color: $color-white;
+      &.show {
+        .offcanvas-body {
+          background-color: $color-black;
 
-                    &:hover {
-                        color: $color-gold;
-                    }
-                }
+          .nav-link {
+            color: $color-white;
+
+            &:hover {
+              color: $color-gold;
             }
+          }
         }
+      }
     }
 
     .card {
-        .card-body {
-            background-color: $color-black;
-        }
+      .card-body {
+        background-color: $color-black;
+      }
     }
 
-    .btn-scroll-down {
-        i {
-            color: $color-white;
-        }
+    &:hover {
+      i {
+        color: $color-black;
+      }
 
-        &:after {
-            border: $border-dark !important;
-        }
+      &:after {
+        background-color: $color-white;
+        color: $color-black;
+      }
+    }
+  }
 
+  .logo-text {
+    color: $color-white !important;
+  }
+
+  .button-border-effect {
+    @extend .btn-dark;
+  }
+
+  .fight-flags {
+    img[alt="Direitos Animais"] {
+      filter: invert(1);
+    }
+  }
+
+  .body-card {
+    background-color: $color-black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $color-white;
+  }
+
+  .btn-menu-hamburguer {
+    color: $color-white;
+  }
+
+  .navbar-brand {
+    img {
+      filter: invert(1);
+    }
+
+    &:after {
+      background-color: $color-black;
+    }
+  }
+
+  footer {
+    background-color: $color-black;
+
+    span,
+    a,
+    small {
+      color: $color-white;
+    }
+  }
+
+  .content-contact__link i {
+    color: $color-white;
+  }
+
+  .content-services {
+    &__item {
+      &__box {
         &:hover {
-            i {
-                color: $color-black;
-            }
-
-            &:after {
-                background-color: $color-white;
-                color: $color-black;
-            }
         }
+      }
+    }
+  }
+  .content-services__item img {
+    filter: invert(1);
+  }
+
+  .cd-horizontal-timeline .events a {
+    color: $color-white;
+  }
+
+  .content-services__item {
+    background-color: $color-black;
+
+    &__box {
+      box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 6px,
+        rgba(255, 255, 255, 0.23) 0px 2px 6px;
+    }
+  }
+
+  .container-divider {
+    .icon-arrows {
+      @extend .img-invert;
+    }
+  }
+
+  .timeline-years {
+    a {
+      color: $color-white !important;
+
+      &.selected {
+        color: $color-gold !important;
+      }
+    }
+  }
+
+  .cd-timeline-navigation {
+    .fa-angle-right,
+    .fa-angle-left {
+      color: $color-gray-light !important;
+    }
+  }
+
+  .content-skills {
+    &__subtitle {
+      color: $color-gold;
     }
 
     .logo-text {
-        color: $color-white !important;
+      color: $color-white !important;
 
-        &:hover {
-            color: $color-gold !important;
-        }
+      &:hover {
+        color: $color-gold !important;
+      }
     }
+  }
 
-    .button-border-effect {
-        @extend .btn-dark;
+  .svg-icons {
+    fill: $color-white;
+
+    g {
+      fill: $color-white;
     }
+  }
 
-    .fight-flags {
-        img[alt="Direitos Animais"] {
-            filter: invert(1);
-        }
+  .top-button {
+    i {
+      color: $color-white;
+
+      &:hover {
+        color: $color-gold;
+      }
     }
 
     .body-card {
-        background-color: $color-black;
+      background-color: $color-black;
     }
 
     h1,
@@ -90,95 +208,95 @@
     h5,
     h6,
     p {
-        color: $color-white;
+      color: $color-white;
     }
 
     .btn-menu-hamburguer {
-        color: $color-white;
+      color: $color-white;
     }
 
     .navbar-brand {
-        img {
-            filter: invert(1);
-        }
+      img {
+        filter: invert(1);
+      }
 
-        &:after {
-            background-color: $color-black;
-        }
+      &:after {
+        background-color: $color-black;
+      }
     }
 
     footer {
-        background-color: $color-black;
+      background-color: $color-black;
 
-        span,
-        a,
-        small {
-            color: $color-white;
-        }
+      span,
+      a,
+      small {
+        color: $color-white;
+      }
     }
 
     .content-contact__link i {
-        color: $color-white;
+      color: $color-white;
     }
 
     .content-services {
-        &__item {
-            img {
-                filter: invert(1);
-
-            }
+      &__item {
+        img {
+          filter: invert(1);
         }
+      }
     }
 
     .cd-horizontal-timeline .events a {
-        color: $color-white;
+      color: $color-white;
     }
 
     .content-services__item {
-        background-color: $color-black;
+      background-color: $color-black;
 
-        &__box {
-            box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 6px, rgba(255, 255, 255, 0.23) 0px 2px 6px;
-        }
+      &__box {
+        box-shadow: rgba(255, 255, 255, 0.16) 0px 2px 6px,
+          rgba(255, 255, 255, 0.23) 0px 2px 6px;
+      }
     }
 
     .container-divider {
-        .icon-arrows {
-            @extend .img-invert;
-        }
+      .icon-arrows {
+        @extend .img-invert;
+      }
     }
 
     .timeline-years {
-        a {
-            color: $color-white !important;
+      a {
+        color: $color-white !important;
 
-            &.selected {
-                color: $color-gold !important;
-            }
+        &.selected {
+          color: $color-gold !important;
         }
+      }
     }
 
     .cd-timeline-navigation {
-
-        .fa-angle-right,
-        .fa-angle-left {
-            color: $color-gray-light !important;
-        }
+      .fa-angle-right,
+      .fa-angle-left {
+        color: $color-gray-light !important;
+      }
     }
 
     .content-skills {
-        &__subtitle {
-            color: $color-gold;
-        }
+      &__subtitle {
+        color: $color-gold;
+      }
 
-        &__legends {
-            color: $color-white;
-        }
+      &__legends {
+        color: $color-white;
+      }
     }
 
     .technologies-icons {
-        svg {
-            fill: $color-white;
-        }
+      svg {
+        fill: $color-white;
+      }
     }
+  }
 }

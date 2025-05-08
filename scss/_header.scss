@@ -1,6 +1,7 @@
 .site-header {
     margin-bottom: 70px;
-    @include border-shadow(0, 0, 3px, $color-secondary);
+    @include border-shadow(0, 0, 2px, $color-secondary);
+    @extend .trans;
 
     .logo-text {
         font-size: 3em;
@@ -22,10 +23,36 @@
     top: 0 !important;
     position: fixed;
     background-color: $color-white;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
 }
 
 .navbar-brand {
     padding-bottom: 0 !important;
+}
+
+.navbar-nav {
+    .nav-link {
+        font-family: $font-title !important;
+        @extend .trans;
+
+        &:hover {
+            opacity: .7;
+            color: $color-gold;
+            // &:after {
+            //     content: "";
+            //     width: 100%;
+            //     height: 2px;
+            //     position: absolute;
+            //     top: 13px;
+            //     left: 0;
+            //     background-color: $color-gold;
+            // }
+        }
+
+
+    }
 }
 
 .btn-menu-hamburguer {
@@ -46,11 +73,6 @@
     z-index: 9;
     position: relative;
     padding: 10px;
-}
-
-.logo-subtitle {
-    padding-bottom: 0;
-    margin-bottom: 0;
 }
 
 .offcanvas-title {
@@ -108,14 +130,6 @@
         opacity: 0;
     }
 
-    .offcanvas-body {
-        overflow: hidden;
-        transition-duration: .5s;
-        backface-visibility: none;
-        opacity: 0;
-        visibility: hidden;
-    }
-
     &.show {
         .offcanvas-body {
             width: 100vw;
@@ -123,33 +137,20 @@
             position: fixed;
             top: 0;
             left: 0;
-            //background-color: $color-white;
-            background: $color-white;
+            background-color: $color-white;
             display: block !important;
-            z-index: 999;
-            visibility: visible; 
-            opacity:1;
-           
-            //@extend .trans;
 
             .navbar-nav {
+                margin: 100px 0 0;
+                margin-left: 0px;
                 padding: 0;
                 width: 100%;
                 height: 100%;
                 display: block;
-                margin-top: 10vh;
 
                 .nav-item {
-                    margin: 1rem auto;
-
-                    .nav-link {
-                        font-size: 4rem;
-                        font-family: $font-title;
-
-                        &:hover {
-                            color: $color-gold;
-                        }
-                    }
+                    margin: 30px 0;
+                    font-size: 2em;
                 }
             }
         }
@@ -161,8 +162,8 @@
     .btn-menu-hamburguer {
         z-index: 999999;
         position: absolute;
-        right: 15px;
-        top: 15px;
+        right: 10px;
+        top: 10px;
         color: $color-black;
 
         .fa-bars {
@@ -188,6 +189,12 @@
         .offcanvas-body {
             background-color: $color-black;
         }
+
+        .menu-item {
+            .nav-link {
+                color: $color-white;
+            }
+        }
     }
 }
 
@@ -202,42 +209,24 @@
 }
 
 @media(min-width: 320px) {
-    .bg-fullscreen {
-        &__title {
-            font-size: 5rem;
-        }
-    }
-
     .navbar {
-        padding: 10px !important;
+        padding: 4px 10px !important;
     }
 
-    .offcanvas {
-        &.show {
-            .offcanvas-body {
-                .navbar-nav {
-                    margin-top: 5vh;
-
-                    .nav-item {
-                        .nav-link {
-                            font-size: 3rem;
-                        }
-
-                    }
-
-                }
-            }
-        }
+    .logo-text {
+        font-size: 4.5em;
     }
 
-    .words-effect {
-        width: 100vw;
+    .logo {
+        padding: 23px 20px 0 6px;
+        margin-top: 30px;
     }
-
+ 
     .logo-subtitle {
-        font-size: 2rem;
+        font-size: 1.8em;
+        width: 100%;
     }
-
+  
     .words-effect__container {
         padding-left: 0;
 
@@ -258,6 +247,18 @@
         z-index: 9;
     }
 
+    .navbar-nav {
+        .nav-link {
+            font-size: 1.2em;
+            padding: 0;
+
+            &:hover {
+                color: $color-gold;
+
+            }
+        }
+    }
+
     .btn-scroll-down {
         margin: auto;
         position: absolute;
@@ -266,20 +267,19 @@
 }
 
 @media(min-width: 768px) {
-    .bg-fullscreen {
-        &__title {
-            font-size: 7rem;
-        }
-    }
 
     .logo-text {
-        //font-size: 4em;
+        font-size: 7em;
+    }
+
+    .logo-subtitle {
+        font-size: 2.2em;
     }
 
     .btn-toggle-dark-light {
         right: 0;
         position: absolute;
-        right: 50px;
+        right: 65px;
     }
 
     .navbar-brand {
@@ -294,6 +294,13 @@
         }
     }
 
+    .navbar-nav {
+        .nav-link {
+            padding: 0 10px !important;
+            font-size: 1.1rem ;
+        }
+    }
+
     .words-effect__container {
         &__text {
             display: inline-block;
@@ -303,29 +310,17 @@
             padding-left: 200px;
         }
     }
-
-    .offcanvas {
-        &.show {
-            .offcanvas-body {
-                .navbar-nav {
-                    margin-top: 8vh;
-
-                    .nav-item {
-                        .nav-link {
-                            font-size: 4rem;
-                        }
-
-                    }
-
-                }
-            }
-        }
-    }
 }
 
 @media(min-width: 992px) {
     .navbar {
         padding: 5px !important;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            font-size: 1.2em ;
+        }
     }
 
     .words-effect__container {
@@ -339,4 +334,10 @@
     }
 }
 
-@media(min-width: 1200px) {}
+@media(min-width: 1200px) {
+    .navbar-nav {
+        .nav-link {
+            font-size: 2em;
+        }
+    }
+}

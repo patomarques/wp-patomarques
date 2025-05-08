@@ -83,7 +83,6 @@ function timelineYearCheck() {
 function toggleSwitchDarkLightTheme() {
     const checkboxToggle = document.getElementById("btn-dark-light-checkbox");
     checkboxToggle.addEventListener("click", () => {
-        console.log('check switch');
         document.body.classList.toggle("dark-theme");
     });
 }

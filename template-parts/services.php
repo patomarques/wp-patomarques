@@ -22,8 +22,8 @@ $services = new WP_Query(
             while ($services->have_posts()):
                 $services->the_post(); ?>
 
-                <div class="col-12 col-md-4 content-services__item">
-                    <a href="javascript::void()" class="content-services__item__box text-center">
+                <div class="col-12 col-lg-4 content-services__item">
+                    <a href="#" class="content-services__item__box text-center">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/' .  get_post_meta(get_the_ID(), 'svg_icon_url')[0]; ?>" alt="" class="img-fluid content-services__item__box__icon content-services__item__box__icon--gold d-block m-auto text-center mb-4
                         ">
                         <h3 class="content-services__item__box__title text-center bold h2">

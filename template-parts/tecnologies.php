@@ -50,7 +50,7 @@ $skills = array(
 
             <?php foreach ($technologiesFormatted as $key => $techs) { ?>
 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <h4 class="content-skills__subtitle bold pb-3">
                         <?= $skills[$key] ?>
                     </h4>
