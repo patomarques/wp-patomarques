@@ -1149,6 +1149,12 @@ p {
   }
 }
 @media (min-width: 992px) {
+  .content-centered__box-text .logo-text {
+    font-size: 9em;
+  }
+  .content-centered__box-text .logo-subtitle {
+    font-size: 3em;
+  }
   .text-send-mail {
     font-size: 5rem;
   }
