@@ -119,3 +119,16 @@ function formatDateToMMYY($date) {
   }
   return $date;
 }
+
+function calculateYearsDiff() {
+  $date1 = strtotime("2011-03-01 22:45:00");
+  $date2 = strtotime(date('Y-m-d H:i:s'));
+
+  // Calculate the difference in seconds
+  $diff = abs($date2 - $date1);
+
+  // Calculate years
+  $devYears = floor($diff / (365 * 60 * 60 * 24));
+  
+  return $devYears;
+}

@@ -33,6 +33,10 @@
   color: #ffc93c;
 }
 
+.color-black {
+  color: #000000;
+}
+
 .title-section {
   font-size: 6rem;
   font-family: "Eagle Lake", serif !important;
@@ -910,7 +914,6 @@ p {
   content: "";
   display: block;
   padding-bottom: 100%;
-  background-color: #000000;
 }
 .square__image {
   position: absolute;
@@ -920,7 +923,6 @@ p {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
-  border: 3px dashed #ffffff;
   filter: saturate(50%);
 }
 .square__image:hover {
@@ -1498,7 +1500,7 @@ footer {
 footer a,
 footer i {
   color: #000000;
-  font-family: "Titillium Web", serif;
+  font-family: "Eagle Lake", serif;
 }
 
 .flex-center {

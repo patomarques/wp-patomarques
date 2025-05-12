@@ -45,7 +45,7 @@ $fightFlags = new WP_Query(
 
 ?>
 
-<section id="section-about" class="section-container">
+<section id="about" class="section-container">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -55,27 +55,28 @@ $fightFlags = new WP_Query(
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-4">
-                <div class="square mb-5">
+            <div class="col-12 col-lg-5">
+                <div class="square mb-5 p-5">
                     <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
                     <div class="losange"></div>
                 </div>
             </div>
-            <div class="col-12 col-lg-7 offset-lg-1">
-                <div class="content-about">
+            <div class="col-12 col-lg-6 offset-lg-1">
+                <div class="content-about text-justify">
 
                     <div class="content-about__subtitle text-justify pt-3 pb-4">
-                        <?php //echo apply_filters('get_the_post_excerpt', $pageAbout->post_excerpt); 
+                        <?php 
+                         $devYears = calculateYearsDiff();
                         ?>
-                        <p class="h1">Pato Marques</p>
-                        <p class="h3 pb-3">Recife, Desenvolvedor web, Sistemas de Informação </p>
-                        <p class="h3 pb-3">+13 anos trampando com sites, lojas online e aplicações web
+                        <p class=" pb-3"><span class="fs-1">Olá, me chamo</span> <span class="bold display-5">Pato Marques</span></p>
+                        <p class="h2 pb-3">Sou de <a class="fs-2 color-black link" target="_blank" href="https://www.google.com/maps/place/Recife+-+PE/@-8.0419955,-35.0202499,12z/data=!3m1!4b1!4m6!3m5!1s0x7ab196f88c446e5:0x3c9ef52922447fd4!8m2!3d-8.0577401!4d-34.8829629!16zL20vMGhkenQ?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D">Recife</a>, Desenvolvedor web, Graduado em Sistemas de Informação </p>
+                        <p class="h2 pb-3">+<?= $devYears ?> anos trabalhando com sites, lojas online e aplicações web
                             <span class="h5 hide">(desde 2010)</span>;
                         </p>
-                        <p class="h3">Desenvolvedor
-                            <a href="https://www.php.net/" class="link h3 bold" target="_blank">php,</a>
-                            <a href="https://br.wordpress.org/" class="link h3 bold" target="_blank">wordpress,</a>
-                            <a href="https://laravel.com/" class="link h3 bold" target="_blank">laravel</a>
+                        <p class="h2">Desenvolvedor
+                            <a href="https://www.php.net/" class="link h2 bold" target="_blank">php,</a>
+                            <a href="https://br.wordpress.org/" class="link h2 bold" target="_blank">wordpress,</a>
+                            <a href="https://laravel.com/" class="link h2 bold" target="_blank">laravel</a>
                             e entusiasta em tecnologias de código aberto.
                         </p>
 
@@ -144,7 +145,8 @@ $fightFlags = new WP_Query(
 
 <?php get_template_part('template-parts/portfolio'); ?>
 
-<? //php get_template_part('template-parts/blog-recent-posts'); ?>
+<? //php get_template_part('template-parts/blog-recent-posts'); 
+?>
 
 <?php get_template_part('template-parts/contatos'); ?>
 

@@ -18,7 +18,7 @@
   <div class="text-center">
     <div class="<?= bootscore_container_class(); ?>">
       <small class="bootscore-copyright ">
-        <a href="/" class="fs-4">
+        <a href="/" class="fs-5">
           <?php bloginfo('name'); ?>
         </a>
         <span class="fs-4">&copy;</span>&nbsp;

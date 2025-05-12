@@ -284,7 +284,7 @@ p {
     content: "";
     display: block;
     padding-bottom: 100%;
-    background-color: $color-black;
+    //background-color: $color-black;
   }
 
   &__image {
@@ -293,7 +293,7 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    border: 3px dashed $color-white;
+    //border: 3px dashed $color-white;
     filter: saturate(50%);
     @extend .trans;
 

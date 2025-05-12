@@ -1,5 +1,3 @@
-
-
 <?php
 $args = array(
     'post_type' => 'contatos',
@@ -13,9 +11,9 @@ $contacts = new WP_Query($args);
 ?>
 
 <section id="contact" class="d-block">
-<?php get_template_part('template-parts/contact-notification'); ?>
+    <?php get_template_part('template-parts/contact-notification'); ?>
 
-    <div class="container flex-center pt-5">
+    <div class="container flex-center">
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
@@ -33,7 +31,7 @@ $contacts = new WP_Query($args);
                                     </a>
                                 </li>
 
-                                <?php
+                        <?php
                             endwhile;
                         }
                         ?>
