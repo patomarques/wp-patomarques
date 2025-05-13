@@ -674,6 +674,10 @@
 
 html {
   margin-top: 0 !important;
+  scroll-behavior: smooth;
+  top: 0;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 html,
@@ -681,6 +685,9 @@ body {
   font-family: "Titillium Web", serif;
   font-weight: 300;
   background-color: #fafeff;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -1267,6 +1274,8 @@ p {
   -webkit-transition: opacity 2s ease-in;
   -moz-transition: opacity 2s ease-in;
   -o-transition: opacity 2s ease-in;
+  width: 100vw;
+  max-width: 100vw;
 }
 
 .navbar-brand {
@@ -1401,7 +1410,7 @@ p {
     padding: 4px 10px !important;
   }
   .logo-text {
-    font-size: 4.5em;
+    font-size: 4em;
   }
   .logo {
     padding: 23px 20px 0 6px;

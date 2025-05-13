@@ -25,7 +25,7 @@
         </div>
 
         <div class="content-btn-scroll mt-5">
-            <a href="#section-about" class="btn-scroll-down" name="target">
+            <a href="#about" class="btn-scroll-down" name="target">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
         </div>
@@ -56,7 +56,7 @@ $fightFlags = new WP_Query(
         </div>
         <div class="row">
             <div class="col-12 col-lg-5">
-                <div class="square mb-5 p-5">
+                <div class="square mb-5">
                     <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
                     <div class="losange"></div>
                 </div>

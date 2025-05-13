@@ -26,6 +26,8 @@
     -webkit-transition: opacity 2s ease-in;
     -moz-transition: opacity 2s ease-in;
     -o-transition: opacity 2s ease-in;
+    width: 100vw;
+    max-width: 100vw;
 }
 
 .navbar-brand {
@@ -214,7 +216,7 @@
     }
 
     .logo-text {
-        font-size: 4.5em;
+        font-size: 4em;
     }
 
     .logo {
@@ -267,7 +269,6 @@
 }
 
 @media(min-width: 768px) {
-
     .logo-text {
         font-size: 7em;
     }
