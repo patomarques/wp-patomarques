@@ -378,7 +378,6 @@ p {
 
       border-radius: 5px;
       padding: 4rem !important;
-      margin-bottom: 50px;
       @extend .trans;
 
       &__title {
@@ -412,73 +411,6 @@ p {
         .content-services__item__box__title {
           color: $color-gold !important;
         }
-
-        // &__box {
-        //   display: block;
-        //   //border: 1px solid $color-black;
-        //   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px,
-        //     rgba(0, 0, 0, 0.23) 0px 2px 6px;
-
-        //   border-radius: 5px;
-        //   padding: 4rem !important;
-        //   @extend .trans;
-
-        //   &__icon {
-        //     display: inline-block;
-        //     width: 100px;
-        //     height: 100px;
-        //   }
-
-        //   &__title {
-        //     //color: $color-black;
-        //     font-size: 2.3rem;
-        //     margin-bottom: 20px;
-        //   }
-
-        //   &:hover {
-        //     background-color: $color-black;
-        //     cursor: auto;
-
-        //     &__title {
-        //       color: $color-white !important;
-        //     }
-
-        //     p {
-        //       color: $color-white !important;
-        //     }
-
-        //     .content-services__item__box__icon {
-        //       filter: brightness(0) saturate(100%) invert(86%) sepia(72%)
-        //         saturate(2144%) hue-rotate(320deg) brightness(98%)
-        //         contrast(105%);
-        //     }
-        //   }
-        // }
-
-        // &:nth-child(1) {
-        //   // img {
-        //   //   width: 90px;
-        //   // }
-        // }
-
-        // &:nth-child(2) {
-        //   padding-bottom: 10px;
-
-        //   img {
-        //     width: 88px;
-        //   }
-        // }
-
-        // &:nth-child(3) {
-        //   .content-services__item__box {
-        //     &__icon {
-        //       width: 80px;
-        //       height: 80px;
-        //       margin-top: 15px !important;
-        //       margin-bottom: 30px;
-        //     }
-        //   }
-        // }
       }
     }
 
@@ -502,7 +434,6 @@ p {
           width: 80px;
           height: 80px;
           margin-top: 15px !important;
-          margin-bottom: 30px;
         }
       }
     }

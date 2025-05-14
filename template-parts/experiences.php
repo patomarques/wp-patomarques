@@ -44,8 +44,8 @@ wp_reset_postdata();
                 <h3 class="title-section">Experiência</h3>
                 <div class="content-experience">
                     <h4 class="display-6 content-experience__description mb-5 text-justify">
-                        Linha do tempo com os principais trabalhos que
-                        tive desde 2010 até agora...</h4>
+                        Linha do tempo dos principais trabalhos que
+                        passei desde 2010 até agora...</h4>
                 </div>
             </div>
         </div>
