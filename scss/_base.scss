@@ -25,10 +25,6 @@ a {
 
   &:hover {
     color: $color-gold;
-
-    // i {
-    //     color: $color-gold;
-    // }
   }
 }
 
@@ -274,6 +270,7 @@ p {
 
   &-body {
     display: none !important;
+    @extend .trans;
   }
 
   &.show {
@@ -290,7 +287,6 @@ p {
     content: "";
     display: block;
     padding-bottom: 100%;
-    //background-color: $color-black;
   }
 
   &__image {
@@ -299,7 +295,6 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    //border: 3px dashed $color-white;
     filter: saturate(50%);
     @extend .trans;
 
@@ -565,6 +560,12 @@ p {
   .title-section {
     font-size: 3em;
   }
+
+  .content-skills {
+    &__subtitle {
+      margin-top: 30px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -610,5 +611,11 @@ p {
 
   .title-section {
     font-size: 7em;
+  }
+
+  .content-skills {
+    &__subtitle {
+      margin-top: 0;
+    }
   }
 }

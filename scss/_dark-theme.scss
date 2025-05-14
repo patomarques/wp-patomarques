@@ -1,6 +1,10 @@
 .dark-theme {
   background-color: $color-black !important;
 
+  body {
+    background-color: $color-black !important;
+  }
+
   section,
   header {
     background-color: $color-black !important;
@@ -174,6 +178,10 @@
   .content-skills {
     &__subtitle {
       color: $color-gold;
+    }
+
+    &__legends {
+      color: $color-white;
     }
 
     .logo-text {

@@ -1,18 +1,18 @@
 jQuery(function ($) {
-  //   let target = document.querySelector("a[name=target]");
-
-  //   if (target.length > 0) {
-  //     target.addEventListener("click", function () {
-  //       let top = target.offset().top;
-  //       // console.log('top', top);
-  //       // top = top - 10;
-  //       // console.log('top', top);
-  //       $("html,body").animate({ scrollTop: top }, 1000);
-  //       return false;
-  //     });
-  //   }
-
   $(document).ready(function () {
+    let target = document.querySelector("a[name=target]");
+
+    if (target.length > 0) {
+      target.addEventListener("click", function () {
+        let top = target.offset().top;
+        // console.log('top', top);
+        // top = top - 10;
+        // console.log('top', top);
+        $("html,body").animate({ scrollTop: top }, 1000);
+        return false;
+      });
+    }
+
     $("#timeline-navigation li:last-child a").click();
     $("#timeline-years li:last-child a").click();
 
@@ -25,14 +25,14 @@ jQuery(function ($) {
       $("body").toggleClass("menu-fullscreen");
     });
 
-    scrollToSection(".btn-scroll-down", "#about");
+    //scrollToSection(".btn-scroll-down", "#about");
   });
 
   function scrollToSection(buttonClass, sectionClass) {
     const btn = document.querySelector(buttonClass);
     const section = document.querySelector(sectionClass);
     btn.addEventListener("click", function () {
-      section.scrollIntoView({ behavior: "smooth" }); //will smoothly scroll to desired section
+      section.scrollIntoView({ behavior: "smooth" }); 
     });
   }
 
