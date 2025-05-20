@@ -55,27 +55,27 @@ $fightFlags = new WP_Query(
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-5">
                 <div class="square mb-5">
                     <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
                     <div class="losange"></div>
                 </div>
             </div>
-            <div class="col-12 col-lg-7 offset-lg-1">
+            <div class="col-12 col-lg-6 offset-lg-1">
                 <div class="content-about">
 
                     <div class="content-about__subtitle text-justify pt-3 pb-4">
                         <?php //echo apply_filters('get_the_post_excerpt', $pageAbout->post_excerpt); 
                         ?>
-                        <p class="h1">Pato Marques</p>
-                        <p class="h3 pb-3">Recife, Desenvolvedor web, Sistemas de Informação </p>
-                        <p class="h3 pb-3">+13 anos trampando com sites, lojas online e aplicações web
+                        <p class="display-6 pb-3">Olá, me chamo <span class="display-5 bold">Pato Marques</span></p>
+                        <p class="fs-2 pb-3">Sou Desenvolvedor web, vivo em Recife / PE, graduado em Sistemas de Informação; </p>
+                        <p class="fs-2 pb-3">+14 anos trabalhando com sites, lojas online e aplicações web
                             <span class="h5 hide">(desde 2010)</span>;
                         </p>
-                        <p class="h3">Desenvolvedor
-                            <a href="https://www.php.net/" class="link h3 bold" target="_blank">php,</a>
-                            <a href="https://br.wordpress.org/" class="link h3 bold" target="_blank">wordpress,</a>
-                            <a href="https://laravel.com/" class="link h3 bold" target="_blank">laravel</a>
+                        <p class="fs-2">Desenvolvedor
+                            <a href="https://www.php.net/" class="link fs-2 bold" target="_blank">php,</a>
+                            <a href="https://br.wordpress.org/" class="link fs-2 bold" target="_blank">wordpress,</a>
+                            <a href="https://laravel.com/" class="link fs-2 bold" target="_blank">laravel</a>
                             e entusiasta em tecnologias de código aberto.
                         </p>
 

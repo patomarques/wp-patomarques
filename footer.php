@@ -17,13 +17,13 @@
 <footer class="p-4 mt-5 pt-5">
   <div class="text-center">
     <div class="<?= bootscore_container_class(); ?>">
-      <small class="bootscore-copyright ">
-        <a href="/" class="fs-3">
+      <div class="bootscore-copyright ">
+        <a href="/" class="fs-4">
           <?php bloginfo('name'); ?>
         </a>
-        <span class="fs-3">&copy;</span>&nbsp;
+        <span class="fs-3"> &copy;</span>&nbsp;
         <span class="fs-5"><?= date('Y'); ?></span>
-      </small>
+      </div>
     </div>
   </div>
 

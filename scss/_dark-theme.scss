@@ -1,6 +1,10 @@
 .dark-theme {
   background-color: $color-black !important;
 
+  body {
+    background-color: $color-black !important;
+  }
+
   section,
   header {
     background-color: $color-black !important;
@@ -12,53 +16,56 @@
     }
   }
 
+  .link {
+    color: $color-white;
+  }
   .btn-scroll-down {
     i {
       color: $color-white;
     }
+  }
 
-    .menu-fullscreen {
-      .btn-menu-hamburguer {
-        i {
-          color: $color-white;
-        }
+  .menu-fullscreen {
+    .btn-menu-hamburguer {
+      i {
+        color: $color-white;
+      }
 
-        &:hover {
-          color: $color-gold;
-        }
+      &:hover {
+        color: $color-gold;
       }
     }
-    .offcanvas {
-      &.show {
-        .offcanvas-body {
-          background-color: $color-black;
+  }
+  .offcanvas {
+    &.show {
+      .offcanvas-body {
+        background-color: $color-black;
 
-          .nav-link {
-            color: $color-white;
+        .nav-link {
+          color: $color-white;
 
-            &:hover {
-              color: $color-gold;
-            }
+          &:hover {
+            color: $color-gold;
           }
         }
       }
     }
+  }
 
-    .card {
-      .card-body {
-        background-color: $color-black;
-      }
+  .card {
+    .card-body {
+      background-color: $color-black;
+    }
+  }
+
+  &:hover {
+    i {
+      color: $color-black;
     }
 
-    &:hover {
-      i {
-        color: $color-black;
-      }
-
-      &:after {
-        background-color: $color-white;
-        color: $color-black;
-      }
+    &:after {
+      background-color: $color-white;
+      color: $color-black;
     }
   }
 
@@ -122,10 +129,15 @@
     &__item {
       &__box {
         &:hover {
+          img {
+            filter: brightness(0) saturate(100%) invert(86%) sepia(72%)
+              saturate(2144%) hue-rotate(320deg) brightness(98%) contrast(105%);
+          }
         }
       }
     }
   }
+
   .content-services__item img {
     filter: invert(1);
   }
@@ -169,6 +181,10 @@
   .content-skills {
     &__subtitle {
       color: $color-gold;
+    }
+
+    &__legends {
+      color: $color-white;
     }
 
     .logo-text {
