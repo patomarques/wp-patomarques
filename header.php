@@ -40,14 +40,12 @@
 
   <?php wp_body_open(); ?>
 
+  <?php (is_front_page())?get_template_part('template-parts/banner-home'):''; ?>
+
   <header id="masthead" class="site-header <?= is_home() ? 'd-none ' : '' ?>">
-
     <div class="menu-bar bg-transparent">
-
       <nav id="nav-main" class="navbar navbar-expand-lg p-0">
-
         <div class="<?= bootscore_container_class(); ?> position-relative">
-
           <div class="text-center d-block">
             <a class="navbar-brand md d-none d-md-block text-center p-0 m-0" href="<?= esc_url(home_url()); ?>">
               <h1 class="logo-text m-0 p-0">
