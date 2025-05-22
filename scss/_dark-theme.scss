@@ -19,6 +19,7 @@
   .link {
     color: $color-white;
   }
+
   .btn-scroll-down {
     i {
       color: $color-white;
@@ -36,6 +37,7 @@
       }
     }
   }
+
   .offcanvas {
     &.show {
       .offcanvas-body {
@@ -58,16 +60,16 @@
     }
   }
 
-  &:hover {
-    i {
-      color: $color-black;
-    }
+  // &:hover {
+  //   i {
+  //     color: $color-black;
+  //   }
 
-    &:after {
-      background-color: $color-white;
-      color: $color-black;
-    }
-  }
+  //   &:after {
+  //     background-color: $color-white;
+  //     color: $color-black;
+  //   }
+  // }
 
   .logo-text {
     color: $color-white !important;

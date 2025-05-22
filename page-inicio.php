@@ -35,7 +35,7 @@ $fightFlags = new WP_Query(
                         <?php //echo apply_filters('get_the_post_excerpt', $pageAbout->post_excerpt); 
                         ?>
                         <p class="display-6 pb-3">Olá, me chamo <span class="display-5 bold">Pato Marques</span></p>
-                        <p class="fs-2 pb-3">Sou Desenvolvedor web, vivo em Recife / PE, graduado em Sistemas de Informação; </p>
+                        <p class="fs-2 pb-3">Sou Desenvolvedor web, de Recife/PE, graduado em Sistemas de Informação; </p>
                         <p class="fs-2 pb-3">+14 anos trabalhando com sites, lojas online e aplicações web
                             <span class="h5 hide">(desde 2010)</span>;
                         </p>
