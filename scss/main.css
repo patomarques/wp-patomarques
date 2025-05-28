@@ -67,7 +67,6 @@
 }
 
 .text-send-mail {
-  font-size: 3.4rem;
   text-transform: lowercase;
   font-family: "Eagle Lake", serif;
 }
@@ -163,6 +162,10 @@
   transition: opacity 0.2s;
   width: 100vw;
 }
+.cd-horizontal-timeline .fa-angle-left,
+.cd-horizontal-timeline .fa-angle-right {
+  -webkit-text-stroke: 7px #ffffff;
+}
 
 .cd-horizontal-timeline::before {
   /* never visible - this is used in jQuery to check the current MQ */
@@ -214,7 +217,7 @@
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 60px;
+  top: 50px;
   height: 3px;
   /* width will be set using JavaScript */
   background: #f1f1f1;
@@ -451,7 +454,7 @@
 }
 
 .timeline-years a {
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
   color: #000000 !important;
 }
 
@@ -925,7 +928,7 @@ p {
 .square:after {
   content: "";
   display: block;
-  padding-bottom: 100%;
+  padding-bottom: 125%;
 }
 .square__image {
   position: absolute;
@@ -935,10 +938,9 @@ p {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
-  filter: saturate(50%);
 }
 .square__image:hover {
-  filter: saturate(100%);
+  filter: saturate(70%);
 }
 
 .btn-toggle-dark-light .checkbox {
@@ -996,13 +998,10 @@ p {
 
 .content-services__item {
   background-color: #ffffff;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .content-services__item:nth-child(1) img {
   width: 90px;
-}
-.content-services__item:nth-child(2) {
-  padding-bottom: 10px;
 }
 .content-services__item:nth-child(2) img {
   width: 90px;
@@ -1019,7 +1018,6 @@ p {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px, rgba(0, 0, 0, 0.23) 0px 2px 6px;
   border-radius: 5px;
   padding: 4rem !important;
-  margin-bottom: 50px;
 }
 .content-services__item__box__title {
   margin-top: 20px;
@@ -1057,21 +1055,6 @@ p {
 .content-services__item__box:hover__box__title {
   font-size: 2.3rem;
   margin-bottom: 20px;
-}
-.content-services__item:nth-child(1) img {
-  width: 90px;
-}
-.content-services__item:nth-child(2) {
-  padding-bottom: 10px;
-}
-.content-services__item:nth-child(2) img {
-  width: 88px;
-}
-.content-services__item:nth-child(3) .content-services__item__box__icon {
-  width: 80px;
-  height: 80px;
-  margin-top: 15px !important;
-  margin-bottom: 30px;
 }
 
 .technologies-icons {
@@ -1123,6 +1106,20 @@ p {
   opacity: 0.6;
 }
 
+.content-video {
+  width: 100%;
+  position: relative;
+}
+.content-video:after {
+  content: "";
+  padding-bottom: 100%;
+}
+.content-video__video {
+  position: absolute;
+  width: auto;
+  height: 100%;
+}
+
 @media (min-width: 320px) {
   .content-centered__box-text .logo-text {
     margin-top: 0;
@@ -1147,12 +1144,6 @@ p {
   }
   .words-effect__container__list {
     padding-left: 0;
-  }
-  .text-send-mail {
-    font-size: 1.5rem;
-  }
-  .text-send-mail {
-    font-size: 3.2rem;
   }
   .content-btn-scroll {
     margin-top: 40px;
@@ -1191,9 +1182,6 @@ p {
   }
 }
 @media (min-width: 992px) {
-  .text-send-mail {
-    font-size: 5rem;
-  }
   .content-blog {
     display: flex;
   }
@@ -1202,9 +1190,6 @@ p {
   }
   .content-blog .box-square {
     width: auto;
-  }
-  .content-blog .text-send-mail {
-    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
@@ -1603,6 +1588,18 @@ footer i {
   margin: 10px;
 }
 
+@media (min-width: 320px) {
+  .text-send-mail {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 576px) {
+  .text-send-mail {
+    font-size: 3rem;
+    margin-bottom: 45px;
+  }
+}
 @media (min-width: 992px) {
   .content-contact__link i {
     font-size: 5em;

@@ -12,11 +12,11 @@ $fightFlags = new WP_Query(
 );
 ?>
 
-<section id="section-about" class="section-container mt-5">
+<section id="about" class="section-container mt-5 ">
     <div class="container mt-3">
-        <div class="row mb-5">
+        <div class="row">
             <div class="col-12 text-center">
-                <h3 class="content-about__title title-section pb-4 text-center">
+                <h3 class="content-about__title title-section text-center">
                     <?php echo get_the_title($pageAbout); ?>
                 </h3>
             </div>
@@ -24,9 +24,9 @@ $fightFlags = new WP_Query(
         <div class="row">
             <div class="col-12 col-lg-5">
                 <div class="square mb-5">
-                    <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout); ?>">
-                    <div class="losange"></div>
+                    <img class="square__image" src="<?= get_the_post_thumbnail_url($pageAbout, 'large'); ?>">
                 </div>
+
             </div>
             <div class="col-12 col-lg-6 offset-lg-1">
                 <div class="content-about">
@@ -109,7 +109,8 @@ $fightFlags = new WP_Query(
 
 <?php get_template_part('template-parts/portfolio'); ?>
 
-<? //php get_template_part('template-parts/blog-recent-posts'); ?>
+<? //php get_template_part('template-parts/blog-recent-posts'); 
+?>
 
 <?php get_template_part('template-parts/contatos'); ?>
 

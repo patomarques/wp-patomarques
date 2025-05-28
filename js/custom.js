@@ -5,7 +5,7 @@ jQuery(function ($) {
         target.click(function () {
             var top = target.offset().top;
             console.log('top', top);
-            top = top + 400;
+            top = top + 300;
             console.log('top', top);
             $('html,body').animate({ scrollTop: top }, 1000);
             return false;

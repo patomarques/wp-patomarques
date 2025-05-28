@@ -67,6 +67,23 @@ $blueColor: rgba(33, 150, 243, 1);
     }
 }
 
+
+@media (min-width: 320px) {
+  .text-send-mail {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+}
+
+@media (min-width: $sm) {
+  .text-send-mail {
+    font-size: 3rem;
+    margin-bottom: 45px;
+  }
+  
+}
+
 @media (min-width: 992px) {
   .content-contact__link {
     i {

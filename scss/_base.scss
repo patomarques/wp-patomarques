@@ -289,7 +289,7 @@ p {
   &:after {
     content: "";
     display: block;
-    padding-bottom: 100%;
+    padding-bottom: 125%;
   }
 
   &__image {
@@ -298,11 +298,11 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    filter: saturate(50%);
+    //filter: saturate(50%);
     @extend .trans;
 
     &:hover {
-      filter: saturate(100%);
+      filter: saturate(70%);
     }
   }
 }
@@ -367,7 +367,7 @@ p {
 .content-services {
   &__item {
     background-color: $color-white;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     &:nth-child(1) {
       img {
@@ -376,8 +376,6 @@ p {
     }
 
     &:nth-child(2) {
-      padding-bottom: 10px;
-
       img {
         width: 90px;
         padding-top: 10px;
@@ -402,7 +400,6 @@ p {
 
       border-radius: 5px;
       padding: 4rem !important;
-      margin-bottom: 50px;
       @extend .trans;
 
       &__title {
@@ -453,31 +450,6 @@ p {
             font-size: 2.3rem;
             margin-bottom: 20px;
           }
-        }
-      }
-    }
-
-    &:nth-child(1) {
-      img {
-        width: 90px;
-      }
-    }
-
-    &:nth-child(2) {
-      padding-bottom: 10px;
-
-      img {
-        width: 88px;
-      }
-    }
-
-    &:nth-child(3) {
-      .content-services__item__box {
-        &__icon {
-          width: 80px;
-          height: 80px;
-          margin-top: 15px !important;
-          margin-bottom: 30px;
         }
       }
     }
@@ -552,6 +524,22 @@ p {
   }
 }
 
+.content-video {
+  width: 100%;
+  position: relative;
+  //overflow: hidden;
+
+  &:after {
+    content: "";
+    padding-bottom: 100%;
+  }
+
+  &__video {
+    position: absolute;
+    width: auto;
+    height: 100%;
+  }
+}
 @media (min-width: 320px) {
   .content-centered {
     &__box-text {
@@ -585,14 +573,6 @@ p {
     &__list {
       padding-left: 0;
     }
-  }
-
-  .text-send-mail {
-    font-size: 1.5rem;
-  }
-
-  .text-send-mail {
-    font-size: 3.2rem;
   }
 
   .content-btn-scroll {
@@ -647,10 +627,6 @@ p {
 }
 
 @media (min-width: 992px) {
-  .text-send-mail {
-    font-size: 5rem;
-  }
-
   .content-blog {
     display: flex;
 
@@ -660,10 +636,6 @@ p {
 
     .box-square {
       width: auto;
-    }
-
-    .text-send-mail {
-      font-size: 3rem;
     }
   }
 }

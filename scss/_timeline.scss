@@ -11,6 +11,11 @@
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;
     width: 100vw;
+
+    .fa-angle-left,
+    .fa-angle-right {
+        -webkit-text-stroke: 7px $color-white;
+    }
 }
 
 .cd-horizontal-timeline::before {
@@ -35,7 +40,6 @@
 .cd-horizontal-timeline .events-wrapper {
     position: relative;
     height: 100%;
-    //margin: 0 40px;
     margin: 0 6vw;
     overflow: hidden;
 }
@@ -64,7 +68,7 @@
     position: absolute;
     z-index: 1;
     left: 0;
-    top: 60px;
+    top: 50px;
     height: 3px;
     /* width will be set using JavaScript */
     background: $color-graylight;
@@ -390,7 +394,7 @@
 
 .timeline-years {
     a {
-        font-size: 1.5rem !important;
+        font-size: 1.2rem !important;
         color: $color-black !important;
     }
 }
