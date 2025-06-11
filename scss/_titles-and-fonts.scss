@@ -7,6 +7,14 @@ $font-default: "Titillium Web", serif;
 $font-title: "Eagle Lake", serif;
 $font-subtitle: "Raleway", serif;
 
+.ff-primary {
+    font-family: $font-default !important;
+}
+
+.ff-secondary {
+    font-family: $font-logo-subtitle !important;
+}
+
 .title-section {
     font-size: 6rem;
     font-family: $font-title !important;

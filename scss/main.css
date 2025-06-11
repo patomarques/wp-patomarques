@@ -37,6 +37,14 @@
   color: #000000;
 }
 
+.ff-primary {
+  font-family: "Titillium Web", serif !important;
+}
+
+.ff-secondary {
+  font-family: "Eagle Lake", serif !important;
+}
+
 .title-section {
   font-size: 6rem;
   font-family: "Eagle Lake", serif !important;
@@ -679,6 +687,7 @@
 
 html {
   margin-top: 0 !important;
+  overflow-x: hidden;
   min-height: 100vh;
   max-width: 100%;
 }
@@ -692,6 +701,13 @@ body {
 
 body {
   min-width: 100%;
+  min-height: 100vh;
+}
+body.error404 {
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -1072,7 +1088,7 @@ p {
 }
 
 .section-container {
-  padding: 10vh 0;
+  padding: 7vh 0;
 }
 
 .list-tags__item__link {
@@ -1121,6 +1137,9 @@ p {
 }
 
 @media (min-width: 320px) {
+  .error-404-text {
+    font-size: 7em;
+  }
   .content-centered__box-text .logo-text {
     margin-top: 0;
     font-size: 4em;
@@ -1198,6 +1217,9 @@ p {
   }
   .content-centered__box-text .logo-subtitle {
     font-size: 3em;
+  }
+  .error-404-text {
+    font-size: 10em;
   }
 }
 .words-effect {
@@ -1604,5 +1626,9 @@ footer i {
   .content-contact__link i {
     font-size: 5em;
     margin: 40px;
+  }
+  .text-send-mail {
+    font-size: 4.5rem;
+    margin-bottom: 35px;
   }
 }/*# sourceMappingURL=main.css.map */

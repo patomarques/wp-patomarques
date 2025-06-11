@@ -1,6 +1,6 @@
 html {
   margin-top: 0 !important;
-  //overflow-x: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
   max-width: 100%;
 }
@@ -14,6 +14,14 @@ body {
 
 body {
   min-width: 100%;
+  min-height: 100vh;
+
+  &.error404 {
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }
 
 a {
@@ -475,7 +483,7 @@ p {
 }
 
 .section-container {
-  padding: 10vh 0;
+  padding: 7vh 0;
 }
 
 .list-tags {
@@ -540,7 +548,12 @@ p {
     height: 100%;
   }
 }
+
 @media (min-width: 320px) {
+  .error-404-text {
+    font-size: 7em;
+  }
+
   .content-centered {
     &__box-text {
       .logo-text {
@@ -651,5 +664,9 @@ p {
         font-size: 3em;
       }
     }
+  }
+
+  .error-404-text {
+    font-size: 10em;
   }
 }

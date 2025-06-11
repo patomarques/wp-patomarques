@@ -60,7 +60,9 @@ wp_reset_postdata();
                         foreach ($experiencesFormatted as $e) { ?>
 
                             <li>
-                                <a href="#0" data-date="<?= $e['start_date'] ?>" class="<?php if ($count == 0) { echo "selected"; } ?>">
+                                <a href="#0" data-date="<?= $e['start_date'] ?>" class="<?php if ($count == 0) {
+                                                                                            echo "selected";
+                                                                                        } ?>">
                                     <?= $e['year'] ?>
                                 </a>
                             </li>
