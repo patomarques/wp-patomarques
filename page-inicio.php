@@ -25,7 +25,7 @@
         </div>
 
         <div class="content-btn-scroll mt-5">
-            <a href="#about" class="btn-scroll-down" name="target">
+            <a href="javascript:void(0)" class="btn-scroll-down" name="target" id="target">
                 <i class="fa-solid fa-angles-down"></i>
             </a>
         </div>

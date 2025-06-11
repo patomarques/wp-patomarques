@@ -1,14 +1,9 @@
 jQuery(function ($) {
   $(document).ready(function () {
-    let target = document.querySelector("a[name=target]");
-
-    if (target.length > 0) {
-      target.addEventListener("click", function () {
-        let top = target.offset().top;
-        $("html,body").animate({ scrollTop: top }, 1000);
-        return false;
-      });
-    }
+    document.getElementById('target').addEventListener("click", function () {
+      document.getElementById('about').scrollIntoView({ behavior: "smooth" });
+      return false;
+    });
 
     $("#timeline-navigation li:last-child a").click();
     $("#timeline-years li:last-child a").click();
@@ -20,8 +15,6 @@ jQuery(function ($) {
     $(".nav-link").on("click", function () {
       $("body").toggleClass("menu-fullscreen");
     });
-
-    //scrollToSection(".btn-scroll-down", "#about");
   });
 
   function scrollToSection(buttonClass, sectionClass) {
@@ -61,7 +54,8 @@ jQuery(function ($) {
 
 function isMenuFixed() {
   const menu = document.getElementById("masthead");
-  const offset = document.getElementById("section-home-intro").offsetHeight - 10;
+  const offset =
+    document.getElementById("section-home-intro").offsetHeight - 10;
   let distanceTop = document.body.scrollTop;
 
   if (distanceTop > offset) {
