@@ -5,9 +5,6 @@ jQuery(function ($) {
     if (target.length > 0) {
       target.addEventListener("click", function () {
         let top = target.offset().top;
-        // console.log('top', top);
-        // top = top - 10;
-        // console.log('top', top);
         $("html,body").animate({ scrollTop: top }, 1000);
         return false;
       });
@@ -21,7 +18,6 @@ jQuery(function ($) {
     clickMenuFull();
 
     $(".nav-link").on("click", function () {
-      console.log("click", $(this).prop("href").split("#")[1]);
       $("body").toggleClass("menu-fullscreen");
     });
 
@@ -32,7 +28,7 @@ jQuery(function ($) {
     const btn = document.querySelector(buttonClass);
     const section = document.querySelector(sectionClass);
     btn.addEventListener("click", function () {
-      section.scrollIntoView({ behavior: "smooth" }); 
+      section.scrollIntoView({ behavior: "smooth" });
     });
   }
 
@@ -63,10 +59,9 @@ jQuery(function ($) {
   }
 });
 
-let menu = document.getElementById("masthead");
-let offset = document.getElementById("section-home-intro").offsetHeight - 60;
-
-document.body.addEventListener("scroll", () => {
+function isMenuFixed() {
+  const menu = document.getElementById("masthead");
+  const offset = document.getElementById("section-home-intro").offsetHeight;
   let distanceTop = document.body.scrollTop;
 
   if (distanceTop > offset) {
@@ -76,21 +71,15 @@ document.body.addEventListener("scroll", () => {
     menu.classList.remove("fixed-top");
     menu.classList.add("hide");
   }
+}
+
+document.body.addEventListener("scroll", () => {
+  isMenuFixed();
 });
 
 window.addEventListener("load", (event) => {
-  menuFixed();
+  isMenuFixed();
 });
-
-function menuFixed() {
-  if (window.scrollY > offset - 10) {
-    menu.classList.add("fixed-top");
-    menu.classList.remove("hide");
-  } else if (window.scrollY < offset - 20) {
-    menu.classList.remove("fixed-top");
-    menu.classList.add("hide");
-  }
-}
 
 function timelineYearCheck() {
   $("#timeline-years li:last-child a").click();
