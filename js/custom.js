@@ -61,7 +61,7 @@ jQuery(function ($) {
 
 function isMenuFixed() {
   const menu = document.getElementById("masthead");
-  const offset = document.getElementById("section-home-intro").offsetHeight;
+  const offset = document.getElementById("section-home-intro").offsetHeight - 10;
   let distanceTop = document.body.scrollTop;
 
   if (distanceTop > offset) {
