@@ -1,17 +1,4 @@
 jQuery(function ($) {
-  var target = $("a[name=target]");
-
-  if (target.length > 0) {
-    target.click(function () {
-      var top = target.offset().top;
-      console.log("top", top);
-      top = top + 300;
-      console.log("top", top);
-      $("html,body").animate({ scrollTop: top }, 1000);
-      return false;
-    });
-  }
-
   $(document).ready(function () {
     $("#timeline-navigation li:last-child a").click();
     $("#timeline-years li:last-child a").click();
@@ -19,11 +6,25 @@ jQuery(function ($) {
     loadDarkTheme();
     toggleSwitchDarkLightTheme();
     clickMenuFull();
+    targetSection();
 
     $(".nav-link").on("click", function () {
       $("body").toggleClass("menu-fullscreen");
     });
   });
+
+  function targetSection() {
+    var target = $("a[name=target]");
+
+    if (target.length > 0) {
+      target.click(function () {
+        var top = target.offset().top;
+        top = top + 400;
+        $("html,body").animate({ scrollTop: top }, 1000);
+        return false;
+      });
+    }
+  }
 
   function clickMenuFull() {
     $(".btn-menu-hamburguer").on("click", function () {
@@ -85,6 +86,4 @@ function toggleSwitchDarkLightTheme() {
   });
 }
 
-function changeTimelineEvent() {
-
-}
+function changeTimelineEvent() {}
