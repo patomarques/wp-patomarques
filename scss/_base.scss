@@ -295,12 +295,12 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    filter: saturate(50%);
+    //filter: saturate(50%);
     @extend .trans;
 
-    &:hover {
-      filter: saturate(100%);
-    }
+    // &:hover {
+    //   filter: saturate(100%);
+    // }
   }
 }
 
@@ -484,7 +484,7 @@ p {
 
 .container-divider {
   .icon-arrows {
-    width: 75px;
+    width: 50px;
     margin: auto !important;
     display: block;
     text-align: center;
@@ -578,6 +578,7 @@ p {
       padding-left: 0;
     }
   }
+
 }
 
 @media (min-width: 992px) {

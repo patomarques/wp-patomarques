@@ -8,7 +8,7 @@ $portfolio = new WP_Query(
 );
 ?>
 
-<section id="portfolio" class="section-container">
+<section id="portfolio" class="section-container pb-0">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -23,7 +23,7 @@ $portfolio = new WP_Query(
 
                 <div class="col-12 col-lg-4">
 
-                    <div class="card mb-5  ">
+                    <div class="card mb-5 pb-5">
                         <a href="<?php echo get_post_meta(get_the_ID(), 'link')[0]; ?>" class="card__box-header box-square-responsive border">
                             <img class="card__box-header__image" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>"
                                 alt="Card image cap">
@@ -43,8 +43,8 @@ $portfolio = new WP_Query(
                             <p class="h4 card-text mt-3 text-justify">
                                 <?= get_the_excerpt(get_the_ID()) ?>
                             </p>
-                            <div class="d-block m-auto mt-5 mb-4 text-center hide">
-                                <a href="#" class="button-border-effect m-auto">Ver mais</a>
+                            <div class="d-block m-auto mt-1 mb-4 text-center">
+                                <a href="<?php echo get_post_meta(get_the_ID(), 'link')[0]; ?>" class="button-border-effect m-auto">Ver site</a>
                             </div>
                         </div>
                     </div>

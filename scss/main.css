@@ -496,26 +496,26 @@
 .dark-theme header {
   background-color: #000000 !important;
 }
+.dark-theme .offcanvas.show .offcanvas-body {
+  background-color: #000000 !important;
+}
+.dark-theme .offcanvas.show .offcanvas-body .nav-link {
+  color: #ffffff;
+}
+.dark-theme .offcanvas.show .offcanvas-body .nav-link:hover {
+  color: #ffc93c;
+}
+.dark-theme .menu-fullscreen .btn-menu-hamburguer i {
+  color: #ffffff;
+}
+.dark-theme .menu-fullscreen .btn-menu-hamburguer:hover {
+  color: #ffc93c;
+}
 .dark-theme .card .card-body {
   background-color: #000000;
 }
 .dark-theme .btn-scroll-down i {
   color: #ffffff;
-}
-.dark-theme .btn-scroll-down .menu-fullscreen .btn-menu-hamburguer i {
-  color: #ffffff;
-}
-.dark-theme .btn-scroll-down .menu-fullscreen .btn-menu-hamburguer:hover {
-  color: #ffc93c;
-}
-.dark-theme .btn-scroll-down .offcanvas.show .offcanvas-body {
-  background-color: #000000;
-}
-.dark-theme .btn-scroll-down .offcanvas.show .offcanvas-body .nav-link {
-  color: #ffffff;
-}
-.dark-theme .btn-scroll-down .offcanvas.show .offcanvas-body .nav-link:hover {
-  color: #ffc93c;
 }
 .dark-theme .btn-scroll-down .card .card-body {
   background-color: #000000;
@@ -936,10 +936,6 @@ p {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
-  filter: saturate(50%);
-}
-.square__image:hover {
-  filter: saturate(100%);
 }
 
 .btn-toggle-dark-light .checkbox {
@@ -1081,7 +1077,7 @@ p {
 }
 
 .container-divider .icon-arrows {
-  width: 75px;
+  width: 50px;
   margin: auto !important;
   display: block;
   text-align: center;
@@ -1384,8 +1380,8 @@ p {
 .menu-fullscreen .btn-menu-hamburguer {
   z-index: 999999;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 14px;
+  top: 14px;
   color: #000000;
 }
 .menu-fullscreen .btn-menu-hamburguer .fa-bars {
@@ -1482,7 +1478,7 @@ p {
   }
   .navbar-nav .nav-link {
     padding: 0 10px !important;
-    font-size: 1.1rem;
+    font-size: 3rem;
   }
   .words-effect__container__text {
     display: inline-block;
@@ -1513,7 +1509,7 @@ p {
   }
 }
 footer {
-  margin-top: 160px;
+  margin-top: 5em;
   margin-bottom: 20px;
 }
 footer a,

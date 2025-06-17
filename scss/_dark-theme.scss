@@ -10,6 +10,34 @@
     background-color: $color-black !important;
   }
 
+  .offcanvas {
+    &.show {
+      .offcanvas-body {
+        background-color: $color-black !important;
+
+        .nav-link {
+          color: $color-white;
+
+          &:hover {
+            color: $color-gold;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-fullscreen {
+    .btn-menu-hamburguer {
+      i {
+        color: $color-white;
+      }
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+
   .card {
     .card-body {
       background-color: $color-black;
@@ -19,33 +47,6 @@
   .btn-scroll-down {
     i {
       color: $color-white;
-    }
-
-    .menu-fullscreen {
-      .btn-menu-hamburguer {
-        i {
-          color: $color-white;
-        }
-
-        &:hover {
-          color: $color-gold;
-        }
-      }
-    }
-    .offcanvas {
-      &.show {
-        .offcanvas-body {
-          background-color: $color-black;
-
-          .nav-link {
-            color: $color-white;
-
-            &:hover {
-              color: $color-gold;
-            }
-          }
-        }
-      }
     }
 
     .card {
@@ -134,7 +135,7 @@
       }
     }
   }
-  
+
   .content-services__item img {
     filter: invert(1);
   }
