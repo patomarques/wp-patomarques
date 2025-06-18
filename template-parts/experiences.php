@@ -41,11 +41,11 @@ wp_reset_postdata();
     <div class="container mb-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h3 class="title-section">Experiência</h3>
+                <h3 class="title-section pb-3">Experiência</h3>
                 <div class="content-experience">
                     <h4 class="display-6 content-experience__description mb-5 text-justify">
-                        Linha do tempo dos principais trabalhos que
-                        passei desde 2010 até agora...</h4>
+                        Linha do tempo em ordem cronológica dos principais trabalhos que
+                        passei desde 2010 até agora, click no <b>ano</b> para navegar.</h4>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@ wp_reset_postdata();
             <ul id="timeline-navigation" class="cd-timeline-navigation list-unstyled">
                 <li>
                     <a href="#0" class="prev inactive">
-                        <i class="fa-solid fa-angle-right fa-5x"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li><a href="#0" class="next"><i class="fa-solid fa-angle-right fa-5x"></i></a></li>

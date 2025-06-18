@@ -324,7 +324,6 @@
   /* these are the left/right arrows to navigate the timeline */
   position: absolute;
   z-index: 1;
-  top: 50%;
   bottom: auto;
   transform: translateY(-50%);
   /* replace text with an icon */
@@ -338,6 +337,10 @@
   top: 50%;
   bottom: auto;
   right: auto;
+}
+.cd-timeline-navigation .fa-angle-left,
+.cd-timeline-navigation .fa-angle-right {
+  font-size: 5em;
 }
 
 .cd-timeline-navigation a.prev {
@@ -484,6 +487,30 @@
   100% {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+@media (min-width: 576px) {
+  .cd-timeline-navigation a {
+    top: 60%;
+  }
+  .cd-timeline-navigation .fa-angle-left,
+  .cd-timeline-navigation .fa-angle-right {
+    font-size: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .cd-timeline-navigation .fa-angle-left,
+  .cd-timeline-navigation .fa-angle-right {
+    font-size: 5em;
+  }
+}
+@media (min-width: 1200px) {
+  .cd-timeline-navigation {
+    top: 50%;
+  }
+  .cd-timeline-navigation .fa-angle-left,
+  .cd-timeline-navigation .fa-angle-right {
+    font-size: 5em;
   }
 }
 .dark-theme {
