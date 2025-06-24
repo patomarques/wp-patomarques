@@ -489,13 +489,13 @@
     transform: translateX(0%);
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 320px) {
   .cd-timeline-navigation a {
-    top: 60%;
+    top: 60px;
   }
   .cd-timeline-navigation .fa-angle-left,
   .cd-timeline-navigation .fa-angle-right {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 @media (min-width: 992px) {

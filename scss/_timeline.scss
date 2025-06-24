@@ -501,15 +501,15 @@
   }
 }
 
-@media (min-width: $sm) {
+@media (min-width: $xs) {
   .cd-timeline-navigation {
     a {
-      top: 60%;
+      top: 60px;
     }
 
     .fa-angle-left,
     .fa-angle-right {
-      font-size: 2em;
+      font-size: 3em;
     }
   }
 }
