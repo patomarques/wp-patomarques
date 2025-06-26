@@ -44,13 +44,14 @@ wp_reset_postdata();
                 <h3 class="title-section pb-3">Experiência</h3>
                 <div class="content-experience">
                     <h4 class="display-6 content-experience__description mb-5 text-justify">
-                        Linha do tempo em ordem cronológica dos principais trabalhos que
-                        passei desde 2010 até agora, click no <b>ano</b> para navegar.</h4>
+                        <span>Linha do tempo em ordem cronológica dos principais trabalhos que
+                            passei desde 2010 até agora. <span class="d-none d-md-inline-block display-7 bold">Click no ano para navegar.</span></span>
+                    </h4>
                 </div>
             </div>
         </div>
     </div>
-    <div class="cd-horizontal-timeline">
+    <div class="cd-horizontal-timeline d-none d-md-inline-block">
         <div class="timeline">
             <div class="events-wrapper">
                 <div class="events">
@@ -61,7 +62,9 @@ wp_reset_postdata();
                         foreach ($experiencesFormatted as $e) { ?>
 
                             <li>
-                                <a href="#0" data-date="<?= $e['start_date'] ?>" class="<?php if ($count == 0) { echo "selected"; } ?>">
+                                <a href="#0" data-date="<?= $e['start_date'] ?>" class="<?php if ($count == 0) {
+                                                                                            echo "selected";
+                                                                                        } ?>">
                                     <?= $e['year'] ?>
                                 </a>
                             </li>
@@ -84,7 +87,7 @@ wp_reset_postdata();
         </div>
 
         <div class="events-content">
-            <ol id="timeline-info" class="timeline-info">
+            <ol id="timeline-info" class="timeline-info slick-timeline">
 
                 <?php
                 $index = 0;
@@ -124,5 +127,42 @@ wp_reset_postdata();
 
             </ol>
         </div>
+    </div>
+
+    <div class="d-block d-md-none">
+        <ul class="list-unstyled slick-timeline">
+            <?php
+            foreach ($experiencesFormatted as $e) { ?>
+
+                <li data-date="<?= $e['start_date'] ?>" class="p-5">
+                    <h3 class="timeline-info__title pb-2">
+                        <span class="">
+                            <?= $e['cargo'] ?>
+                        </span>
+                        <span class="timeline-info__title__company">
+                            na
+                            <span class="bold">
+                                <?= $e['title'] ?>
+                            </span>
+                        </span>
+                    </h3>
+
+                    <h4 class="timeline-info__date pr-2 italic pb-4">
+                        <i class="fa-regular fa-calendar-days pr-1"></i>
+                        <?= formatDateToMMYY($e['start_date']) ?> à
+                        <?= formatDateToMMYY($e['end_date']) ?>
+                    </h4>
+                    <h4 class="timeline-info__description pb-3 text-justify h2">
+                        <?= $e['excerpt'] ?>
+                    </h4>
+                    <h5 class="timeline-info__techs h3 mt-3">
+                        <span class="bold">Tecnologias: </span>
+                        <?= $e['techs'] ?>
+                    </h5>
+                </li>
+
+            <?php } ?>
+
+        </ul>
     </div>
 </section>

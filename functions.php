@@ -7,14 +7,17 @@ function bootscore_child_enqueue_styles()
 
   // style.css
   wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+  wp_enqueue_style('slick-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick.css');
+  wp_enqueue_style('slick-theme-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick-theme.css');
   wp_enqueue_style('main-style', get_template_directory_uri() . '/scss/main.css');
 
   // Compiled main.css
   $modified_bootscoreChildCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/css/main.css'));
   wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.css', array('parent-style'), $modified_bootscoreChildCss);
 
-  wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
   wp_enqueue_script('timeline-js', get_stylesheet_directory_uri() . '/js/timeline.js', false, '', true);
+  wp_enqueue_script('slick-js', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick.min.js', false, '', true);
+  wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
 }
 
 function wporg_custom_post_type()
@@ -81,19 +84,6 @@ function wporg_custom_post_type()
       'public' => true,
       'has_archive' => true,
       'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'excerpt')
-    )
-  );
-
-  register_post_type(
-    'fight-flags',
-    array(
-      'labels' => array(
-        'name' => __('Bandeiras de Luta', 'textdomain'),
-        'singular_name' => __('Bandeira de Luta', 'textdomain'),
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
     )
   );
 

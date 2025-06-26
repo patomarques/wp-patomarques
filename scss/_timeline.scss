@@ -501,35 +501,70 @@
   }
 }
 
-@media (min-width: $xs) {
+// @media (min-width: $xs) {
+//   .cd-timeline-navigation {
+//     a {
+//       top: 60px;
+//     }
+
+//     .fa-angle-left,
+//     .fa-angle-right {
+//       font-size: 3em;
+//     }
+//   }
+
+//   // .cd-horizontal-timeline {
+//   //   .timeline {
+//   //     display: none;
+//   //   }
+
+//   //   .events-content {
+//   //     height: auto !important;
+
+//   //     li {
+//   //       opacity: 1;
+//   //       position: relative;
+//   //       transform: none;
+//   //     }
+//   //   }
+//   // }
+
+//   // .timeline-info {
+//   //   width: 100vw;
+//   //   padding: 10px;
+//   //   position: relative;
+
+//   //   li {
+//   //     transform: inherit;
+//   //     opacity: 1;
+//   //   }
+//   // }
+// }
+
+@media (min-width: $md) {
   .cd-timeline-navigation {
     a {
-      top: 60px;
-    }
-
-    .fa-angle-left,
-    .fa-angle-right {
-      font-size: 3em;
+      top: 58px;
     }
   }
 }
 
-@media (min-width: $lg) {
-  .cd-timeline-navigation {
-    .fa-angle-left,
-    .fa-angle-right {
-      font-size: 5em;
-    }
-  }
-}
+// // @media (min-width: $lg) {
+// //   .cd-timeline-navigation {
+// //     .fa-angle-left,
+// //     .fa-angle-right {
+// //       font-size: 5em;
+// //     }
+// //   }
+// // }
 
-@media (min-width: $xl) {
-  .cd-timeline-navigation {
-    top: 50%;
+// // @media (min-width: $xl) {
+// //   .cd-timeline-navigation {
+// //     top: 50%;
 
-    .fa-angle-left,
-    .fa-angle-right {
-      font-size: 5em;
-    }
-  }
-}
+// //     .fa-angle-left,
+// //     .fa-angle-right {
+// //       font-size: 5em;
+// //     }
+// //   }
+// // }

@@ -1,5 +1,6 @@
 .DS_Store
-css/main.css
-css/main.map
+scss/main.css
+scss/main.map
 vendor/
+node_modules/
 scss/main.css.map

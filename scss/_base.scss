@@ -482,6 +482,25 @@ p {
   }
 }
 
+.slick-prev,
+.slick-next {
+  top: -35px;
+  font-size: 1em;
+
+  &:before {
+    font-size: 3em;
+    color: $color-black;
+  }
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 45px;
+}
+
 .container-divider {
   .icon-arrows {
     width: 50px;
@@ -578,7 +597,6 @@ p {
       padding-left: 0;
     }
   }
-
 }
 
 @media (min-width: 992px) {
