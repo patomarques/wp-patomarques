@@ -1167,6 +1167,9 @@ p {
   .words-effect__container__list {
     padding-left: 0;
   }
+  .text-send-mail {
+    font-size: 3rem;
+  }
 }
 @media (min-width: 992px) {
   .content-centered__box-text .logo-text {

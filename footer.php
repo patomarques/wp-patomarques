@@ -18,11 +18,11 @@
   <div class="text-center">
     <div class="<?= bootscore_container_class(); ?>">
       <small class="bootscore-copyright ">
-        <a href="/" class="fs-5">
+        <a href="/" class="fs-6">
           <?php bloginfo('name'); ?>
         </a>
-        <span class="fs-4">&copy;</span>&nbsp;
-        <span class="fs-5"><?= date('Y'); ?></span>
+        <span class="fs-5">&copy;</span>&nbsp;
+        <span class="fs-6"><?= date('Y'); ?></span>
       </small>
     </div>
   </div>

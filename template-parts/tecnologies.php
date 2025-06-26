@@ -3,6 +3,8 @@ $technologies = new WP_Query(
     array(
         'post_type' => 'technologies',
         'orderby' => 'ordem',
+        'meta_key' => 'ordem',
+        'orderby' => 'meta_value',
         'order' => 'ASC',
         'posts_per_page' => -1,
     )
