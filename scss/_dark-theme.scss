@@ -39,6 +39,8 @@
   }
 
   .card {
+    background-color: $color-black;
+
     .card-body {
       background-color: $color-black;
     }
@@ -119,8 +121,16 @@
     }
   }
 
-  .content-contact__link i {
-    color: $color-white;
+  .content-contact__link {
+    i {
+      color: $color-white;
+    }
+
+    &:hover {
+      i {
+        color: $color-gold;
+      }
+    }
   }
 
   .content-services {

@@ -4,8 +4,12 @@ footer {
 
   a,
   i {
-    color: $color-black;
+    color: $color-black; 
     font-family: $font-title;
+
+    &:hover {
+      color: $color-gold;
+    }
   }
 }
 
@@ -15,7 +19,7 @@ $blueColor: rgba(33, 150, 243, 1);
 .flex-center {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
+  display: -webkit-flex; 
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
@@ -40,25 +44,35 @@ $blueColor: rgba(33, 150, 243, 1);
   }
 }
 
+.content-contact {
+  &__link {
+    color: $color-black;
+
+    &:hover {
+      color: $color-gold;
+    }
+  }
+}
+
 @keyframes icon3d {
   0% {
-    text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+    text-shadow: 5px 4px $color-gold, -5px -6px $color-main;
   }
 
   25% {
-    text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+    text-shadow: -5px -6px $color-gold, 5px 4px $color-main;
   }
 
   50% {
-    text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+    text-shadow: 5px -4px $color-gold, -8px 4px $color-main;
   }
 
   75% {
-    text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+    text-shadow: -8px -4px $color-gold, -5px -4px $color-main;
   }
 
   100% {
-    text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
+    text-shadow: -5px 0 $color-gold, 5px -4px $color-main;
   }
 }
 

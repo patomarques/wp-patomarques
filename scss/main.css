@@ -519,6 +519,9 @@
 .dark-theme .menu-fullscreen .btn-menu-hamburguer:hover {
   color: #ffc93c;
 }
+.dark-theme .card {
+  background-color: #000000;
+}
 .dark-theme .card .card-body {
   background-color: #000000;
 }
@@ -572,6 +575,9 @@
 }
 .dark-theme .content-contact__link i {
   color: #ffffff;
+}
+.dark-theme .content-contact__link:hover i {
+  color: #ffc93c;
 }
 .dark-theme .content-services__item__box:hover img {
   filter: brightness(0) saturate(100%) invert(86%) sepia(72%) saturate(2144%) hue-rotate(320deg) brightness(98%) contrast(105%);
@@ -1547,6 +1553,10 @@ footer i {
   color: #000000;
   font-family: "Eagle Lake", serif;
 }
+footer a:hover,
+footer i:hover {
+  color: #ffc93c;
+}
 
 .flex-center {
   width: 100%;
@@ -1564,21 +1574,28 @@ footer i {
   animation: icon3d 200ms infinite;
 }
 
+.content-contact__link {
+  color: #000000;
+}
+.content-contact__link:hover {
+  color: #ffc93c;
+}
+
 @keyframes icon3d {
   0% {
-    text-shadow: 5px 4px rgb(244, 67, 54), -5px -6px rgb(33, 150, 243);
+    text-shadow: 5px 4px #ffc93c, -5px -6px #303841;
   }
   25% {
-    text-shadow: -5px -6px rgb(244, 67, 54), 5px 4px rgb(33, 150, 243);
+    text-shadow: -5px -6px #ffc93c, 5px 4px #303841;
   }
   50% {
-    text-shadow: 5px -4px rgb(244, 67, 54), -8px 4px rgb(33, 150, 243);
+    text-shadow: 5px -4px #ffc93c, -8px 4px #303841;
   }
   75% {
-    text-shadow: -8px -4px rgb(244, 67, 54), -5px -4px rgb(33, 150, 243);
+    text-shadow: -8px -4px #ffc93c, -5px -4px #303841;
   }
   100% {
-    text-shadow: -5px 0 rgb(244, 67, 54), 5px -4px rgb(33, 150, 243);
+    text-shadow: -5px 0 #ffc93c, 5px -4px #303841;
   }
 }
 .content-contact__link i {
